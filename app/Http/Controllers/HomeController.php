@@ -23,6 +23,11 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        return view('EasyPlanHome');
+    }
+
+    public function vssuchen()
+    {
+       return view('EasyPlanHome');
     }
 }
