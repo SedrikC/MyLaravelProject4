@@ -33,7 +33,7 @@ class HomeController extends Controller
     public function erstellen(){
         return view('Verstellen');
     }
-    public function profil({
+    public function profil(){
         return view('Profil');
-    })
+    }
 }
