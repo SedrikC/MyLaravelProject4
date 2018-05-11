@@ -14,7 +14,7 @@
 <body>
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a href="Startseite.html"><img src="Logo-EasyPlan.gif" alt="Bild" class="Logo" /></a>
+    <a href="{{ route('home') }}"><img src="Logo-EasyPlan.gif" alt="Bild" class="Logo" /></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -22,16 +22,16 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" id="Home" href="#">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-link" id="Home" href="{{ route('home') }}">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">Mein Profil</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="VSerstellen.html">Veranstaltung erstellen</a>
+                <a class="nav-link" href="{{ route('erstellen') }}">Veranstaltung erstellen</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="VSsuchen.html">Veranstaltung suchen</a>
+                <a class="nav-link" href="{{ route('suchen') }}">Veranstaltung suchen</a>
             </li>
         </ul>
         <form class="form-inline my-2 my-lg-0" action="{{ route('login') }}">
@@ -94,7 +94,7 @@
         <div class="row mt-3">
 
             <!--First column-->
-            <div class="col-md-3 col-lg-4 col-xl-3 mb-4">
+            <div class="col-md-3 col-lg-4 col-xl-3 mb-4" id="foot">
                 <h6 class="text-uppercase font-weight-bold">
                     <strong>EasyPlan</strong>
                 </h6>

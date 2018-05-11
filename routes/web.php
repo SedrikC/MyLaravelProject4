@@ -19,9 +19,8 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Auth::routes();
+Route::get('/suchen', 'HomeController@suchen')->name('suchen');
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/erstellen', 'HomeController@erstellen')->name('erstellen');
 
-Auth::routes();
-Route::get('/VSsuchen.html', 'HomeController@EasyPlanHome')->name('home');
+Route::get('/profil', 'HomeController@profil')->name('profil');

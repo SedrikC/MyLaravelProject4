@@ -21,7 +21,7 @@
             <div class="row">
                 <div class="col-md-1"></div>
                 <div class="suchen col-md-5 col-sm-12">
-                    <a href ="VSsuchen.html">
+                    <a href ="{{route('suchen')}}">
                         <img src="Suchen.jpg" class="bilder" width="100%" alt="Suchen">
                         <p class="Text">
                             Veranstaltung suchen
@@ -32,7 +32,7 @@
 
 
                 <div class="erstellen col-md-5 col-sm-12">
-                    <a href ="VSerstellen.html">
+                    <a href ="{{route('erstellen')}}">
                         <img src="Erstellen.jpg" class="bilder" width="100%" alt="Erstellen">
                         <p class="Text">
                             Veranstaltung erstellen
