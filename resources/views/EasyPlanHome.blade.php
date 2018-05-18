@@ -22,7 +22,7 @@
                 <div class="col-md-1"></div>
                 <div class="suchen col-md-5 col-sm-12">
                     <a href ="{{route('suchen')}}">
-                        <img src="Suchen.jpg" class="bilder" width="100%" alt="Suchen">
+                        <img src="img/Suchen.jpg" class="bilder" width="100%" alt="Suchen">
                         <p class="Text">
                             Veranstaltung suchen
                         </p>
@@ -33,7 +33,7 @@
 
                 <div class="erstellen col-md-5 col-sm-12">
                     <a href ="{{route('erstellen')}}">
-                        <img src="Erstellen.jpg" class="bilder" width="100%" alt="Erstellen">
+                        <img src="img/Erstellen.jpg" class="bilder" width="100%" alt="Erstellen">
                         <p class="Text">
                             Veranstaltung erstellen
                         </p>
