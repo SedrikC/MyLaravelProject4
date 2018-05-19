@@ -24,3 +24,5 @@ Route::get('/suchen', 'HomeController@suchen')->name('suchen');
 Route::get('/erstellen', 'HomeController@erstellen')->name('erstellen');
 
 Route::get('/profil', 'HomeController@profil')->name('profil');
+
+Route::post('upload', 'UploadController@upload');
