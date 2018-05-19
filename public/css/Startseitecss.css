@@ -100,3 +100,8 @@ i:hover {
     position: relative;
     top: 10px;
 }
+
+.footer{
+    background-color: lightgrey;
+    padding: 1px;
+}

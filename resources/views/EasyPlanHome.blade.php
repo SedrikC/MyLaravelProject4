@@ -4,7 +4,6 @@
 
     <h1>Willkommen auf EasyPlan.de</h1>
 
-
     <div class="inhalt">
         <p> Bei der Organisation von mittelgroßen Veranstaltungen treten oft sehr viele Probleme auf, die die Planung und Durchführung oft sehr umständlich und kompliziert machen.</p>
         <p>

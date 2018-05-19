@@ -90,6 +90,7 @@
     </div>
 
     <!--Footer Links-->
+    <div class="footer">
     <div class="container mt-5 mb-4 text-center text-md-left">
         <div class="row mt-3">
 
@@ -142,6 +143,7 @@
             <!--/.Fourth column-->
 
         </div>
+    </div>
     </div>
 </footer>
 <!--/.Footer-->
