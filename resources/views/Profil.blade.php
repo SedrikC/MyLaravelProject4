@@ -16,10 +16,10 @@
     </ul>
     </p>
     <h1>FILE UPLOAD</h1>
-    <form action="{{ URL::to('upload') }}" method="post" enctype="multipart/form-data">
+    <form action="{{ URL::to('hochladen') }}" method="post" enctype="multipart/form-data">
         <label>Füge ein Profilbild hinzu</label><br>
         <input type="file" name="file" id="file"><br><br>
-        <input type="submit" value="Upload" name="submit">
+        <input type="submit" value="hochladen" name="submit">
         <input type="hidden" value="{{ csrf_token() }}" name="_token">
     </form>
 
