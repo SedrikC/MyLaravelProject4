@@ -5,6 +5,7 @@
     <h1>Veranstaltung suchen</h1>
 
     <div class="Container">
+        <div class="row">
         <div class="col-md-3 col-sm-12">
             <div id="AuswahlSuchen">
                 Veranstaltungsname
@@ -31,8 +32,12 @@
                 <input id="SuchenButton" type="submit" name="SuchenButton" value="Suchen">
             </div>
         </div>
-        <div class="col-md-8 col-sm-12">
-            <p>Hier sollen irgendwann die Suchergebnisse stehen</p>
+        <div class="col-md-8 col-sm-12 Ergebnis">
+            @foreach($Vsuchen as $vsuchen)
+                <h1 id="VerName"> {{ $vsuchen->Name }}</h1>
+                <h2 id="VerInfo"> Veranstaltungsort: {{ $vsuchen->Ort }}   |    Veranstalter: {{ $vsuchen->Veranstalter }}</h2>
+                @endforeach
+        </div>
         </div>
     </div>
 

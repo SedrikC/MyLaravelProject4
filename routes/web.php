@@ -19,8 +19,19 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/suchen', 'HomeController@suchen')->name('suchen');
-
 Route::get('/erstellen', 'HomeController@erstellen')->name('erstellen');
 
 Route::get('/profil', 'HomeController@profil')->name('profil');
+
+Route::get('/suchen', function (){
+    $Vsuchen = \App\Veranstaltungen::all();
+
+    return View::make('Vsuchen')->with('Vsuchen', $Vsuchen);
+})->name('suchen');
+
+
+Route::get('/Veranstaltungen/{Name}', function ($name){
+   $VerNamen = \App\Veranstaltungen::where('name', $name)->firstOrFail();
+
+   return View::make('Vprofil')->with('name', $VerNamen);
+})->name('VProfil');
