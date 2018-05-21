@@ -9,11 +9,11 @@
             <div id="AuswahlSuchen">
                 Veranstaltungsname
                 <br>
-                <input type="text" size="24px" maxlength="30" name="Veranstaltungsname">
+                <input type="text" size="24px" maxlength="30" name="Veranstaltungsname" placeholder="z.B. Grillparty">
                 <br>
                 Veranstaltungsort
                 <br>
-                <input type="text" size="24px" maxlength="20" name="Veranstaltungsort">
+                <input type="text" size="24px" maxlength="20" name="Veranstaltungsort" placeholder="z.B. Konstanz">
                 <br>
                 Genre
                 <br>
