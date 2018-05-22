@@ -4,7 +4,7 @@
 
 
     <h1> {{Auth::user()->name }}'s Profil</h1>
-    <h2>{{ $user->name }}'s Profile</h2>
+    <h2>{{ Auth::user()->name }}'s Profile</h2>
 <p> hier stehen sachen von meinem Profil</p>
     <?php
 
