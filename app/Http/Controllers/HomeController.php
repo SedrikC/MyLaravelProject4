@@ -26,10 +26,6 @@ class HomeController extends Controller
         return view('EasyPlanHome');
     }
 
-    public function suchen(){
-        return view('Vsuchen');
-    }
-
     public function erstellen(){
         return view('Verstellen');
     }

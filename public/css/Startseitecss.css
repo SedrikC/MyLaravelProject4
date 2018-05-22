@@ -87,6 +87,7 @@ i:hover {
     padding-top: 15px;
     position: relative;
     border: solid 2px #568BFF;
+    left: 15px;
 }
 
 #AuswahErstellen{
@@ -99,4 +100,19 @@ i:hover {
 #SuchenButton{
     position: relative;
     top: 10px;
+}
+
+.footer{
+    background-color: lightgrey;
+    padding: 1px;
+}
+
+.Ergebnis{
+    position: relative;
+    left: 20px;
+}
+
+#VerName{
+    color: #568BFF;
+    font-size: 30px;
 }

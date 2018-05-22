@@ -11,6 +11,6 @@ class veranstaltungseeder extends Seeder
      */
     public function run()
     {
-       DB::insert("INSERT into veranstaltungen values (1, 'Grillen', 'Konstanz', NOW(), 'Sedrik', NOW(), NOW())");
+        DB::insert("INSERT INTO veranstaltungen VALUES (1,'Grillen', 'Sedrik',NOW(),NOW())");
     }
 }
