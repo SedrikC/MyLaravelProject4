@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>EasyPlan</title>
+    <link rel="shortcut icon" type="image/gif" href="img/Logo-EasyPlan.gif">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="css/Startseitecss.css">
+    <link rel="stylesheet" href="css/Profile.css">
     <!--  <link rel="stylesheet" href="pfad-zur-css-datei/font-awesome.min.css">-->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
@@ -59,6 +61,7 @@
         <form class="form-inline my-2 my-lg-0" action="{{ route('login') }}" >
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Login</button>
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Register</button>
+
         </form>
         <?php }?>
         <?php if (\Auth::check()){ ?>
@@ -70,11 +73,25 @@
 
             <ul class="dropdown-menu" role="menu">
                 <li><a href="{{URL('profile')}}"><i class="fa fa-btn fa-user"></i>Profil bearbeiten</a> </li>
+                <li><a href="{{URL('profile')}}"><i class="fa fa-btn fa-cog"></i>Einstellungen</a> </li>
+                <li><a href="{{URL('profile')}}"><i class="fa fa-btn fa-envelope"></i>Kontakt</a> </li>
                 <li><a href="{{URL('logout')}}"><i class="fa fa-btn fa-sign-out"></i>Logout</a> </li>
+
+
+                </li>
             </ul>
         </li>
 
         <?php }?>
+<div class="col-md-1">
+    <li class="dropdown ">
+        <a href="#" class=dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+            <img src="/uploads/avatar/Deutschlandflagge.png" style="width:30px; height:30px; float:left; border-radius:50%; margin-right:25px;">
+            <span class="caret"></span>
+        </a>
+
+    </li>
+</div>
 
 
     </div>
