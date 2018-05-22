@@ -19,20 +19,6 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/suchen', 'HomeController@suchen')->name('suchen');
-
-Route::get('/erstellen', 'HomeController@erstellen')->name('erstellen');
-
-Route::get('/profil', 'HomeController@profil')->name('profil');
-
-Route::get('/', function () {
-    return view('EasyPlanHome');
-});
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
 Route::get('/erstellen', 'HomeController@erstellen')->name('erstellen');
 
 Route::get('/profil', 'HomeController@profil')->name('profil');
@@ -41,6 +27,10 @@ Route::get('/profil', 'HomeController@profil')->name('profil');
 Route::get('/profile', 'UserController@profile')->name('profile');
 Route::post('hochladen', 'UploadController@hochladen')->name('hochladen');
 Route::post('profile', 'UserController@update_avatar');
+
+Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
+
+
 
 Route::get('/suchen', function (){
     $Vsuchen = \App\Veranstaltungen::all();
