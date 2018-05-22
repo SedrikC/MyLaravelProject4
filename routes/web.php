@@ -40,6 +40,5 @@ Route::get('/Veranstaltungen/{name}', function ($name){
    return View::make('Vprofil')->with('Vprofil', $VerNamen);
 })->name('VProfil');
 
-Route::get('/bla', function(){
-    return ("Hallo");
-});
+Route::get('/suchen/{name}/{ort}', 'RessourceController@CheckVeranstaltung')->name('checker');
+
