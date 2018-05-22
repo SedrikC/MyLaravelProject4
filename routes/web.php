@@ -19,20 +19,6 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/suchen', 'HomeController@suchen')->name('suchen');
-
-Route::get('/erstellen', 'HomeController@erstellen')->name('erstellen');
-
-Route::get('/profil', 'HomeController@profil')->name('profil');
-
-Route::get('/', function () {
-    return view('EasyPlanHome');
-});
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
 Route::get('/erstellen', 'HomeController@erstellen')->name('erstellen');
 
 Route::get('/profil', 'HomeController@profil')->name('profil');
@@ -48,9 +34,12 @@ Route::get('/suchen', function (){
 })->name('suchen');
 
 
-Route::get('/Veranstaltungen/{Name}', function ($name){
-   $VerNamen = \App\Veranstaltungen::where('name', $name)->firstOrFail();
+Route::get('/Veranstaltungen/{name}', function ($name){
+   $VerNamen = \App\Veranstaltungen::where('Name', $name);
 
-   return View::make('Vprofil')->with('name', $VerNamen);
+   return View::make('Vprofil')->with('Vprofil', $VerNamen);
 })->name('VProfil');
 
+Route::get('/bla', function(){
+    return ("Hallo");
+});

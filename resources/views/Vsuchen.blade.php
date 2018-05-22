@@ -34,9 +34,13 @@
         </div>
         <div class="col-md-8 col-sm-12 Ergebnis">
             @foreach($Vsuchen as $vsuchen)
+               <table>
                 <h1 id="VerName"> {{ $vsuchen->Name }}</h1>
-                <h2 id="VerInfo"> Veranstaltungsort: {{ $vsuchen->Ort }}   |    Veranstalter: {{ $vsuchen->Veranstalter }}</h2>
-                @endforeach
+                <td id="VerInfo"> Veranstaltungsort: {{ $vsuchen->Ort }}</td>
+                   <td> | </td>
+                   <td id="VerInfo">Veranstalter: {{ $vsuchen->Veranstalter }}</td>
+               </table>
+            @endforeach
         </div>
         </div>
     </div>
