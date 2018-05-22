@@ -40,6 +40,7 @@ Route::get('/profil', 'HomeController@profil')->name('profil');
 
 Route::get('/profile', 'UserController@profile')->name('profile');
 Route::post('hochladen', 'UploadController@hochladen')->name('hochladen');
+Route::post('profile', 'UserController@update_avatar');
 
 Route::get('/suchen', function (){
     $Vsuchen = \App\Veranstaltungen::all();

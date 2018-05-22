@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>EasyPlan</title>
+    <link rel="shortcut icon" type="image/gif" href="img/Logo-EasyPlan.gif">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="css/Startseitecss.css">
     <!--  <link rel="stylesheet" href="pfad-zur-css-datei/font-awesome.min.css">-->
@@ -75,6 +76,15 @@
         </li>
 
         <?php }?>
+<div class="col-md-1">
+    <li class="dropdown ">
+        <a href="#" class=dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+            <img src="/uploads/avatar/Deutschlandflagge.png" style="width:30px; height:30px; float:left; border-radius:50%; margin-right:25px;">
+            <span class="caret"></span>
+        </a>
+
+    </li>
+</div>
 
 
     </div>
