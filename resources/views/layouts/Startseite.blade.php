@@ -25,19 +25,58 @@
                 <a class="nav-link" id="Home" href="{{ route('home') }}">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Mein Profil</a>
+                <a class="nav-link" id="Profil" href=
+                <?php if (\Auth::check()){ ?>
+                        "{{ route('profil')}}">Mein Profil
+                <?php } else {?>
+                "#" onClick="alert('Bitte melde dich erst an, um auf dein Profil zugreifen zu können!')">Mein Profil
+                <?php } ?>
+                </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{ route('erstellen') }}">Veranstaltung erstellen</a>
+
+               <a class="nav-link"
+                   href=
+                   <?php if (\Auth::check()){ ?>
+                           "{{ route('suchen') }}">
+                   <?php } else {?>
+                "#" onClick="alert('Bitte melde dich erst an um eine Veranstaltung zu erstellen!')">
+                   <?php } ?>Veranstaltung suchen</a>
+
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{ route('suchen') }}">Veranstaltung suchen</a>
+                <a class="nav-link" href=
+                <?php if (\Auth::check()){ ?>
+                        "{{ route('erstellen') }}">
+                    <?php } else {?>
+                    "#" onClick="alert('Bitte melde dich erst an um eine Veranstaltung zu erstellen!')">
+                    <?php } ?>Veranstaltung erstellen</a>
             </li>
         </ul>
-        <form class="form-inline my-2 my-lg-0" action="{{ route('login') }}">
+
+        <?php if (!Auth::check()){ ?>
+
+        <form class="form-inline my-2 my-lg-0" action="{{ route('login') }}" >
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Login</button>
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Registrieren</button>
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Register</button>
         </form>
+        <?php }?>
+        <?php if (\Auth::check()){ ?>
+
+        <li class="dropdown">
+            <a href="#" class=dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                {{ Auth::user()->name }} <span class="caret"></span>
+            </a>
+
+            <ul class="dropdown-menu" role="menu">
+                <li><a href="{{URL('profile')}}"><i class="fa fa-btn fa-user"></i>Profil bearbeiten</a> </li>
+                <li><a href="{{URL('logout')}}"><i class="fa fa-btn fa-sign-out"></i>Logout</a> </li>
+            </ul>
+        </li>
+
+        <?php }?>
+
+
     </div>
 </nav>
 
@@ -146,6 +185,5 @@
     </div>
     </div>
 </footer>
-<!--/.Footer-->
 </body>
 </html>
