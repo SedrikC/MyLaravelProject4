@@ -1,0 +1,14 @@
+#datenschutz{
+    position: relative;
+    top: 20px;
+    padding-bottom: 20px;
+    font-size: 12px;
+}
+#datenschutzheader{
+    margin-top: 20px;
+    text-align: left;
+    font-family: Helonia;
+    font-style: Italic;
+    color: #568BFF;
+    font-size: 30px;
+}

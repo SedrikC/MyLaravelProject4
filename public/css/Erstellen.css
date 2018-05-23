@@ -1,0 +1,13 @@
+#AuswahlErstellen{
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    width: 250px;
+    border: solid #568BFF;
+    padding: 10px;
+}
+#weiter{
+    position: relative;
+    margin-top: 10px;
+}

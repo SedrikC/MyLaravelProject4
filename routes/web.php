@@ -27,6 +27,8 @@ Route::get('/profil', 'HomeController@profil')->name('profil');
 Route::get('/profile', 'UserController@profile')->name('profile');
 Route::post('hochladen', 'UploadController@hochladen')->name('hochladen');
 
+Route::get('/datenschutz', 'HomeController@datenschutz')->name('datenschutz');
+
 Route::get('/suchen', function (){
     $Vsuchen = \App\Veranstaltungen::all();
 

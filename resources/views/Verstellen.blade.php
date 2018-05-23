@@ -6,7 +6,7 @@
 
 
     <div id="AuswahlErstellen">
-        <div class="Container" class="col-md-4">
+        <div class="Container" class="col-md-4 col-sm-12">
         Veranstaltungsname
         <br>
         <input type="text" size="24px" maxlength="30" name="Veranstaltungsname" placeholder="z.B. Grillparty">
@@ -23,7 +23,8 @@
             <option>Mimimi ich suche Freunde</option>
             <option>Sonstiges</option>
         </select>
-        <input type="submit" name="WeiterButton" value="Weiter">
+            <br>
+        <input id="weiter" type="submit" name="WeiterButton" value="Weiter">
     </div>
     </div>
 
