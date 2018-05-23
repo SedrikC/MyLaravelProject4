@@ -75,8 +75,8 @@
 
             <ul class="dropdown-menu" role="menu">
                 <li><a href="{{URL('profile')}}"><i class="fa fa-btn fa-user"></i>Profil bearbeiten</a> </li>
-                <li><a href="{{URL('profile')}}"><i class="fa fa-btn fa-cog"></i>Einstellungen</a> </li>
-                <li><a href="{{URL('profile')}}"><i class="fa fa-btn fa-envelope"></i>Kontakt</a> </li>
+                <li><a href="{{URL('Einstellungen')}}"><i class="fa fa-btn fa-cog"></i>Einstellungen</a> </li>
+                <li><a href="{{URL('Kontakt')}}"><i class="fa fa-btn fa-envelope"></i>Kontakt</a> </li>
                 <li><a href="{{URL('logout')}}"><i class="fa fa-btn fa-sign-out"></i>Logout</a> </li>
 
 

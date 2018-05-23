@@ -49,3 +49,4 @@ Route::get('/Veranstaltungen/{name}', function ($name){
 
 Route::get('/suchen/{name}/{ort}', 'RessourceController@CheckVeranstaltung')->name('checker');
 
+Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
