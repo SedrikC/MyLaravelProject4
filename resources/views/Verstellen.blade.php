@@ -17,14 +17,14 @@
         <br>
         Genre
         <br>
-        <select size="1" name="Gerne">
+        <select size="1" name="Genre">
             <option>Party</option>
             <option>Sport</option>
             <option>Mimimi ich suche Freunde</option>
             <option>Sonstiges</option>
         </select>
             <br>
-        <input id="weiter" type="submit" name="WeiterButton" value="Weiter">
+            <a href="{{route('erstellen2')}}"><input id="weiter" type="submit" name="WeiterButton" value="Weiter"></a>
     </div>
     </div>
 

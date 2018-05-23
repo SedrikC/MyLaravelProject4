@@ -29,6 +29,9 @@ class HomeController extends Controller
     public function erstellen(){
         return view('Verstellen');
     }
+    public function erstellen2(){
+        return view('Verstellen2');
+    }
     public function profil(){
         return view('Profil');
     }
