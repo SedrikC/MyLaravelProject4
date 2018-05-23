@@ -169,16 +169,16 @@
                 </h6>
                 <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
                 <p class="foot">
-                    <a href="#!">Mein Account</a>
+                    <a href="{{URL('profile')}}">Mein Account</a>
                 </p>
                 <p class="foot">
                     <a href="#!">Impressum</a>
                 </p>
                 <p class="foot">
-                    <a href="#!">Datenschutzrichtlinien</a>
+                    <a href="{{URL('datenschutz')}}">Datenschutzrichtlinien</a>
                 </p>
                 <p class="foot">
-                    <a href="#!">Kontakt</a>
+                    <a href="{{URL('Kontakt')}}">Kontakt</a>
                 </p>
             </div>
             <!--/.Third column-->
