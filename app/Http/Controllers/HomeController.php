@@ -32,6 +32,15 @@ class HomeController extends Controller
     public function profil(){
         return view('Profil');
     }
+    public function datenschutz(){
+        return view('Datenschutz');
+    }
+    public function Einstellungen(){
+        return view('Einstellungen');
+    }
+    public function Kontakt(){
+        return view('Kontakt');
+    }
 
   //  public function login(){
   //      return view('login');
