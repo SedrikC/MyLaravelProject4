@@ -1,9 +1,15 @@
 <?php namespace App\Http\Controllers;
 
-use Illuminate\Support\Facades\Input;
-use Request;
-use Auth;
+
+
+namespace App\Http\Controllers;
+
+use Illuminate\Database\Eloquent\Model;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Image;
+
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Http\Request;
 
 class UserController extends Controller
 {

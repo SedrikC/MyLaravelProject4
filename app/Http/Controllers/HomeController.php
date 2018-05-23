@@ -33,10 +33,6 @@ class HomeController extends Controller
         return view('Profil');
     }
 
-    public function datenschutz(){
-        return view('Datenschutz');
-    }
-
   //  public function login(){
   //      return view('login');
   //  }

@@ -2,6 +2,7 @@
 
 @section('content')
 
+    <link rel="stylesheet" href="css/Profile.css">
     <div>
         <ul>
             <li>
