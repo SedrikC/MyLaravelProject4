@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Input;
 
+
 class UploadController extends Controller {
 
     public function hochladen(){

@@ -23,8 +23,13 @@ Route::get('/erstellen', 'HomeController@erstellen')->name('erstellen');
 
 Route::get('/profil', 'HomeController@profil')->name('profil');
 
+Route::get('/Kontakt', 'HomeController@Kontakt')->name('Kontakt');
+
+Route::get('/Einstellungen', 'HomeController@Einstellungen')->name('Einstellungen');
+
 
 Route::get('/profile', 'UserController@profile')->name('profile');
+
 Route::post('hochladen', 'UploadController@hochladen')->name('hochladen');
 Route::post('profile', 'UserController@update_avatar');
 

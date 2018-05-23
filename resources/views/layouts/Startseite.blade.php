@@ -6,7 +6,8 @@
     <link rel="shortcut icon" type="image/gif" href="img/Logo-EasyPlan.gif">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="css/Startseitecss.css">
-    <link rel="stylesheet" href="css/Profile.css">
+
+
     <!--  <link rel="stylesheet" href="pfad-zur-css-datei/font-awesome.min.css">-->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
@@ -73,8 +74,8 @@
 
             <ul class="dropdown-menu" role="menu">
                 <li><a href="{{URL('profile')}}"><i class="fa fa-btn fa-user"></i>Profil bearbeiten</a> </li>
-                <li><a href="{{URL('profile')}}"><i class="fa fa-btn fa-cog"></i>Einstellungen</a> </li>
-                <li><a href="{{URL('profile')}}"><i class="fa fa-btn fa-envelope"></i>Kontakt</a> </li>
+                <li><a href="{{URL('Einstellungen')}}"><i class="fa fa-btn fa-cog"></i>Einstellungen</a> </li>
+                <li><a href="{{URL('Kontakt')}}"><i class="fa fa-btn fa-envelope"></i>Kontakt</a> </li>
                 <li><a href="{{URL('logout')}}"><i class="fa fa-btn fa-sign-out"></i>Logout</a> </li>
 
 
@@ -96,7 +97,6 @@
 
     </div>
 </nav>
-
 
 @yield('content')
 
@@ -167,7 +167,7 @@
                 </h6>
                 <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
                 <p class="foot">
-                    <a href="#!">Mein Account</a>
+                    <a href="{{URL('profile')}}">Mein Account</a>
                 </p>
                 <p class="foot">
                     <a href="#!">Impressum</a>
@@ -176,7 +176,7 @@
                     <a href="#!">Datenschutzrichtlinien</a>
                 </p>
                 <p class="foot">
-                    <a href="#!">Kontakt</a>
+                    <a href="{{URL('Kontakt')}}">Kontakt</a>
                 </p>
             </div>
             <!--/.Third column-->
@@ -184,7 +184,7 @@
             <!--Fourth column-->
             <div class="col-md-4 col-lg-3 col-xl-3">
                 <h6 class="text-uppercase font-weight-bold">
-                    <strong>Contact</strong>
+                    <strong><a href="{{URL('Kontakt')}}">Kontakt</a></strong>
                 </h6>
                 <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
                 <p class="foot">
