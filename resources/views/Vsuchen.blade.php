@@ -8,28 +8,23 @@
         <div class="row">
         <div class="col-md-3 col-sm-12">
             <div id="AuswahlSuchen">
-                Veranstaltungsname
-                <br>
+                <form action="/suchen">
+                    <label for="Veranstaltungsname">Veranstaltungsname</label>
                 <input type="text" size="24px" maxlength="30" name="Veranstaltungsname" placeholder="z.B. Grillparty">
-                <br>
-                Veranstaltungsort
-                <br>
+                <label for="Veranstaltungsort">Veranstaltungsort</label>
                 <input type="text" size="24px" maxlength="20" name="Veranstaltungsort" placeholder="z.B. Konstanz">
-                <br>
-                Genre
-                <br>
+                    <label for="Veranstalter">Veranstalter</label>
+                    <input type="text" size="24px" maxlength="20" name="Veranstalter" placeholder="z.B. Cristiano Ronaldo">
+                    <br>
+                    <label for="Genre">Genre</label>
+                    <br>
                 <select size="1" name="Gerne">
                     <option>Party</option>
                     <option>Sport</option>
                     <option>Mimimi ich suche Freunde</option>
                     <option>Sonstiges</option>
                 </select>
-                <br>
-                Datum
-                <br>
-                <input type="date" size="24px" name="Datum">
-                <br>
-                <input id="SuchenButton" type="submit" name="SuchenButton" value="Suchen">
+                    <button type="submit"> Suchen</button>
             </div>
         </div>
         <div class="col-md-8 col-sm-12 Ergebnis">

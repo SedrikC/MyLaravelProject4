@@ -9,7 +9,7 @@
 
         <div class="row Kontakt">
             <div class="col-md-3 Sedrik_bild">
-                <img src="/uploads/avatar/sedrik.jpg">
+                <img src="/uploads/avatar/63.jpg">
             </div>
 
             <div class="col-md-3 Sedrik">
