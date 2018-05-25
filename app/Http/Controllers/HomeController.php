@@ -45,7 +45,7 @@ class HomeController extends Controller
         return view('Kontakt');
     }
     public function test(){
-        return view('test');
+        return view('Veranstaltung');
     }
 
   //  public function login(){

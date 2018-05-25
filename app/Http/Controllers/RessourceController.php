@@ -20,10 +20,10 @@ class RessourceController extends Controller
         return view('Vsuchen')->with('Vsuchen',$result);
     }
 
-    public function VProfil($id){
+    public function Veranstaltung($id){
         $Veranstaltungen = Veranstaltungen::where('id', $id);
 
-        return view('VProfil')->with('VProfil', $Veranstaltungen);
+        return view('Veranstaltung')->with('Veranstaltung', $Veranstaltungen);
     }
     /**
      * Display a listing of the resource.

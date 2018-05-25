@@ -1,7 +1,9 @@
 @extends('layouts.Startseite')
 
 @section('content')
-
+<head>
+    <link rel="stylesheet" href="css/Erstellen.css">
+</head>
     <h1>Veranstaltung suchen</h1>
 
     <div class="Container">
@@ -32,7 +34,7 @@
         <div class="col-md-8 col-sm-12 Ergebnis">
             @foreach($Vsuchen as $vsuchen)
                <table>
-                   <a href ="{{route('VProfil', $vsuchen->id)}}"> <h1 id="VerName"> {{ $vsuchen->Name }}</h1></a>
+                   <a href ="{{route('Veranstaltung', $vsuchen->id)}}"> <h1 id="VerName"> {{ $vsuchen->Name }}</h1></a>
                    <td id="VerInfo"> Veranstaltungsort: {{ $vsuchen->Ort }}</td>
                    <td id="VerInfo">Veranstalter: {{ $vsuchen->Veranstalter }}</td>
                    <td id="VerInfo">Genre: {{ $vsuchen->Genre }}</td>
