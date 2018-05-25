@@ -21,7 +21,7 @@ class RessourceController extends Controller
     }
 
     public function Veranstaltung($id){
-        $Veranstaltungen = Veranstaltungen::where('id', $id);
+        $Veranstaltungen = Veranstaltungen::where('id', $id)->get();
 
         return view('Veranstaltung')->with('Veranstaltung', $Veranstaltungen);
     }
