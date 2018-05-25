@@ -18,15 +18,17 @@
                     <br>
                     <label for="Genre">Genre</label>
                     <br>
-                <select size="1" name="Gerne">
-                    <option>Party</option>
-                    <option>Sport</option>
-                    <option>Mimimi ich suche Freunde</option>
-                    <option>Sonstiges</option>
+                    <select size="1" name="Genre">
+                        <option>Party</option>
+                        <option>Sport</option>
+                        <option>Mimimi ich suche Freunde</option>
+                        <option>Sonstiges</option>
                 </select>
                     <button type="submit"> Suchen</button>
+                </form>
             </div>
         </div>
+
         <div class="col-md-8 col-sm-12 Ergebnis">
             @foreach($Vsuchen as $vsuchen)
                <table>
@@ -36,7 +38,9 @@
                    <td id="VerInfo">Veranstalter: {{ $vsuchen->Veranstalter }}</td>
                </table>
             @endforeach
+
         </div>
+
         </div>
     </div>
 

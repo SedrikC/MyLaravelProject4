@@ -7,9 +7,6 @@
     <link rel="shortcut icon" type="image/gif" href="img/Logo-EasyPlan.gif">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="css/Startseitecss.css">
-    <link rel="stylesheet" href="css/Profile.css">
-    <link rel="stylesheet" href="css/Datenschutz.css">
-    <link rel="stylesheet" href="css/Erstellen.css">
     <!--  <link rel="stylesheet" href="pfad-zur-css-datei/font-awesome.min.css">-->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
@@ -99,7 +96,6 @@
 
     </div>
 </nav>
-
 
 @yield('content')
 

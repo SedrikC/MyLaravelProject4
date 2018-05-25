@@ -33,15 +33,22 @@ Route::get('/profile', 'UserController@profile')->name('profile');
 
 Route::post('hochladen', 'UploadController@hochladen')->name('hochladen');
 
+Route::get("create", 'profiling@index');
+Route::post("store", 'profiling@store');
+Route::get('/insert', function (){
+    return view('InsertForm');
+});
+Route::post('insert','Controller@insert');
+
 Route::get('/datenschutz', 'HomeController@datenschutz')->name('datenschutz');
 
-/**
+
 Route::get('/suchen', function (){
     $Vsuchen = \App\Veranstaltungen::where('Ort', 'LIKE', '%'.'heim'.'%')->get();
 
     return View::make('Vsuchen')->with('Vsuchen', $Vsuchen);
 })->name('suchen');
-**/
+
 
 Route::get('/suchen', 'RessourceController@suchen')->name('suchen');
 

@@ -14,7 +14,10 @@ class RessourceController extends Controller
         $Genre = $request->input('Genre');
         $Veranstalter = $request->input('Veranstalter');
 
-        $result = Veranstaltungen::where('Name', 'LIKE', '%'.$Veranstaltungsname.'%')->where('Ort', 'LIKE', '%'.$Veranstaltungsort.'%')->where('Genre', 'LIKE', '%'.$Genre.'%')->where('Veranstalter', 'LIKE', '%'.$Veranstalter.'%')->get();
+        $result = Veranstaltungen::where('Name', 'LIKE', '%'.$Veranstaltungsname.'%')->where('Ort', 'LIKE', '%'.$Veranstaltungsort.'%')
+          //     ->where('Genre', 'LIKE', '%'.$Genre.'%')
+          ->where('Veranstalter', 'LIKE', '%'.$Veranstalter.'%')
+            ->get();
 
         return view('Vsuchen')->with('Vsuchen',$result);
     }

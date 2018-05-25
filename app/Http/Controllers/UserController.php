@@ -6,10 +6,14 @@ namespace App\Http\Controllers;
 
 use Illuminate\Database\Eloquent\Model;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
-use Image;
+
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Routing\Controller as BaseController;
+
 
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Http\Request;
+
 
 class UserController extends Controller
 {
