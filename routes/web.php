@@ -54,5 +54,8 @@ Route::get('/suchen', 'RessourceController@suchen')->name('suchen');
 
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
 
-Route::get('/Veranstaltungen/{name}', 'RessourceController@Veranstaltung')->name('Veranstaltung');
-Route::get('/test', 'HomeController@test')->name('Veranstaltung');
+
+
+Route::get('/Veranstaltungen/{$id}', 'RessourceController@Veranstaltung')->name('Veranstaltung');
+
+
