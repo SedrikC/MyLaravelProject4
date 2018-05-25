@@ -11,3 +11,11 @@
     position: relative;
     margin-top: 10px;
 }
+
+#genre{
+    width: 210px;
+}
+
+#VerInfo{
+    padding-left: 20px;
+}

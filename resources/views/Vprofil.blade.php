@@ -2,7 +2,6 @@
 
 @section('content')
 
-    <h1>Veranstaltung</h1>
-
+    <h1 class="test">Veranstaltung</h1>
 
 @endsection

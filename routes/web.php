@@ -52,12 +52,16 @@ Route::get('/suchen', function (){
 
 Route::get('/suchen', 'RessourceController@suchen')->name('suchen');
 
+Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
 
+Route::get('/Veranstaltungen/{name}', 'RessourceController@VProfil')->name('VProfil');
+/**
 Route::get('/Veranstaltungen/{name}', function ($name){
    $VerNamen = \App\Veranstaltungen::where('Name', $name);
 
    return View::make('Vprofil')->with('Vprofil', $VerNamen);
 })->name('VProfil');
+**/
 
 
-Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
+Route::get('/test', 'HomeController@test')->name('test');
