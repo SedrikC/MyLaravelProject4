@@ -40,6 +40,9 @@ Route::get('/insert', function (){
 });
 Route::post('insert','Controller@insert');
 
+Route::post('insert_veranstaltungen1','Controller@insert_veranstaltungen1');
+
+
 Route::get('/datenschutz', 'HomeController@datenschutz')->name('datenschutz');
 
 
