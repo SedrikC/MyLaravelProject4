@@ -31,4 +31,18 @@ class Controller extends BaseController
 
         return view('profile');
     }
+
+
+    function insert_veranstaltungen1(Request $req){
+        $Name =$req->input('Name');
+        $Ort = $req->input('Ort');
+        $datum = $req->input('datum');
+        $Veranstalter = $req->input('Veranstalter');
+//
+        $data = array('Name'=>$Name, "Ort"=>$Ort,"datum"=>$datum, "Veranstalter"=>$Veranstalter);
+
+        DB::table('veranstaltungen')->insert($data);
+
+        return view('Verstellen');
+    }
 }
