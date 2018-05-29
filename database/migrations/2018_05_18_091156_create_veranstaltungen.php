@@ -17,6 +17,7 @@ class CreateVeranstaltungen extends Migration
             $table->increments('id')->unique();
             $table->string('Name');
             $table->string('Ort');
+            $table->string('Genre');
             $table->string('Veranstalter');
             $table->timestamps();
         });

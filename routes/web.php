@@ -49,10 +49,6 @@ Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
 
 
 
-Route::get('/Veranstaltungen/{$id}', function ($id){
-    $Veranstaltungen = Veranstaltungen::where('id', $id)->get();
-
-    return view('Veranstaltung')->with('Veranstaltung', $Veranstaltungen);
-})->name('Veranstaltung');
+Route::get('/Veranstaltung/{id}', 'RessourceController@Veranstaltung')->name('Veranstaltung');
 
 

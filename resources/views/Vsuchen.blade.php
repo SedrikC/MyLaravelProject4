@@ -20,11 +20,11 @@
                     <br>
                     <label for="Genre">Genre</label>
                     <br>
-                <select size="1" id="genre" name="Gerne">
-                    <option>Party</option>
-                    <option>Sport</option>
-                    <option>Öffentlich</option>
-                    <option>Sonstiges</option>
+                <select size="1" id="genre" name="Genre">
+                    <option label="Party">Party</option>
+                    <option label="Sport">Sport</option>
+                    <option label="Öffentlich">Öffentlich</option>
+                    <option label="Sonstige">Sonstiges</option>
                 </select>
                     <br>
                     <button type="submit" id="weiter"> Suchen</button>
