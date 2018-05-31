@@ -46,21 +46,14 @@ Route::post('insert_veranstaltungen1','Controller@insert_veranstaltungen1');
 Route::get('/datenschutz', 'HomeController@datenschutz')->name('datenschutz');
 
 
-Route::get('/suchen', function (){
-    $Vsuchen = \App\Veranstaltungen::where('Ort', 'LIKE', '%'.'heim'.'%')->get();
-
-    return View::make('Vsuchen')->with('Vsuchen', $Vsuchen);
-})->name('suchen');
-
-
 Route::get('/suchen', 'RessourceController@suchen')->name('suchen');
 
-
-Route::get('/Veranstaltungen/{name}', function ($name){
-   $VerNamen = \App\Veranstaltungen::where('Name', $name);
-
-   return View::make('Vprofil')->with('Vprofil', $VerNamen);
-})->name('VProfil');
-
-
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
+
+
+
+Route::get('/Veranstaltung/{id}', 'RessourceController@Veranstaltung')->name('Veranstaltung');
+
+Route::post('/StoreComment', 'CommentController@store')->name('StoreComment');
+
+

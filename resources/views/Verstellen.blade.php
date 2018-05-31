@@ -1,9 +1,11 @@
 @extends('layouts.Startseite')
 
 @section('content')
-
+<head>
+    <link rel="stylesheet" href="css/Erstellen.css">
+</head>
     <h1>Veranstaltung erstellen</h1>
-
+<div id="AuswahlErstellen">
     <form action="/insert_veranstaltungen1" method="post">
         {{csrf_field()}}
         Veranstaltungsname<br>
@@ -14,15 +16,26 @@
         <br>
         <input type="text" size="24px" maxlength="20" name="Ort" placeholder="z.B. Konstanz">
         <br>
-        Veranstalter <br>
+        Veranstalter
+        <br>
         <input type="text" size="24px" maxlength="20" name="Veranstalter" placeholder="z.B. Dominik">
         <br>
-        Datum<br>
-                <input type="date" size="24px"name="datum"> <br>
+        Genre
+        <br>
+        <select size="1" id="genre" name="Genre">
+            <option label="Party">Party</option>
+            <option label="Sport">Sport</option>
+            <option label="Öffentlich">Öffentlich</option>
+            <option label="Sonstige">Sonstiges</option>
+        </select>
+        <br>
+        Datum
+        <br>
+        <input type="date" size="24px"name="datum"> <br>
 
-               <input type="submit" name="submit" value="Add">
+        <input id="weiter" type="submit" name="submit" value="Add">
 
-
+</div>
    <!-- <div id="AuswahlErstellen">
         <div class="Container" class="col-md-4 col-sm-12">
         Veranstaltungsname

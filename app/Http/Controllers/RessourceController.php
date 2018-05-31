@@ -15,14 +15,16 @@ class RessourceController extends Controller
         $Veranstalter = $request->input('Veranstalter');
 
         $result = Veranstaltungen::where('Name', 'LIKE', '%'.$Veranstaltungsname.'%')->where('Ort', 'LIKE', '%'.$Veranstaltungsort.'%')
-          //     ->where('Genre', 'LIKE', '%'.$Genre.'%')
-          ->where('Veranstalter', 'LIKE', '%'.$Veranstalter.'%')
-            ->get();
+            ->where('Genre', 'LIKE', '%'.$Genre.'%')->where('Veranstalter', 'LIKE', '%'.$Veranstalter.'%')->get();
 
         return view('Vsuchen')->with('Vsuchen',$result);
     }
 
+    public function Veranstaltung($id){
+        $Veranstaltungen = Veranstaltungen::where('id', $id)->get();
 
+        return view('Veranstaltung')->with('Events', $Veranstaltungen);
+    }
     /**
      * Display a listing of the resource.
      *
