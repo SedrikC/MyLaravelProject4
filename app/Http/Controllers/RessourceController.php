@@ -21,6 +21,8 @@ class RessourceController extends Controller
 
         return view('Vsuchen')->with('Vsuchen',$result);
     }
+
+
     /**
      * Display a listing of the resource.
      *
