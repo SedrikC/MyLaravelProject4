@@ -38,6 +38,7 @@
                    <td id="VerInfo"> Veranstaltungsort: {{ $vsuchen->Ort }}</td>
                    <td id="VerInfo">Veranstalter: {{ $vsuchen->Veranstalter }}</td>
                    <td id="VerInfo">Genre: {{ $vsuchen->Genre }}</td>
+                   <td id="VerInfo">Datum: {{ $vsuchen->Datum }}</td>
                </table>
             @endforeach
         </div>

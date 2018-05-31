@@ -2,15 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Foundation\Bus\DispatchesJobs;
+use Illuminate\Routing\Controller as BaseController;
+use Illuminate\Foundation\Validation\ValidatesRequests;
+use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Http\Request;
+use DB;
 
-class CommentController extends Controller
+class CommentController extends BaseController
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
     public function index()
     {
         //
@@ -34,15 +35,17 @@ class CommentController extends Controller
      */
     public function store(Request $request)
     {
-        //
+    $Comment = $request->input('comment');
+    $id = $request->input('ID');
+
+    $data = array('id'=>$id, 'Comment'=>$Comment);
+
+    DB::table('comment')->insert($data);
+
+    return view('Veranstaltung');
+
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function show($id)
     {
         //

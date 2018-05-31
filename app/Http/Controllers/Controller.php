@@ -37,9 +37,10 @@ class Controller extends BaseController
         $Name =$req->input('Name');
         $Ort = $req->input('Ort');
         $datum = $req->input('datum');
+        $Genre = $req->input('Genre');
         $Veranstalter = $req->input('Veranstalter');
 //
-        $data = array('Name'=>$Name, "Ort"=>$Ort,"datum"=>$datum, "Veranstalter"=>$Veranstalter);
+        $data = array('Name'=>$Name, "Ort"=>$Ort,"datum"=>$datum, "Veranstalter"=>$Veranstalter, 'Genre'=>$Genre);
 
         DB::table('veranstaltungen')->insert($data);
 
