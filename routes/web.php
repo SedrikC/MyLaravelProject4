@@ -29,9 +29,9 @@ Route::get('/Kontakt', 'HomeController@Kontakt')->name('Kontakt');
 Route::get('/Einstellungen', 'HomeController@Einstellungen')->name('Einstellungen');
 
 
-Route::get('/profile', 'UserController@profile')->name('profile');
+Route::get('/profile', 'UserController@index')->name('profile');
+Route::post('profile', 'UserController@update_avatar');
 
-Route::post('hochladen', 'UploadController@hochladen')->name('hochladen');
 
 Route::get("create", 'profiling@index');
 Route::post("store", 'profiling@store');
@@ -45,6 +45,7 @@ Route::post('insert_veranstaltungen1','Controller@insert_veranstaltungen1');
 
 Route::get('/datenschutz', 'HomeController@datenschutz')->name('datenschutz');
 
+Route::get('/select_mein_profil','Controller@select_mein_profil');
 
 Route::get('/suchen', 'RessourceController@suchen')->name('suchen');
 

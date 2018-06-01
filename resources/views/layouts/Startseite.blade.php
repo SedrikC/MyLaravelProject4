@@ -86,7 +86,7 @@
 <div class="col-md-1">
     <li class="dropdown ">
         <a href="#" class=dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-            <img src="/uploads/avatar/Deutschlandflagge.png" style="width:30px; height:30px; float:left; border-radius:50%; margin-right:25px;">
+            <img src="/uploads/avatar/{{Auth::user()->avatar}}" style="width:30px; height:30px; float:left; border-radius:50%; margin-right:25px;">
             <span class="caret"></span>
         </a>
 
