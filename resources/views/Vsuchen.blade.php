@@ -11,15 +11,13 @@
         <div class="col-md-3 col-sm-12">
             <div id="AuswahlSuchen">
                 <form action="/suchen">
-                    <label for="Veranstaltungsname">Veranstaltungsname</label>
-                <input type="text" size="24px" maxlength="30" name="Veranstaltungsname" placeholder="z.B. Grillparty">
-                <label for="Veranstaltungsort">Veranstaltungsort</label>
-                <input type="text" size="24px" maxlength="20" name="Veranstaltungsort" placeholder="z.B. Konstanz">
-                    <label for="Veranstalter">Veranstalter</label>
-                    <input type="text" size="24px" maxlength="20" name="Veranstalter" placeholder="z.B. Cristiano Ronaldo">
-                    <br>
-                    <label for="Genre">Genre</label>
-                    <br>
+                    <label for="Veranstaltungsname">Veranstaltungsname</label><br>
+                <input type="text" size="24px" maxlength="30" name="Veranstaltungsname" placeholder="z.B. Grillparty"><br>
+                <label for="Veranstaltungsort">Veranstaltungsort</label><br>
+                <input type="text" size="24px" maxlength="20" name="Veranstaltungsort" placeholder="z.B. Konstanz"><br>
+                    <label for="Veranstalter">Veranstalter</label><br>
+                    <input type="text" size="24px" maxlength="20" name="Veranstalter" placeholder="z.B. Cristiano Ronaldo"><br>
+                    <label for="Genre">Genre</label><br>
                 <select size="1" id="genre" name="Genre">
                     <option label="Party">Party</option>
                     <option label="Sport">Sport</option>

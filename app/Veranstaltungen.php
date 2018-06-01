@@ -9,6 +9,6 @@ class Veranstaltungen extends Model
   protected $table = 'veranstaltungen';
 
   public function comments(){
-      return $this->hasMany('app/Comment');
+      return $this->hasMany('app/comments');
   }
 }

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Ressource;
 use App\Veranstaltungen;
+use App\comments;
 use Illuminate\Http\Request;
 
 class RessourceController extends Controller
@@ -23,7 +24,9 @@ class RessourceController extends Controller
     public function Veranstaltung($id){
         $Veranstaltungen = Veranstaltungen::where('id', $id)->get();
 
-        return view('Veranstaltung')->with('Events', $Veranstaltungen);
+        $Comment = comments::where('Veranstaltungsid',$id)->get();
+
+        return view('Veranstaltung')->with('Events', $Veranstaltungen)->with('Comment', $Comment);
     }
     /**
      * Display a listing of the resource.

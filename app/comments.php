@@ -4,9 +4,9 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Comment extends Model
+class comments extends Model
 {
-    protected $table = 'comment';
+    protected $table = 'comments';
 
     public function comments(){
         return $this->belongsTo('app/Veranstaltungen');

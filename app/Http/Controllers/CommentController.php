@@ -7,6 +7,9 @@ use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Http\Request;
+use Auth;
+use App\User;
+
 use DB;
 
 class CommentController extends BaseController
@@ -36,11 +39,14 @@ class CommentController extends BaseController
     public function store(Request $request)
     {
     $Comment = $request->input('comment');
-    $id = $request->input('ID');
+    $VerID = $request->input('ID');
+    $User =Auth::user();
+    $Name = $User->name;
 
-    $data = array('id'=>$id, 'Comment'=>$Comment);
 
-    DB::table('comment')->insert($data);
+    $data = array('Comment'=>$Comment, 'VeranstaltungsID'=>$VerID, 'Username'=>$Name);
+
+    DB::table('comments')->insert($data);
 
     return view('Veranstaltung');
 
