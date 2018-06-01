@@ -23,41 +23,41 @@
             </div>
             <div class="col-md-9 profilinhalt">
                 <table class="table table-user-information">
-
+@foreach($Daten as $daten)
 
                   <tbody>
                         <tr>
                         <td>Name</td>
-                        <td>-</td>
+                        <td>{{ $daten->lastName }}</td>
                     </tr>
                     <tr>
                         <td>Vorname</td>
-                        <td>-</td>
+                        <td>{{ $daten->firstName }}</td>
                     </tr>
                     <tr>
                         <td>Geburtstag</td>
-                        <td>-</td>
+                        <td>{{ $daten->geburtsdatum }}</td>
                     </tr>
 
                     <tr>
                     <tr>
                         <td>Geschlecht</td>
-                        <td>-</td>
+                        <td>{{ $daten->geschlecht }}</td>
                     </tr>
                     <tr>
                         <td>Addresse</td>
-                        <td>-</td>
+                        <td>{{ $daten->plz }} {{ $daten->strasse }}</td>
                     </tr>
                     <tr>
                         <td>Email</td>
                         <td><a href="mailto:info@support.com">info@support.com</a></td>
                     </tr>
                     <td>Handynummer</td>
-                    <td>-
+                    <td>{{ $daten->mobile }}
                     </td>
 
                     </tr>
-
+@endforeach
                     </tbody></form>
                 </table>
 
