@@ -7,6 +7,7 @@ use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use DB;
 
 
@@ -14,7 +15,9 @@ class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
+
     function insert(Request $req){
+        $id= Auth::user()->id;
         $firstName =$req->input('firstName');
         $lastName = $req->input('lastName');
         $mobile = $req->input('mobile');
@@ -27,7 +30,9 @@ class Controller extends BaseController
 
         $data = array('firstName'=>$firstName, "lastName"=>$lastName,"mobile"=>$mobile, "geburtsdatum"=>$geburtsdatum, "geschlecht"=>$geschlecht, "ort"=>$ort, "plz"=>$plz, "strasse"=>$strasse, "email"=>$email);
 
-        DB::table('meinprofil')->insert($data);
+        DB::table('meinprofil')
+            ->where('id',$id)
+            ->update($data);
 
         return view('profile');
     }
@@ -46,4 +51,7 @@ class Controller extends BaseController
 
         return view('Verstellen');
     }
+
+
+
 }

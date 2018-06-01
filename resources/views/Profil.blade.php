@@ -15,7 +15,7 @@
         <div class="row Mein_Profil">
             <div class="col-md-2" id="bild">
 
-                <img src="/uploads/avatar/avatar_default.jpg" id="Profilbild">
+                <img src="/uploads/avatar/{{Auth::user()->avatar}}" id="Profilbild">
                 Profilbild ändern
             </div>
             <div class="col-md-1">
@@ -23,8 +23,10 @@
             </div>
             <div class="col-md-9 profilinhalt">
                 <table class="table table-user-information">
-                    <tbody>
-                    <tr>
+
+
+                  <tbody>
+                        <tr>
                         <td>Name</td>
                         <td>-</td>
                     </tr>
@@ -56,7 +58,7 @@
 
                     </tr>
 
-                    </tbody>
+                    </tbody></form>
                 </table>
 
                 <div class="container">
@@ -66,7 +68,7 @@
 
                         </div>
                         <div class="col-md-4">
-                <a href="#" class="btn btn-primary">Profil bearbeiten </a><p></p>
+                <a href="{{ route('profile') }}" class="btn btn-primary">Profil bearbeiten </a><p>   </p>
                         </div>
                     </div>
                 </div>
