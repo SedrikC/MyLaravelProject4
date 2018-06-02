@@ -57,4 +57,10 @@ Route::get('/Veranstaltung/{id}', 'RessourceController@Veranstaltung')->name('Ve
 
 Route::post('/StoreComment', 'CommentController@store')->name('StoreComment');
 
+Route::get('/CreatePoll/{id}', 'HomeController@CreatePoll')->name('Pollerstellen');
+
+Route::post('/StorePoll', 'PollController@store');
+
+Route::get('/Teilnahme', 'TeilnahmeController@store');
+
 

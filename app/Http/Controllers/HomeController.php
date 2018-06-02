@@ -51,6 +51,9 @@ class HomeController extends Controller
     public function test(){
         return view('Veranstaltung');
     }
+    public function CreatePoll($id){
+        return view('Pollerstellen')->with('id', $id);
+    }
 
   //  public function login(){
   //      return view('login');

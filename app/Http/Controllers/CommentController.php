@@ -48,8 +48,6 @@ class CommentController extends BaseController
 
     DB::table('comments')->insert($data);
 
-    return view('Veranstaltung');
-
     }
 
     public function show($id)

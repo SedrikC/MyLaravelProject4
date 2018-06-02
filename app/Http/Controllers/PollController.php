@@ -3,8 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
-class SurveyController extends Controller
+use function Sodium\increment;
+use App\poll;
+use App\option;
+use Auth;
+use DB;
+class PollController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -34,7 +38,34 @@ class SurveyController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $poll = new poll;
+        $poll->titel = $request->input('titel');
+        $User =Auth::user();
+        $poll->User = $User->name;
+        $poll->VerID = $request->input('VerID');
+        $poll->pollid = DB::table('poll')->increment('pollid');
+
+        $option1 = new option;
+        $option1->Name = $request->input('option1');
+
+        $option2 = new option;
+        $option2->Name = $request->input('option2');
+
+        $option3 = new option;
+        $option3->Name = $request->input('option3');
+
+        $option4 = new option;
+        $option4->Name = $request->input('option4');
+
+        $option5 = new option;
+        $option5->Name = $request->input('option5');
+
+        $poll->save();
+        $poll->options()->save($option1);
+        $poll->options()->save($option2);
+        $poll->options()->save($option3);
+        $poll->options()->save($option4);
+        $poll->options()->save($option5);
     }
 
     /**

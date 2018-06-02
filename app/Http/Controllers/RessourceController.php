@@ -2,9 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\option;
 use App\Ressource;
+use App\teilnahme;
 use App\Veranstaltungen;
 use App\comments;
+use App\poll;
 use Illuminate\Http\Request;
 
 class RessourceController extends Controller
@@ -26,7 +29,20 @@ class RessourceController extends Controller
 
         $Comment = comments::where('Veranstaltungsid',$id)->get();
 
-        return view('Veranstaltung')->with('Events', $Veranstaltungen)->with('Comment', $Comment);
+        $Poll = poll::where('VerID', $id)->get();
+
+        $Teilnahme = teilnahme::where('VeranstaltungsID', $id)->where('antwort', 0)->get();
+        $Absagen = teilnahme::where('VeranstaltungsID', $id)->where('antwort', 1)->get();
+
+        $Option = option::where('pollid', 1)->get();
+
+        return view('Veranstaltung')->with('Events', $Veranstaltungen)
+            ->with('Comment', $Comment)
+            ->with('id', $id)
+            ->with('Poll', $Poll)
+            ->with('Teilnahme', $Teilnahme)
+            ->with('Absagen', $Absagen)
+            ->with('Option', $Option);
     }
     /**
      * Display a listing of the resource.

@@ -30,7 +30,7 @@ class Controller extends BaseController
 
         $data = array('firstName'=>$firstName, "lastName"=>$lastName,"mobile"=>$mobile, "geburtsdatum"=>$geburtsdatum, "geschlecht"=>$geschlecht, "ort"=>$ort, "plz"=>$plz, "strasse"=>$strasse, "email"=>$email);
 
-        DB::table('meinprofil')
+        DB::table('mein_profils')
             ->where('id',$id)
             ->update($data);
 
