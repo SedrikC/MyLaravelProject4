@@ -19,6 +19,7 @@
                     <input type="text" size="24px" maxlength="20" name="Veranstalter" placeholder="z.B. Cristiano Ronaldo"><br>
                     <label for="Genre">Genre</label><br>
                 <select size="1" id="genre" name="Genre">
+                    <option label=""></option>
                     <option label="Party">Party</option>
                     <option label="Sport">Sport</option>
                     <option label="Öffentlich">Öffentlich</option>
