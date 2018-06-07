@@ -21,7 +21,7 @@
 
     <h2>Teilnahme</h2>
 
-<form action="/Teilnahme">
+<form action={{action('TeilnahmeController@store')}}>
     Ja <input type="radio" name="answer" value="0" onclick="this.form.submit();">
     Nein<input type="radio" name="answer" value="1" onclick="this.form.submit();">
     <input type="hidden" name="VerID" value="<?php echo $id?>">
@@ -53,7 +53,7 @@
         <textarea size="5" rows="5" name="comment"></textarea>
         <input type="hidden" name="ID" value="<?php echo $id?>">
     <button type="submit">Senden</button>
-</form>
+    </form>
     @foreach( $Comment as $comment)
         <h1>{{ $comment->Username }} Datum: {{ $comment->created_at }}</h1>
         <p>{{  $comment->Comment }}</p>

@@ -49,6 +49,8 @@ class RessourceController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+
     public function index()
     {
     $rs = Ressource::all();
