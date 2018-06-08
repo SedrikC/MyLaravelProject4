@@ -19,6 +19,16 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->string('avatar')->default('default.jpg');
             $table->string('password');
+          //ehemalig von der mein_profil migration
+           /* $table->string('firstName')->default(' - ');
+            $table->string('lastName')->default(' - ');
+            $table->string('mobile')->default(' - ');
+            $table->date('geburtsdatum')->default('00'.'00'.'1001');
+            $table->string('ort')->default(' - ');
+            $table->string('geschlecht')->default(' - ');
+            $table->string('strasse')->default(' - ');
+            $table->string('plz')->default(' - ');
+*/
             $table->rememberToken();
             $table->timestamps();
         });

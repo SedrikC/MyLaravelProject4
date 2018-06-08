@@ -4,13 +4,8 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class MeinProfil extends Migration
+class CreateMeinProfil extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
     public function up()
     {
        Schema::create('mein_profil', function (Blueprint $table) {
@@ -28,11 +23,6 @@ class MeinProfil extends Migration
       });
     }
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
     public function down()
     {
         Schema::dropIfExists('mein_profil');
