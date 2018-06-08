@@ -40,17 +40,20 @@
 <div class="col-md-6">
     <h2 id="Comment">Kommentare</h2>
 
-    <form action={{action('CommentController@store')}} method="post">
+    <form method="POST" id="comment_form">
         {{csrf_field()}}
-        <textarea size="5" rows="5" name="comment"></textarea>
+        <div><textarea size="5" rows="5" name="comment" id="comment" class="form-control" placeholder="Kommentar eingeben"></textarea></div>
         <input type="hidden" name="ID" value="<?php echo $id?>">
-    <button type="submit">Senden</button>
+    <div><input type="submit" name="submit" id="submit" class="btn btn-info" value="Submit"></div>
     </form>
-    @foreach( $Comment as $comment)
-        <h1>{{ $comment->Username }} Datum: {{ $comment->created_at }}</h1>
-        <p>{{  $comment->Comment }}</p>
-    @endforeach
+    <span id="comment_message"></span>
+    <br>
+    <div id="display_comment"></div>
+
+    @foreach($Comment as $comment)
+        {{$comment->comment}}
+        @endforeach
 </div>
 </div>
-    @endforeach
+        @endforeach
 @endsection
