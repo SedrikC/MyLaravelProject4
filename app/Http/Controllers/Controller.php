@@ -33,7 +33,7 @@ class Controller extends BaseController
             "geschlecht"=>$geschlecht, "ort"=>$ort, "plz"=>$plz,
             "strasse"=>$strasse, "email"=>$email);
 
-        DB::table('meinprofil')
+        DB::table('mein_profil')
             ->where('id',$id)
             ->update($data);
 

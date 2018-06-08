@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\mein_Profil;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -37,7 +38,7 @@ class HomeController extends Controller
     }
     public function profil(){
         $UserID =Auth::id();
-        $Profil = meinProfil::where('id', $UserID)->get();
+        $Profil = mein_profil::where('id', $UserID)->get();
         return view('Profil')->with('Daten', $Profil);
     }
     public function datenschutz(){

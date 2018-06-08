@@ -8,6 +8,9 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 class User extends Authenticatable
 {
     use Notifiable;
+    public function mein_Profil(){
+        return $this->hasMany('app/mein_Profil');
+    }
 
     /**
      * The attributes that are mass assignable.
