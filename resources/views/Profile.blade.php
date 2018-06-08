@@ -7,7 +7,7 @@
         <ul>
             <li>
                 <div class="container">
-                <h1>Profilbild bearbeiten</h1>
+                    <h1>Profilbild bearbeiten</h1>
                     <h1>User-ID-{{Auth::user()->id}}</h1>
                 <div class="row">
                     <div class="col-md-10 col-md-offset-1">

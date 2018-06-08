@@ -28,9 +28,12 @@ class Controller extends BaseController
         $strasse = $req->input('strasse');
         $email = $req->input('email');
 
-        $data = array('firstName'=>$firstName, "lastName"=>$lastName,"mobile"=>$mobile, "geburtsdatum"=>$geburtsdatum, "geschlecht"=>$geschlecht, "ort"=>$ort, "plz"=>$plz, "strasse"=>$strasse, "email"=>$email);
+        $data = array('firstName'=>$firstName, "lastName"=>$lastName,
+            "mobile"=>$mobile, "geburtsdatum"=>$geburtsdatum,
+            "geschlecht"=>$geschlecht, "ort"=>$ort, "plz"=>$plz,
+            "strasse"=>$strasse, "email"=>$email);
 
-        DB::table('mein_profils')
+        DB::table('meinprofil')
             ->where('id',$id)
             ->update($data);
 

@@ -49,6 +49,8 @@ Route::get('/select_mein_profil','Controller@select_mein_profil');
 
 Route::get('/suchen', 'RessourceController@suchen')->name('suchen');
 
+Route::get('/meine_veranstaltungen', 'RessourceController@my_veranstaltungen')->name('my_veranstaltungen');
+
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
 
 

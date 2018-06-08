@@ -73,6 +73,7 @@
 
             <ul class="dropdown-menu" role="menu">
                 <li><a href="{{URL('profile')}}"><i class="fa fa-btn fa-user"></i>Profil bearbeiten</a> </li>
+                <li><a href="{{URL('meine_veranstaltungen')}}"><i class="fas fa-user-plus"></i></i> </i>Meine Veranstaltungen</a> </li>
                 <li><a href="{{URL('Einstellungen')}}"><i class="fa fa-btn fa-cog"></i>Einstellungen</a> </li>
                 <li><a href="{{URL('Kontakt')}}"><i class="fa fa-btn fa-envelope"></i>Kontakt</a> </li>
                 <li><a href="{{URL('logout')}}"><i class="fa fa-btn fa-sign-out"></i>Logout</a> </li>
@@ -83,13 +84,15 @@
         </li>
 
         <?php }?>
+        <?php if (\Auth::check()){ ?>
 <div class="col-md-1">
     <li class="dropdown ">
+
         <a href="#" class=dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
             <img src="/uploads/avatar/{{Auth::user()->avatar}}" style="width:30px; height:30px; float:left; border-radius:50%; margin-right:25px;">
             <span class="caret"></span>
         </a>
-
+            <?php }?>
     </li>
 </div>
 

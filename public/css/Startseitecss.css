@@ -114,5 +114,6 @@ i:hover {
 
 }
 .dropdown-menu{
-
+padding: 0;
+    margin-right:20px;
 }

@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Auth;
+use Illuminate\Support\Facades\Auth;
+
 use App\meinProfil;
 
 class HomeController extends Controller
@@ -53,6 +54,9 @@ class HomeController extends Controller
     }
     public function CreatePoll($id){
         return view('Pollerstellen')->with('id', $id);
+    }
+    public function meine_veranstaltungen (){
+        return view('meine_veranstaltungen');
     }
 
   //  public function login(){

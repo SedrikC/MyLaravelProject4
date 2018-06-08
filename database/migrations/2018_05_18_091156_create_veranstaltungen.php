@@ -6,11 +6,7 @@ use Illuminate\Database\Migrations\Migration;
 
 class CreateVeranstaltungen extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
+
     public function up()
     {
         Schema::create('veranstaltungen', function (Blueprint $table) {
@@ -23,12 +19,6 @@ class CreateVeranstaltungen extends Migration
             $table->timestamps();
         });
     }
-
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
     public function down()
     {
         Schema::dropIfExists('veranstaltungen');

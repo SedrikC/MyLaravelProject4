@@ -9,6 +9,8 @@ use App\Veranstaltungen;
 use App\comments;
 use App\poll;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+
 
 class RessourceController extends Controller
 {
@@ -22,6 +24,14 @@ class RessourceController extends Controller
             ->where('Genre', 'LIKE', '%'.$Genre.'%')->where('Veranstalter', 'LIKE', '%'.$Veranstalter.'%')->get();
 
         return view('Vsuchen')->with('Vsuchen',$result);
+    }
+    public function my_veranstaltungen (){
+
+        $id= Auth::user()->id;  //Problem: falsche ID, nimmt User ID
+
+        $result = Veranstaltungen::where('userid',$id)->get();
+
+        return view('meine_veranstaltungen')->with('Vsuchen',$result);
     }
 
     public function Veranstaltung($id){
@@ -54,7 +64,7 @@ class RessourceController extends Controller
     public function index()
     {
     $rs = Ressource::all();
-    return view('Vsuchen')->with('Ressourve', $rs);
+    return view('Vsuchen')->with('Ressource', $rs);
     }
 
     /**
