@@ -44,7 +44,7 @@ class RessourceController extends Controller
         $Teilnahme = teilnahme::where('VeranstaltungsID', $id)->where('antwort', 0)->get();
         $Absagen = teilnahme::where('VeranstaltungsID', $id)->where('antwort', 1)->get();
 
-        $Option = option::where('pollid', 1)->get();
+        $Option = option::where('VerID', $id)->get();
 
         return view('Veranstaltung')->with('Events', $Veranstaltungen)
             ->with('Comment', $Comment)

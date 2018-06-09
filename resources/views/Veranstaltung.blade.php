@@ -31,28 +31,31 @@
     <br>
     @foreach($Poll as $poll)
       <h2>{{$poll->Titel}}</h2>
+    <form action={{action('PollController@like@like')}}>
         @foreach($Option as $option)
-        <input type="radio" value="{{$option->optionid}}">{{$option->Name}} <br>
+        <input type="radio" value="{{$option->optionid}}" onclick="this.form.submit()" name="optionID">{{$option->Name}} <br>
         @endforeach
+    </form>
     @endforeach
-    <a href ="{{route('Pollerstellen', $veranstaltung->id)}}"><h3>Umfrage erstellen</h3></a>
+    <?php if(empty($poll)){?>
+    <a href ='{{route('Pollerstellen', $veranstaltung->id)}}'><h3>Umfrage erstellen</h3></a>
+    <?php
+    }?>
+
+
 </div>
 <div class="col-md-6">
     <h2 id="Comment">Kommentare</h2>
-
     <form method="POST" id="comment_form">
         {{csrf_field()}}
         <div><textarea size="5" rows="5" name="comment" id="comment" class="form-control" placeholder="Kommentar eingeben"></textarea></div>
         <input type="hidden" name="ID" value="<?php echo $id?>">
-    <div><input type="submit" name="submit" id="submit" class="btn btn-info" value="Submit"></div>
+        <div><input type="submit" name="submit" id="submit" class="btn btn-info" value="Submit"></div>
     </form>
-    <span id="comment_message"></span>
-    <br>
-    <div id="display_comment"></div>
 
-    @foreach($Comment as $comment)
-        {{$comment->comment}}
-        @endforeach
+    <span id="comment_message">Message</span>
+    <br>
+    <div id="display_comment">Content</div>
 </div>
 </div>
         @endforeach

@@ -217,11 +217,9 @@
                 data:form_data,
                 dataType: "JSON",
                 success:function (data) {
-                    if(data.error != ''){
-                        $('#comment_form')[0].reset();
+                        $('#comment_form').reset();
                         $('#comment_message').html(data.error);
                     }
-                }
             })
         });
         load_comment();

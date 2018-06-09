@@ -45,6 +45,8 @@ class TeilnahmeController extends Controller
         $data = array('Name'=>$Name, 'VeranstaltungsID'=>$VerID, 'antwort'=>$antwort);
 
         DB::table('teilnahme')->insert($data);
+
+        return view('Veranstaltung')->with('id', $VerID);
     }
 
     /**

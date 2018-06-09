@@ -14,10 +14,10 @@ class CreatePollsTable extends Migration
     public function up()
     {
         Schema::create('poll', function (Blueprint $table) {
-            $table->increments('pollid')->unique();
+            $table->increments('pollid');
             $table->string('Titel');
             $table->string('User');
-            $table->integer('VerID');
+            $table->integer('VerID')->unique();
             $table->timestamps();
         });
     }
