@@ -74,16 +74,6 @@ class PollController extends Controller
 
         return redirect('suchen');
     }
-public function like(Request $request){
-        $like = new Like;
-        $Username = Auth::user();
-        $like->Username = $Username;
-        $like->optionID = $request->input('optionID');
-
-        $like->save();
-
-    return redirect('suchen');
-}
     /**
      * Display the specified resource.
      *
@@ -98,18 +88,6 @@ public function like(Request $request){
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */

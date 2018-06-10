@@ -60,7 +60,17 @@ class RessourceController extends Controller
      * @return \Illuminate\Http\Response
      */
 
+    public function like(Request $request){
+        $like = new Like;
+        $like->LikeID = increment();
+        $Username = Auth::user();
+        $like->Username = $Username;
+        $like->OptionID = $request->input('optionID');
 
+        $like->save();
+
+        return redirect('suchen');
+    }
     public function index()
     {
     $rs = Ressource::all();
@@ -74,7 +84,6 @@ class RessourceController extends Controller
      */
     public function create()
     {
-        //
     }
 
     /**

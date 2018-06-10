@@ -31,7 +31,7 @@
     <br>
     @foreach($Poll as $poll)
       <h2>{{$poll->Titel}}</h2>
-    <form action={{action('PollController@like@like')}}>
+    <form action={{action('PollController@edit')}}>
         @foreach($Option as $option)
         <input type="radio" value="{{$option->optionid}}" onclick="this.form.submit()" name="optionID">{{$option->Name}} <br>
         @endforeach
