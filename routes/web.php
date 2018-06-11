@@ -56,12 +56,13 @@ Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
 
 
 Route::get('/Veranstaltung/{id}', 'RessourceController@Veranstaltung')->name('Veranstaltung');
-Route::post('/StoreComment', 'CommentController@store')->name('StoreComment');
+Route::get('/StoreComment', 'CommentController@store')->name('StoreComment');
 
 Route::get('/CreatePoll/{id}', 'HomeController@CreatePoll')->name('Pollerstellen');
 
 Route::post('/StorePoll', 'PollController@store');
 
 Route::get('/Teilnahme', 'TeilnahmeController@store');
+Route::get('/Like', 'LikeController@store');
 
 

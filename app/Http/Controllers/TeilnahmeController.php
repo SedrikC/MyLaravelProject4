@@ -37,6 +37,16 @@ class TeilnahmeController extends Controller
      */
     public function store(Request $request)
     {
+       $antwort = $request->input('answer');
+        $User =Auth::user();
+        $Name = $User->name;
+        $VerID = $request->input('VerID');
+
+        $data = array('Name'=>$Name, 'VeranstaltungsID'=>$VerID, 'antwort'=>$antwort);
+
+        DB::table('teilnahme')->insert($data);
+
+        return \Redirect::route('Veranstaltung', $VerID);
     }
 
     /**

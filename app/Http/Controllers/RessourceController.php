@@ -46,6 +46,7 @@ class RessourceController extends Controller
 
         $Option = option::where('VerID', $id)->get();
 
+
         return view('Veranstaltung')->with('Events', $Veranstaltungen)
             ->with('Comment', $Comment)
             ->with('id', $id)
@@ -53,24 +54,9 @@ class RessourceController extends Controller
             ->with('Teilnahme', $Teilnahme)
             ->with('Absagen', $Absagen)
             ->with('Option', $Option);
+
     }
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
 
-    public function like(Request $request){
-        $like = new Like;
-        $like->LikeID = increment();
-        $Username = Auth::user();
-        $like->Username = $Username;
-        $like->OptionID = $request->input('optionID');
-
-        $like->save();
-
-        return redirect('suchen');
-    }
     public function index()
     {
     $rs = Ressource::all();
