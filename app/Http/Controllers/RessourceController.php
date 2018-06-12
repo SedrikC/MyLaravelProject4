@@ -27,11 +27,25 @@ class RessourceController extends Controller
     }
     public function my_veranstaltungen (){
 
-        $id= Auth::user()->id;  //Problem: falsche ID, nimmt User ID
+        $id = Auth::user()->id;
 
-        $result = Veranstaltungen::where('userid',$id)->get();
+      $result = Veranstaltungen::where('Veranstalter', 'LIKE', $id)->get();
+
+
+
 
         return view('meine_veranstaltungen')->with('Vsuchen',$result);
+    //}
+
+       /* $id= Auth::user()->id;  //Problem: falsche ID, nimmt User ID
+        $User = Auth::user();
+        $Username = $User->Name;
+
+        $Veranstaltungen = Veranstaltungen::where('Veranstalter', $Username)->get();
+
+        $result = Veranstaltungen::where('id',$id)->get();
+*/
+      //  return view('meine_veranstaltungen')->with('Vsuchen',$result)->with('Veranstaltungen', $result);
     }
 
     public function Veranstaltung($id){

@@ -76,10 +76,23 @@
                 <li><a href="{{URL('meine_veranstaltungen')}}"><i class="fas fa-user-plus"></i></i> </i>Meine Veranstaltungen</a> </li>
                 <li><a href="{{URL('Einstellungen')}}"><i class="fa fa-btn fa-cog"></i>Einstellungen</a> </li>
                 <li><a href="{{URL('Kontakt')}}"><i class="fa fa-btn fa-envelope"></i>Kontakt</a> </li>
-                <li><a href="{{URL('logout')}}"><i class="fa fa-btn fa-sign-out"></i>Logout</a> </li>
+                <li><a href="{{URL('logout')}}"><i class="fa fa-btn fa-sign-out"></i>Logout</a>
+
+                <?php
+                $role_id = Auth::user()->role_id;
+               if ($role_id ==1){
+
+                ?>
+                <li><a href="{{URL('admin')}}"><i class="fa fa-btn fa-unlock-alt"></i>Admin</a>
+
+                    <?php }?>
 
 
-                </li>
+
+
+
+
+
             </ul>
         </li>
 
@@ -101,6 +114,7 @@
 </nav>
 
 @yield('content')
+
 
 
 <!--Footer-->
@@ -203,6 +217,7 @@
         </div>
     </div>
     </div>
+</nav>
 </footer>
 </body>
 </html>

@@ -65,3 +65,8 @@ Route::post('/StorePoll', 'PollController@store');
 Route::get('/Teilnahme', 'TeilnahmeController@store');
 
 
+
+
+Route::group(['prefix' => 'admin'], function () {
+    Voyager::routes();
+});

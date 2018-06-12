@@ -26,6 +26,10 @@
 @foreach($Daten as $daten)
 
                   <tbody>
+                  <tr>
+                      <td>Benutzername</td>
+                      <td>{{ $daten->name }}</td>
+                  </tr>
                         <tr>
                         <td>Name</td>
                         <td>{{ $daten->lastName }}</td>
@@ -45,12 +49,20 @@
                         <td>{{ $daten->geschlecht }}</td>
                     </tr>
                     <tr>
-                        <td>Addresse</td>
-                        <td>{{ $daten->plz }} {{ $daten->strasse }}</td>
+                        <td>PLZ</td>
+                        <td>{{ $daten->plz }}</td>
                     </tr>
+                        <tr>
+                            <td>Ort</td>
+                            <td>{{$daten->ort}} </td>
+                        </tr>
+                        <tr>
+                            <td>Strasse</td>
+                            <td> {{ $daten->strasse }}</td>
+                        </tr>
                     <tr>
                         <td>Email</td>
-                        <td><a href="mailto:info@support.com">info@support.com</a></td>
+                        <td>{{$daten->email}}</td>
                     </tr>
                     <td>Handynummer</td>
                     <td>{{ $daten->mobile }}
