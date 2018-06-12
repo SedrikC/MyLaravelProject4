@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class poll extends Model
 {
-    protected $table = 'poll';
+    protected $table = 'polls';
 
     public $timestamps = false;
 }

@@ -10,6 +10,7 @@ use App\comments;
 use App\poll;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Like;
 
 
 class RessourceController extends Controller
@@ -46,6 +47,19 @@ class RessourceController extends Controller
 
         $Option = option::where('VerID', $id)->get();
 
+        $Like1 = like::where('VeranstaltungID', $id)->where('OptionID', 1)->get();
+        $Like2 = like::where('VeranstaltungID', $id)->where('OptionID', 2)->get();
+        $Like3 = like::where('VeranstaltungID', $id)->where('OptionID', 3)->get();
+        $Like4 = like::where('VeranstaltungID', $id)->where('OptionID', 4)->get();
+        $Like5 = like::where('VeranstaltungID', $id)->where('OptionID', 5)->get();
+
+        $User= Auth::user();
+        $Username = $User->name;
+
+        $CheckLike = like::where('VeranstaltungID', $id)->where('Username', $Username)->get();
+
+        $CheckTeilnahme = teilnahme::where('VeranstaltungsID', $id)->where('name', $Username)->get();
+
 
         return view('Veranstaltung')->with('Events', $Veranstaltungen)
             ->with('Comment', $Comment)
@@ -53,8 +67,15 @@ class RessourceController extends Controller
             ->with('Poll', $Poll)
             ->with('Teilnahme', $Teilnahme)
             ->with('Absagen', $Absagen)
-            ->with('Option', $Option);
-
+            ->with('Option', $Option)
+            ->with('Like1', $Like1)
+            ->with('Like2', $Like2)
+            ->with('Like3', $Like3)
+            ->with('Like4', $Like4)
+            ->with('Like5', $Like5)
+            ->with('Username', $Username)
+            ->with('CheckLike', $CheckLike)
+            ->with('CheckTeilnahme', $CheckTeilnahme);
     }
 
     public function index()

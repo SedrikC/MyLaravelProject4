@@ -7,3 +7,14 @@ h1{
     font-size: 30px;
 }
 
+
+
+.Header{
+    color: #568BFF;
+    font-size: 25px;
+    border-bottom: #005cbf solid;
+}
+#submit{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
