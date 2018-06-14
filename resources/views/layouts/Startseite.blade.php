@@ -82,12 +82,14 @@
 
                 <?php
                 $role_id = Auth::user()->role_id;
-               if ($role_id ==1){
+               if ($role_id ==2){
 
                 ?>
-                <li><a href="{{URL('admin')}}"><i class="fa fa-btn fa-unlock-alt"></i>Admin</a>
+                <li><a href="{{URL('admin')}}"><i class="fa fa-btn fa-unlock-alt"></i>Admin - Veranstaltungen</a>
+                <li><a href="{{URL('admin_user')}}"><i class="fa fa-btn fa-unlock-alt"></i>Admin - User</a>
 
-                    <?php }?>
+
+            <?php }?>
 
 
 

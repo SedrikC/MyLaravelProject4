@@ -22,6 +22,7 @@ class Controller extends BaseController
         $name = Auth::user()->name;
         $password = Auth::user()->password;
         $email = Auth::user()->email;
+        $role_id = Auth::user()->role_id;
 
         $firstName =$req->input('firstName');
         $lastName = $req->input('lastName');
@@ -33,7 +34,7 @@ class Controller extends BaseController
         $strasse = $req->input('strasse');
        // $email = $req->input('email');
 
-        $data = array('password'=>$password, 'name'=>$name,'firstName'=>$firstName, "lastName"=>$lastName,
+        $data = array('password'=>$password,'role_id'=>$role_id, 'name'=>$name,'firstName'=>$firstName, "lastName"=>$lastName,
             "mobile"=>$mobile, "geburtsdatum"=>$geburtsdatum,
             "geschlecht"=>$geschlecht, "ort"=>$ort, "plz"=>$plz,
             "strasse"=>$strasse, "email"=>$email);

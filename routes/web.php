@@ -56,6 +56,12 @@ Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
 
 Route::get('/delete_Veranstaltung', 'RessourceController@delete_Veranstaltung')->name('delete_Veranstaltung');
 
+Route::get('/admin_veranstaltungen_loeschen', 'RessourceController@admin_veranstaltungen_loeschen')->name('admin_veranstaltungen_loeschen');
+Route::get('/admin_user_loeschen', 'RessourceController@admin_user_loeschen')->name('admin_user_loeschen');
+
+
+Route::get('/admin', 'RessourceController@admin')->name('Admin');
+Route::get('/admin_user', 'RessourceController@admin_user')->name('Admin_user');
 
 
 Route::get('/Veranstaltung/{id}', 'RessourceController@Veranstaltung')->name('Veranstaltung');

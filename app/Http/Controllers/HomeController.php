@@ -61,6 +61,7 @@ class HomeController extends Controller
         return view('meine_veranstaltungen');
     }
 
+
   //  public function login(){
   //      return view('login');
   //  }

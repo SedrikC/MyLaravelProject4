@@ -10,3 +10,4 @@ class poll extends Model
 
     public $timestamps = false;
 }
+

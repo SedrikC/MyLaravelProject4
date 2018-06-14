@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\option;
 use App\Ressource;
 use App\teilnahme;
+use App\User;
 use App\Veranstaltungen;
 use App\comments;
 use App\poll;
@@ -35,17 +36,34 @@ class RessourceController extends Controller
         $result = Veranstaltungen::where('Veranstalter', 'LIKE', $Veranstalter)->get();
 
         return view('meine_veranstaltungen')->with('Vsuchen',$result);
-    //}
 
-       /* $id= Auth::user()->id;  //Problem: falsche ID, nimmt User ID
-        $User = Auth::user();
-        $Username = $User->Name;
+    }
+    public function admin (){
+        $result = Veranstaltungen::all();
 
-        $Veranstaltungen = Veranstaltungen::where('Veranstalter', $Username)->get();
+        return view('Admin')->with('Vsuchen',$result);
+    }
+    public function admin_user() {
+        $result = User::all();
 
-        $result = Veranstaltungen::where('id',$id)->get();
-*/
-      //  return view('meine_veranstaltungen')->with('Vsuchen',$result)->with('Veranstaltungen', $result);
+        return view('Admin_user')->with('Daten', $result);
+    }
+    public function admin_veranstaltungen_loeschen(Request $request){
+        $VerID = $request->input('VerID');
+        $Ver = Veranstaltungen::where('id', $VerID);
+        $Ver->delete();
+
+        return \Redirect::route('Admin');
+    }
+
+    public function admin_user_loeschen(Request $request){
+        $UserID = $request->input('UserID');
+        $User = User::where('id', $UserID);
+        $User->delete();
+
+        return \Redirect::route('Admin_user');
+
+
     }
 
     public function Veranstaltung($id){
