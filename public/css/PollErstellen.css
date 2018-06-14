@@ -1,0 +1,15 @@
+#PollErstellen{
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    width: 250px;
+    border: solid #568BFF;
+    padding: 10px;
+}
+p{
+    margin-bottom: 0px;
+}
+button{
+    margin-top: 5px;
+}

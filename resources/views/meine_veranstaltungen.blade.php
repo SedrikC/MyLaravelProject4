@@ -11,13 +11,15 @@
         <div class="col-md-8 col-sm-12 Ergebnis">
             @foreach($Vsuchen as $vsuchen)
                <table>
-                   <a href="{{route('Veranstaltung',$vsuchen->id)}}"> <h1 id="VerName"> {{ $vsuchen->Name }}</h1></a>
+                   <form action={{action('RessourceController@delete_Veranstaltung')}}>
+                  <h1 id="VerName"> {{ $vsuchen->Name }}</h1></a>
                    <td id="VerInfo"> Veranstaltungsort: {{ $vsuchen->Ort }}</td>
                    <td id="VerInfo">Veranstalter: {{ $vsuchen->Veranstalter }}</td>
                    <td id="VerInfo">Genre: {{ $vsuchen->Genre }}</td>
                    <td id="VerInfo">Datum: {{ $vsuchen->Datum }}</td>
-                   <td id="bearbeiten"><button>bearbeiten</button></td>
-                   <td id="loeschen"><button>Löschen</button></td>
+                       <input type="hidden" value="{{ $vsuchen->id }}" name="VerID">
+                   <td><button class="btn btn-danger">Löschen</button></td>
+                   </form>
                </table>
             @endforeach
         </div>

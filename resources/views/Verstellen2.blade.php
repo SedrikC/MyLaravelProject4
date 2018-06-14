@@ -1,24 +1,31 @@
 @extends('layouts.Startseite')
 
 @section('content')
-<head>
-    <link rel="stylesheet" href="css/Erstellen.css">
-</head>
+    <head>
+        <link rel="stylesheet" href="css/Erstellen.css">
+    </head>
     <h1>Veranstaltung erstellen</h1>
-
-
     <div id="AuswahlErstellen">
-        <div class="Container" class="col-md-4 col-sm-12">
+        <form action={{action('Controller@insert_veranstaltungen2')}}>
+            {{csrf_field()}}
+            Genre
+            <br>
+            <select size="1" id="genre" name="Genre">
+                <option label="Party">Party</option>
+                <option label="Sport">Sport</option>
+                <option label="Öffentlich">Öffentlich</option>
+                <option label="Sonstige">Sonstiges</option>
+            </select>
+            <br>
             Datum
-            <input type="date" size="24px" name="Datum">
-            <input id="weiter" type="submit" name="WeiterButton" value="Erstellen">
-        </div>
+            <br>
+            <input type="date" size="24px"name="datum"> <br>
+
+            <input id="weiter" type="submit" name="submit" value="Erstellen">
+
+            irgendas rein
+
     </div>
-<form action="/StoreComment" method="post">
-    <textarea size="5" rows="5" name="comment"></textarea>
-    <input name="ID">
-    <br>
-    <button type="submit">Senden</button>
-</form>
+    </form>
 
 @endsection

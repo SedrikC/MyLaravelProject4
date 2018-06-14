@@ -2,7 +2,7 @@
 
 @section('content')
     <head>
-        <link rel="stylesheet" href="/css/Vprofil.css">
+        <link rel="stylesheet" href="/css/VProfil.css">
     </head>
 <h1>Veranstaltungen</h1>
     <div class="row">
@@ -13,7 +13,7 @@
         <table>
         <tr><th>Veranstaltungsname:</th><td> {{ $veranstaltung->Name }}</td></tr>
             <tr><th>Veranstaltungsort:</th><td> {{ $veranstaltung->Ort }}</td></tr>
-            <tr><th>Veranstalter: </th><td> {{ $veranstaltung->Veranstalter }}</td></tr>
+            <tr><th>Veranstalter: </th><td><a href="{{route('UserProfil',$veranstaltung->Veranstalter)}}"><p> {{ $veranstaltung->Veranstalter }}</p></a></td></tr>
         </table>
 <br>
 
@@ -32,19 +32,16 @@
 </form>
 
 <table id="Teilnehmer">
-    <tr><th>
-    Teilnehmer:
-        </th><td>
+    <tr><th class="Zusage">
+            <?php echo count($Teilnahme)?> Teilnehmer:
+        </th><td class="zusage">
     @foreach($Teilnahme as $teilnahme) {{$teilnahme->name}} @endforeach
         </td>
-        <td><?php echo count($Teilnahme)?></td>
     </tr>
-    <tr><th>
-    Absagen:
-        </th><td>
+    <tr><th class="Absage">
+    <?php echo count($Absagen)?> Absagen:
+        </th><td class="absage">
     @foreach($Absagen as $absagen) {{$absagen->name}}@endforeach
-    </td>
-        <td><?php echo count($Absagen)?></td>
     </tr>
 </table>
     <br><br>
@@ -52,7 +49,7 @@
 
     <br>
     @foreach($Poll as $poll)
-      <h2>{{$poll->Titel}}</h2>
+      <h2 id="polltitel">{{$poll->Titel}}</h2>
     <form action={{action('LikeController@store')}}>
         {{csrf_field()}}
             @foreach($Option as $option)
@@ -72,13 +69,16 @@
     <a href ='{{route('Pollerstellen', $veranstaltung->id)}}'><h3>Umfrage erstellen</h3></a>
     <?php
     }?>
-     <table>
-         <thead>
+     <table id="poll">
+         <thead id="thead">
+         <th id="left">Optionen</th>
         @foreach($Option as $option)
         <th>{{$option->Name}}</th>
         @endforeach
         </thead>
-     <tbody><td>
+     <tbody id="tbody">
+     <th id="left">Teilnehmer</th>
+     <td>
      @foreach($Like1 as $l1)
          {{$l1->Username}}<br>
      @endforeach
@@ -104,7 +104,8 @@
          @endforeach
      </td>
      </tbody>
-         <tfoot>
+         <tfoot id="tfood">
+         <th id="left">Anzahl</th>
          <td><?php if(empty($option)){}else{echo count($Like1);}?></td>
          <td><?php if(empty($option)){}else{echo count($Like2);}?></td>
          <td><?php if(empty($option)){}else{echo count($Like3);}?></td>
@@ -124,8 +125,8 @@
     </form>
 
     @foreach($Comment as $comment)
-        <h2>{{$comment->Username}} am {{$comment->created_at}}</h2>
-        <p>{{$comment->Comment}}</p>
+        <a href="{{route('UserProfil',$comment->Username)}}"><h2 id="CommentHead">{{$comment->Username}} am {{$comment->created_at}}</h2></a>
+        <p id="Comment">{{$comment->Comment}}</p>
     @endforeach
 </div>
 </div>

@@ -26,13 +26,26 @@ class RessourceController extends Controller
 
         return view('Vsuchen')->with('Vsuchen',$result);
     }
-    public function my_veranstaltungen (){
+    public function my_veranstaltungen (Request $request){
 
-        $id= Auth::user()->id;  //Problem: falsche ID, nimmt User ID
 
-        $result = Veranstaltungen::where('userid',$id)->get();
+
+        $Veranstalter = Auth::user()->name;
+
+        $result = Veranstaltungen::where('Veranstalter', 'LIKE', $Veranstalter)->get();
 
         return view('meine_veranstaltungen')->with('Vsuchen',$result);
+    //}
+
+       /* $id= Auth::user()->id;  //Problem: falsche ID, nimmt User ID
+        $User = Auth::user();
+        $Username = $User->Name;
+
+        $Veranstaltungen = Veranstaltungen::where('Veranstalter', $Username)->get();
+
+        $result = Veranstaltungen::where('id',$id)->get();
+*/
+      //  return view('meine_veranstaltungen')->with('Vsuchen',$result)->with('Veranstaltungen', $result);
     }
 
     public function Veranstaltung($id){
@@ -77,7 +90,15 @@ class RessourceController extends Controller
             ->with('CheckLike', $CheckLike)
             ->with('CheckTeilnahme', $CheckTeilnahme);
     }
+public function delete_Veranstaltung(Request $request){
+        $VerID = $request->input('VerID');
+        $Ver = Veranstaltungen::where('id', $VerID);
+        $Ver->delete();
 
+    return \Redirect::route('my_veranstaltungen');
+
+
+}
     public function index()
     {
     $rs = Ressource::all();
@@ -164,6 +185,6 @@ class RessourceController extends Controller
      */
     public function destroy(Ressource $ressource)
     {
-        //
+
     }
 }

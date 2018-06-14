@@ -64,10 +64,12 @@
                             <td>Strasse</td>
                             <td><input type="text" name="strasse"> </td><br>
                         </tr>
+                       <!--
                         <tr>
                             <td>Email</td>
                             <td><input type="text" name="email"> </td><br>
                         </tr>
+                        -->
                         <tr>
                             <td>Mobile</td>
                             <td><input type="text" name="mobile"> </td><br>

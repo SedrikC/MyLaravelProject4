@@ -4,15 +4,16 @@
     <meta charset="UTF-8">
     <title>EasyPlan</title>
     <meta name="csrf-token" content="{{ csrf_token() }}">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/gif" href="img/Logo-EasyPlan.gif">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/Startseitecss.css">
-    <link rel="shortcut icon" type="image/gif" href="/img/Logo-EasyPlan.gif">
     <!--  <link rel="stylesheet" href="pfad-zur-css-datei/font-awesome.min.css">-->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
 </head>
 <body class="Background">
 
@@ -77,10 +78,23 @@
                 <li><a href="{{URL('meine_veranstaltungen')}}"><i class="fas fa-user-plus"></i></i> </i>Meine Veranstaltungen</a> </li>
                 <li><a href="{{URL('Einstellungen')}}"><i class="fa fa-btn fa-cog"></i>Einstellungen</a> </li>
                 <li><a href="{{URL('Kontakt')}}"><i class="fa fa-btn fa-envelope"></i>Kontakt</a> </li>
-                <li><a href="{{URL('logout')}}"><i class="fa fa-btn fa-sign-out"></i>Logout</a> </li>
+                <li><a href="{{URL('logout')}}"><i class="fa fa-btn fa-sign-out"></i>Logout</a>
+
+                <?php
+                $role_id = Auth::user()->role_id;
+               if ($role_id ==1){
+
+                ?>
+                <li><a href="{{URL('admin')}}"><i class="fa fa-btn fa-unlock-alt"></i>Admin</a>
+
+                    <?php }?>
 
 
-                </li>
+
+
+
+
+
             </ul>
         </li>
 
@@ -102,6 +116,7 @@
 </nav>
 
 @yield('content')
+
 
 
 <!--Footer-->
@@ -204,6 +219,7 @@
         </div>
     </div>
     </div>
+</nav>
 </footer>
 </body>
 </html>
@@ -218,9 +234,11 @@
                 data:form_data,
                 dataType: "JSON",
                 success:function (data) {
-                        $('#comment_form').reset();
+                    if(data.error != ''){
+                        $('#comment_form')[0].reset();
                         $('#comment_message').html(data.error);
                     }
+                }
             })
         });
         load_comment();

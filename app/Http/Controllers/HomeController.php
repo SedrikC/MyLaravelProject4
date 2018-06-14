@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\mein_Profil;
-use Illuminate\Http\Request;
+
+use App\User;
+
 use Illuminate\Support\Facades\Auth;
 
-use App\meinProfil;
 
 class HomeController extends Controller
 {
@@ -38,7 +38,7 @@ class HomeController extends Controller
     }
     public function profil(){
         $UserID =Auth::id();
-        $Profil =mein_Profil::where('id', $UserID)->get();
+        $Profil =User::where('id', $UserID)->get();
         return view('Profil')->with('Daten', $Profil);
     }
     public function datenschutz(){
@@ -57,6 +57,7 @@ class HomeController extends Controller
         return view('Pollerstellen')->with('id', $id);
     }
     public function meine_veranstaltungen (){
+
         return view('meine_veranstaltungen');
     }
 
