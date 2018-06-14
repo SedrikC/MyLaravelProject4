@@ -9,6 +9,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Intervention\Image\Facades\Image;
+use App\User;
 
 
 
@@ -31,5 +32,10 @@ class UserController extends Controller
         }
 
         return view('profile');
+    }
+
+    public function profil($name){
+        $Profil =User::where('name', $name)->get();
+        return view('UserProfil')->with('Daten', $Profil);
     }
 }

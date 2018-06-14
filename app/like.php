@@ -4,9 +4,9 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class teilnahme extends Model
+class like extends Model
 {
-    protected $table = 'teilnahme';
+    protected $table = 'like';
 
     public $timestamps = false;
 }

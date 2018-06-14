@@ -7,3 +7,68 @@ h1{
     font-size: 30px;
 }
 
+
+
+.Header{
+    color: #568BFF;
+    font-size: 25px;
+    border-bottom: #005cbf solid;
+}
+#submit{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.Zusage{
+    color: lightgreen;
+    width: 120px;
+}
+.Absage{
+    color: lightcoral;
+    width: 120px;
+}
+.zusage{
+    background-color: lightgreen;
+    color: white;
+}
+.absage{
+    background-color: lightcoral;
+    color: white;
+}
+#Teilnehmer{
+    width: 100%;
+}
+#poll{
+    width: 100%;
+    text-align: center;
+    border: blue solid;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+#thead{
+    background-color: white;
+    color: blue;
+}
+#left{
+border: blue solid;
+    width: 150px;
+}
+#tbody{
+background-color: lightblue;
+}
+#tfood{
+background-color: lightgrey;
+}
+#polltitel{
+    font-size: 20px;
+    width: 100%;
+    text-align: center;
+    color: blue;
+}
+
+#CommentHead{
+    color: #568BFF;
+}
+#Comment{
+color: grey;
+}

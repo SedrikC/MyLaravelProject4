@@ -2,12 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\teilnahme;
+use App\like;
 use Illuminate\Http\Request;
 use Auth;
 use DB;
 
-class TeilnahmeController extends Controller
+class LikeController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -37,14 +37,14 @@ class TeilnahmeController extends Controller
      */
     public function store(Request $request)
     {
-       $antwort = $request->input('answer');
-        $User =Auth::user();
-        $Name = $User->name;
+        $like = new like;
+        $Username = Auth::user();
         $VerID = $request->input('VerID');
+        $like->Username = $Username->name;
+        $like->OptionID = $request->input('optionID');
+        $like->VeranstaltungID = $VerID;
 
-        $data = array('Name'=>$Name, 'VeranstaltungsID'=>$VerID, 'antwort'=>$antwort);
-
-        DB::table('teilnahme')->insert($data);
+        $like->save();
 
         return \Redirect::route('Veranstaltung', $VerID);
     }
@@ -52,10 +52,10 @@ class TeilnahmeController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\teilnahme  $teilnahme
+     * @param  \App\like  $like
      * @return \Illuminate\Http\Response
      */
-    public function show(teilnahme $teilnahme)
+    public function show(like $like)
     {
         //
     }
@@ -63,10 +63,10 @@ class TeilnahmeController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\teilnahme  $teilnahme
+     * @param  \App\like  $like
      * @return \Illuminate\Http\Response
      */
-    public function edit(teilnahme $teilnahme)
+    public function edit(like $like)
     {
         //
     }
@@ -75,10 +75,10 @@ class TeilnahmeController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\teilnahme  $teilnahme
+     * @param  \App\like  $like
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, teilnahme $teilnahme)
+    public function update(Request $request, like $like)
     {
         //
     }
@@ -86,10 +86,10 @@ class TeilnahmeController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\teilnahme  $teilnahme
+     * @param  \App\like  $like
      * @return \Illuminate\Http\Response
      */
-    public function destroy(teilnahme $teilnahme)
+    public function destroy(like $like)
     {
         //
     }

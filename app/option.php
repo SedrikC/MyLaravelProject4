@@ -6,11 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class option extends Model
 {
-    protected $table = 'option';
+    protected $table = 'options';
 
-    public function poll() {
-        return $this->belongsTo('App\poll', 'pollid', 'pollid');
-    }
     public $timestamps = false;
 
 }

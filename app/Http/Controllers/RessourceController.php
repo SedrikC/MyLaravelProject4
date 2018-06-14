@@ -10,6 +10,7 @@ use App\comments;
 use App\poll;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Like;
 
 
 class RessourceController extends Controller
@@ -25,13 +26,26 @@ class RessourceController extends Controller
 
         return view('Vsuchen')->with('Vsuchen',$result);
     }
-    public function my_veranstaltungen (){
+    public function my_veranstaltungen (Request $request){
 
-        $id= Auth::user()->id;  //Problem: falsche ID, nimmt User ID
 
-        $result = Veranstaltungen::where('userid',$id)->get();
+
+        $Veranstalter = Auth::user()->name;
+
+        $result = Veranstaltungen::where('Veranstalter', 'LIKE', $Veranstalter)->get();
 
         return view('meine_veranstaltungen')->with('Vsuchen',$result);
+    //}
+
+       /* $id= Auth::user()->id;  //Problem: falsche ID, nimmt User ID
+        $User = Auth::user();
+        $Username = $User->Name;
+
+        $Veranstaltungen = Veranstaltungen::where('Veranstalter', $Username)->get();
+
+        $result = Veranstaltungen::where('id',$id)->get();
+*/
+      //  return view('meine_veranstaltungen')->with('Vsuchen',$result)->with('Veranstaltungen', $result);
     }
 
     public function Veranstaltung($id){
@@ -44,7 +58,21 @@ class RessourceController extends Controller
         $Teilnahme = teilnahme::where('VeranstaltungsID', $id)->where('antwort', 0)->get();
         $Absagen = teilnahme::where('VeranstaltungsID', $id)->where('antwort', 1)->get();
 
-        $Option = option::where('pollid', 1)->get();
+        $Option = option::where('VerID', $id)->get();
+
+        $Like1 = like::where('VeranstaltungID', $id)->where('OptionID', 1)->get();
+        $Like2 = like::where('VeranstaltungID', $id)->where('OptionID', 2)->get();
+        $Like3 = like::where('VeranstaltungID', $id)->where('OptionID', 3)->get();
+        $Like4 = like::where('VeranstaltungID', $id)->where('OptionID', 4)->get();
+        $Like5 = like::where('VeranstaltungID', $id)->where('OptionID', 5)->get();
+
+        $User= Auth::user();
+        $Username = $User->name;
+
+        $CheckLike = like::where('VeranstaltungID', $id)->where('Username', $Username)->get();
+
+        $CheckTeilnahme = teilnahme::where('VeranstaltungsID', $id)->where('name', $Username)->get();
+
 
         return view('Veranstaltung')->with('Events', $Veranstaltungen)
             ->with('Comment', $Comment)
@@ -52,15 +80,25 @@ class RessourceController extends Controller
             ->with('Poll', $Poll)
             ->with('Teilnahme', $Teilnahme)
             ->with('Absagen', $Absagen)
-            ->with('Option', $Option);
+            ->with('Option', $Option)
+            ->with('Like1', $Like1)
+            ->with('Like2', $Like2)
+            ->with('Like3', $Like3)
+            ->with('Like4', $Like4)
+            ->with('Like5', $Like5)
+            ->with('Username', $Username)
+            ->with('CheckLike', $CheckLike)
+            ->with('CheckTeilnahme', $CheckTeilnahme);
     }
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+public function delete_Veranstaltung(Request $request){
+        $VerID = $request->input('VerID');
+        $Ver = Veranstaltungen::where('id', $VerID);
+        $Ver->delete();
+
+    return \Redirect::route('my_veranstaltungen');
 
 
+}
     public function index()
     {
     $rs = Ressource::all();
@@ -74,7 +112,6 @@ class RessourceController extends Controller
      */
     public function create()
     {
-        //
     }
 
     /**
@@ -148,6 +185,6 @@ class RessourceController extends Controller
      */
     public function destroy(Ressource $ressource)
     {
-        //
+
     }
 }

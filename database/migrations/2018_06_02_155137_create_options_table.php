@@ -13,9 +13,10 @@ class CreateOptionsTable extends Migration
      */
     public function up()
     {
-        Schema::create('option', function (Blueprint $table) {
-            $table->increments('optionid');
-            $table->integer('pollid');
+        Schema::create('options', function (Blueprint $table) {
+            $table->increments('optionid')->unique();
+            $table->integer('option');
+            $table->integer('VerID');
             $table->string('Name');
         });
     }

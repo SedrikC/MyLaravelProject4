@@ -39,11 +39,13 @@ class CommentController extends BaseController
     public function store(Request $request)
     {
     $Comment = $request->input('comment');
-    $VerID = $request->input('ID');
+    $VerID = $request->input('VerID');
     $User =Auth::user();
     $Name = $User->name;
     $data = array('Comment'=>$Comment, 'VeranstaltungsID'=>$VerID, 'Username'=>$Name);
     DB::table('comments')->insert($data);
+
+    return \Redirect::route('Veranstaltung', $VerID);
     }
 
     public function show($id)

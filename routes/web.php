@@ -40,7 +40,8 @@ Route::get('/insert', function (){
 });
 Route::post('insert','Controller@insert');
 
-Route::post('insert_veranstaltungen1','Controller@insert_veranstaltungen1');
+Route::get('insert_veranstaltungen1','Controller@insert_veranstaltungen1');
+Route::get('insert_veranstaltungen2','Controller@insert_veranstaltungen2');
 
 
 Route::get('/datenschutz', 'HomeController@datenschutz')->name('datenschutz');
@@ -53,15 +54,19 @@ Route::get('/meine_veranstaltungen', 'RessourceController@my_veranstaltungen')->
 
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
 
+Route::get('/delete_Veranstaltung', 'RessourceController@delete_Veranstaltung')->name('delete_Veranstaltung');
+
 
 
 Route::get('/Veranstaltung/{id}', 'RessourceController@Veranstaltung')->name('Veranstaltung');
-Route::post('/StoreComment', 'CommentController@store')->name('StoreComment');
+Route::get('/StoreComment', 'CommentController@store')->name('StoreComment');
 
 Route::get('/CreatePoll/{id}', 'HomeController@CreatePoll')->name('Pollerstellen');
 
 Route::post('/StorePoll', 'PollController@store');
 
 Route::get('/Teilnahme', 'TeilnahmeController@store');
+Route::get('/Like', 'LikeController@store');
 
 
+Route::get('Profil/{id}', 'UserController@profil')->name('UserProfil');
