@@ -45,7 +45,7 @@ class Controller extends BaseController
                 ->update($data);
 
 
-        return view('profile');
+        return view('Profile');
     }
 
 

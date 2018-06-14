@@ -2,7 +2,7 @@
 
 @section('content')
     <head>
-        <link rel="stylesheet" href="/css/Vprofil.css">
+        <link rel="stylesheet" href="/css/VProfil.css">
     </head>
 <h1>Veranstaltungen</h1>
     <div class="row">
