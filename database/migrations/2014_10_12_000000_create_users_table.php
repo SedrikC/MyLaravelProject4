@@ -26,7 +26,7 @@ class CreateUsersTable extends Migration
             $table->string('firstName')->default(' - ');
             $table->string('lastName')->default(' - ');
             $table->string('mobile')->default(' - ');
-            $table->date('geburtsdatum')->default('00'.'00'.'1001');
+            $table->date('geburtsdatum')->nullable();
             $table->string('ort')->default(' - ');
             $table->string('geschlecht')->default(' - ');
             $table->string('strasse')->default(' - ');
