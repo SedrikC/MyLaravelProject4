@@ -15,11 +15,11 @@ class CreateCommentsTable extends Migration
     public function up()
     {
         Schema::create('comments', function (Blueprint $table) {
-            $table->increments('Commentid');
+            $table->increments('Commentid')->unique();
             $table->integer('Veranstaltungsid');
             $table->string('Username');
             $table->text('Comment');
-            $table->timestamps();
+            $table->timestamp('created_at')->nullable();
         });
     }
 

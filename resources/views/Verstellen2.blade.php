@@ -22,8 +22,7 @@
             <input type="date" size="24px"name="datum"> <br>
 
             <input id="weiter" type="submit" name="submit" value="Erstellen">
-
-            irgendas rein
+            
 
     </div>
     </form>

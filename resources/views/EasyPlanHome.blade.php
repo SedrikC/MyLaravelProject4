@@ -1,7 +1,9 @@
 @extends('layouts.Startseite')
 
 @section('content')
+<head>
 
+</head>
     <div id="demo" class="carousel slide" data-ride="carousel">
 
         <!-- Indicators -->
@@ -14,10 +16,25 @@
         <!-- The slideshow -->
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="img/Suchen.jpg" class="bilder" alt="Suchen">
+                <img src="img/WillkommenC.jpg" class="bilder" alt="Suchen">
+                <div class="carousel-caption">
+                    <h3  class="caption">Willkommen auf Easyplan</h3>
+                    <p class="caption2">Organisieren sie Ihre Veranstaltungen <strong>einfach</strong> und <strong>zuverlässig</strong></p>
+                </div>
             </div>
             <div class="carousel-item">
-                <img src="img/Erstellen.jpg" class="bilder" alt="Erstellen">
+                <img src="img/ErstellenC.jpg" class="bilder" alt="Erstellen">
+                <div class="carousel-caption">
+                    <h3  class="caption">Veranstaltungen erstellen</h3>
+                    <p class="caption2">Erstellen Sie ihre persönliche <strong>Veranstatungen</strong></p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="img/SuchenC.jpg" class="bilder" alt="Erstellen">
+                <div class="carousel-caption">
+                <h3  class="caption">Veranstaltungen suchen</h3>
+                    <p class="caption2">Finen Sie <strong>Veranstatungen</strong> in ihrer <strong>Umgebung</strong></p>
+                </div>
             </div>
         </div>
 
@@ -28,47 +45,47 @@
         <a class="carousel-control-next" href="#demo" data-slide="next">
             <span class="carousel-control-next-icon"></span>
         </a>
-
+    </div>
+    <div class="container">
+    <div class="row">
+    <div class="col-md-6 col-sm-12">
+        <h1 id="AboutUs">Über uns</h1>
+<p class="text">Wir sind ein junges EntwicklerTeam, das im Rahmen der Veranstaltung WebTechnologien die Webapplikation Easyplan entwickelt haben.<br>
+    Mit EasyPlan soll es Veranstaltern und Teilnehmern von mittelgroßen Veranstaltungen erleichtert werden, diese zu organisieren<br>
+    Hierbei dient EasyPlan als Platform zur Kommunikation zwischen den Teilnehmern, über Umfragen oder Kommentare.
+</p>
+    </div>
+    <div class="col-md-6 col-sm-12">
+        <img src="img/Erstellen.jpg" class="Pic" alt="Bild">
     </div>
 
-
-
-    <div class="inhalt">
-        <p> Bei der Organisation von mittelgroßen Veranstaltungen treten oft sehr viele Probleme auf, die die Planung und Durchführung oft sehr umständlich und kompliziert machen.</p>
-        <p>
-            Klassische Probleme währen, dass nicht alle Teilnehmer auf dem gleichen Informationsstand sind, da Dinge in Abwesenheit von Teilnehmern besprochen wurden oder Teilnehmer Nachrichten
-            in (WhatsApp-)Gruppen überlesen haben.</p>
-        <p> Es kann vorkommen dass Dinge vergessen wurden, oder Missverständnisse zwischen den Teilnehmern entstehen bzw. nicht jeder weiß wer an der Veranstaltung teilnimmt oder bereits abgesagt hat.</p>
-
-        <p> Diese Probleme sollen mit EasyPlan gelöst werden. Es soll jeder Teilnehmer über eine zentrale Organisationsseite auf dem gleichen Informationsstand sein.</p>
-        <p>Es sollen Notizen gemacht werden können, Termine durch Umfragen ermittelt werden können und die anderen Teilnehmer über Zu- oder Absagen informiert werden können.</p>
-    </div>
-    <div id="suchen_erstellen">
-
-        <div class="container">
-            <div class="row">
-                <div class="col-md-1"></div>
-                <div class="suchen col-md-5 col-sm-12">
-                    <a href ="{{route('suchen')}}">
-                        <img src="img/Suchen.jpg" class="bilder" width="100%" alt="Suchen">
-                        <p class="Text">
-                            Veranstaltung suchen
-                        </p>
-                    </a>
-                </div>
-
-
-
-                <div class="erstellen col-md-5 col-sm-12">
-                    <a href ="{{route('erstellen')}}">
-                        <img src="img/Erstellen.jpg" class="bilder" width="100%" alt="Erstellen">
-                        <p class="Text">
-                            Veranstaltung erstellen
-                        </p>
-                    </a>
-                </div>
-            </div>
+        <div class="col-md-6 col-sm-12">
+            <img src="img/Erstellen.jpg" class="Pic2" alt="Bild">
         </div>
+        <div class="col-md-6 col-sm-12">
+            <h1 id="AboutUs">Funktionsumfang</h1>
+            <p class="text">Wir sind ein junges EntwicklerTeam, das im Rahmen der Veranstaltung WebTechnologien die Webapplikation Easyplan entwickelt haben.<br>
+                Mit EasyPlan soll es Veranstaltern und Teilnehmern von mittelgroßen Veranstaltungen erleichtert werden, diese zu organisieren<br>
+                Hierbei dient EasyPlan als Platform zur Kommunikation zwischen den Teilnehmern, über Umfragen oder Kommentare.
+            </p>
+        </div>
+        <div class="col-md-6 col-sm-12">
+            <h1 id="AboutUs">Anderes</h1>
+            <p class="text">Wir sind ein junges EntwicklerTeam, das im Rahmen der Veranstaltung WebTechnologien die Webapplikation Easyplan entwickelt haben.<br>
+                Mit EasyPlan soll es Veranstaltern und Teilnehmern von mittelgroßen Veranstaltungen erleichtert werden, diese zu organisieren<br>
+                Hierbei dient EasyPlan als Platform zur Kommunikation zwischen den Teilnehmern, über Umfragen oder Kommentare.
+            </p>
+        </div>
+        <div class="col-md-6 col-sm-12">
+            <img src="img/Erstellen.jpg" class="Pic" alt="Bild">
+        </div>
+        </div>
+          </div>
+
+
+
+
+
 
 
     </div>
