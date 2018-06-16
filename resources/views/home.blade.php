@@ -1,23 +1,31 @@
-@extends('layouts.app')
+@extends('layouts.Startseite')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">Dashboard</div>
 
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success">
-                            {{ session('status') }}
-                        </div>
-                    @endif
+    <div id="suchen_erstellen">
 
-                    You are logged in!
+        <div class="container">
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="suchen col-md-5 col-sm-12">
+                    <a href ="{{route('suchen')}}">
+                        <img src="img/Suchen.jpg" class="bilder" width="100%" alt="Suchen">
+                        <p class="Text">
+                            Veranstaltung suchen
+                        </p>
+                    </a>
+                </div>
+
+
+
+                <div class="erstellen col-md-5 col-sm-12">
+                    <a href ="{{route('erstellen')}}">
+                        <img src="img/Erstellen.jpg" class="bilder" width="100%" alt="Erstellen">
+                        <p class="Text">
+                            Veranstaltung erstellen
+                        </p>
+                    </a>
                 </div>
             </div>
         </div>
-    </div>
-</div>
 @endsection

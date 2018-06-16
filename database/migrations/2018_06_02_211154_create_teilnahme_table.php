@@ -14,7 +14,7 @@ class CreateTeilnahmeTable extends Migration
     public function up()
     {
         Schema::create('teilnahme', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('id')->unique();
             $table->integer('VeranstaltungsID');
             $table->string('name');
             $table->integer('antwort'); //0 bei Teilnahme 1 bei Absage

@@ -43,6 +43,7 @@ class CommentController extends BaseController
     $User =Auth::user();
     $Name = $User->name;
     $data = array('Comment'=>$Comment, 'VeranstaltungsID'=>$VerID, 'Username'=>$Name);
+
     DB::table('comments')->insert($data);
 
     return \Redirect::route('Veranstaltung', $VerID);
