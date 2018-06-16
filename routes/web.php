@@ -14,10 +14,12 @@
 Route::get('/', function () {
     return view('EasyPlanHome');
 });
+Route::get('/home', 'HomeController@index')->name('home');
+
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+//Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/erstellen', 'HomeController@erstellen')->name('erstellen');
 Route::get('/erstellen2', 'HomeController@erstellen2')->name('erstellen2');

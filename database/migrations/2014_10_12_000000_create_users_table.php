@@ -22,7 +22,6 @@ class CreateUsersTable extends Migration
             //ROLE_ID = 2 => Admin
             $table->string('name');
             $table->string('email')->unique();
-
             $table->string('password');
              $table->string('avatar')->nullable()->default('default.jpg');
             //ehemalig von der mein_profil migration

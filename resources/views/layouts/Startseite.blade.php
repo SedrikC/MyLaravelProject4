@@ -63,9 +63,12 @@
 
         <form class="form-inline my-2 my-lg-0" action="{{ route('login') }}" >
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Login</button>
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Register</button>
-
         </form>
+        <form class="form-inline my-2 my-lg-0" action="{{ route('register') }}" >
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Register</button>
+           <!-- <li><a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a></li>-->
+        </form>
+
         <?php }?>
         <?php if (\Auth::check()){ ?>
 
