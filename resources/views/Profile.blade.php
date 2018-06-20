@@ -7,11 +7,11 @@
 
 
                 <div class="container">
-                    <h1>Profilbild bearbeiten</h1>
-                    <h1>{{Auth::user()->name}}</h1>
+                    <h1 class="BildBearbeiten">Profilbild bearbeiten</h1>
+                    <h1 class="BildBearbeiten">{{Auth::user()->name}}</h1>
                 <div class="row">
-                    <div class="col-md-10 col-md-offset-1">
-                        <img src="/uploads/avatar/{{Auth::user()->avatar}}" style="width:150px; height:150px; float:left; border-radius:50%; margin-right:25px;">
+                    <div class="col-md-10 col-md-offset-1 BildBearbeiten">
+                        <img src="/uploads/avatar/{{Auth::user()->avatar}}" id="Profbild">
                         <h2>{{ Auth::user()->name }}'s Profile</h2>
                         <form enctype="multipart/form-data" action="/profile" method="post">
                             <label>Update Profile Image</label>
@@ -20,6 +20,7 @@
                             <input type="submit" class="pull-right btn btn-sm btn-primary">
                         </form>
                     </div>
+                </div>
                 <form action="/insert" method="post">
                     <div id="Tabelle">
                         {{csrf_field()}}
@@ -27,6 +28,8 @@
                         <tr>
                             <td>First Name:</td>
                             <td><input type="text" name="firstName"> </td><br>
+                        </tr>
+                        <tr>
                             <td>Last Name:</td>
                             <td><input type="text" name="lastName"> </td><br>
                         </tr>
@@ -47,6 +50,8 @@
                         <tr>
                             <td>Ort</td>
                             <td><input type="text" name="ort"> </td><br>
+                        </tr>
+                        <tr>
                             <td>Postleitzahl</td>
                             <td><input type="text" name="plz"> </td><br>
                         </tr>

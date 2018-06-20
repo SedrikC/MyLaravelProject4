@@ -6,7 +6,6 @@ li {
     margin-left: auto;
     margin-right: auto;
     width: 300px;
-    margin-top: 0px;
 }
 td{
     padding: 7px;
@@ -14,4 +13,19 @@ td{
 }
 .test{
     border: black solid;
+}
+#Profbild{
+    width:150px;
+    height:150px;
+    float:left;
+    border-radius:50%;
+    margin-right:25px;
+}
+.BildBearbeiten{
+
+}
+@media screen and (max-width: 500px){
+    .BildBearbeiten{
+        display: none;
+    }
 }

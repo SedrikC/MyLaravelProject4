@@ -12,7 +12,7 @@
     <div class="container">
 
         <div class="row Mein_Profil">
-            <div class="col-md-2" id="bild">
+            <div class="col-md-2 BildBearbeiten" id="bild">
 
                 <img src="/uploads/avatar/{{Auth::user()->avatar}}" id="Profilbild">
             </div>
