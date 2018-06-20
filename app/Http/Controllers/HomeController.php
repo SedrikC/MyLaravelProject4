@@ -61,6 +61,9 @@ class HomeController extends Controller
         return view('meine_veranstaltungen');
     }
 
+    public function Home2(){
+        return view('EasyPlanHome2');
+    }
 
   //  public function login(){
   //      return view('login');

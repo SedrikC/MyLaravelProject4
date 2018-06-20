@@ -27,7 +27,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" id="Home" href="{{ route('home') }}">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-link" id="Home" href="{{ route('Home2') }}">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" id="Profil" href=
@@ -45,7 +45,7 @@
                    <?php if (\Auth::check()){ ?>
                            "{{ route('suchen') }}">
                    <?php } else {?>
-                "#" onClick="alert('Bitte melde dich erst an um eine Veranstaltung zu erstellen!')">
+                "#" onClick="alert('Bitte melde dich erst an um eine Veranstaltung zu suchen!')">
                    <?php } ?>Veranstaltung suchen</a>
 
             </li>
@@ -79,7 +79,7 @@
 
             <ul class="dropdown-menu" role="menu">
                 <li><a href="{{URL('profile')}}"><i class="fa fa-btn fa-user"></i>Profil bearbeiten</a> </li>
-                <li><a href="{{URL('meine_veranstaltungen')}}"><i class="fas fa-user-plus"></i></i> </i>Meine Veranstaltungen</a> </li>
+                <li><a href="{{URL('meine_veranstaltungen')}}"><i class="fas fa-user-plus"></i></i> </i>Veranstaltungen</a> </li>
                 <li><a href="{{URL('Einstellungen')}}"><i class="fa fa-btn fa-cog"></i>Einstellungen</a> </li>
                 <li><a href="{{URL('Kontakt')}}"><i class="fa fa-btn fa-envelope"></i>Kontakt</a> </li>
                 <li><a href="{{URL('logout')}}"><i class="fa fa-btn fa-sign-out"></i>Logout</a>
@@ -192,9 +192,6 @@
                 <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
                 <p class="foot">
                     <a href="{{URL('profile')}}">Mein Account</a>
-                </p>
-                <p class="foot">
-                    <a href="#!">Impressum</a>
                 </p>
                 <p class="foot">
                     <a href="{{URL('datenschutz')}}">Datenschutzrichtlinien</a>

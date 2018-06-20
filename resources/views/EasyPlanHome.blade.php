@@ -55,39 +55,33 @@
     Hierbei dient EasyPlan als Platform zur Kommunikation zwischen den Teilnehmern, über Umfragen oder Kommentare.
 </p>
     </div>
-    <div class="col-md-6 col-sm-12">
-        <img src="img/Erstellen.jpg" class="Pic" alt="Bild">
+    <div class="col-md-6 hidden-sm">
+        <img src="img/Berrys.jpg" class="Pic" alt="Bild">
     </div>
 
         <div class="col-md-6 col-sm-12">
-            <img src="img/Erstellen.jpg" class="Pic2" alt="Bild">
+            <img src="img/Funktionsumfang.jpg" class="Pic2" alt="Bild">
         </div>
         <div class="col-md-6 col-sm-12">
             <h1 id="AboutUs">Funktionsumfang</h1>
-            <p class="text">Wir sind ein junges EntwicklerTeam, das im Rahmen der Veranstaltung WebTechnologien die Webapplikation Easyplan entwickelt haben.<br>
-                Mit EasyPlan soll es Veranstaltern und Teilnehmern von mittelgroßen Veranstaltungen erleichtert werden, diese zu organisieren<br>
-                Hierbei dient EasyPlan als Platform zur Kommunikation zwischen den Teilnehmern, über Umfragen oder Kommentare.
+            <p class="text">EasyPlan bietet Ihnen zahlreiche Features, die Ihnen das organisieren Ihrer Veranstaltung erleichtern. <br>
+                Neben dem Erstellen und Suchen von Veranstaltungen, können Sie Umfragen erstellen und Ihren Freunden per Abstimmung mitteilen ob Sie an
+                der Veranstaltung teilnehmen. Darüber hinaus bietet Ihnen die Kommentarfunktion die Möglichkeit weitere offene Themen für alle sichtbar zu Besprechen.
             </p>
         </div>
         <div class="col-md-6 col-sm-12">
-            <h1 id="AboutUs">Anderes</h1>
-            <p class="text">Wir sind ein junges EntwicklerTeam, das im Rahmen der Veranstaltung WebTechnologien die Webapplikation Easyplan entwickelt haben.<br>
-                Mit EasyPlan soll es Veranstaltern und Teilnehmern von mittelgroßen Veranstaltungen erleichtert werden, diese zu organisieren<br>
-                Hierbei dient EasyPlan als Platform zur Kommunikation zwischen den Teilnehmern, über Umfragen oder Kommentare.
+            <h1 id="AboutUs">Viel Spaß!</h1>
+            <p class="text">
+                Kommunizieren Sie mit Ihren Freunden und Bekannten in Form von Chats und Umfragen um so Ihre perfekte Veranstaltung zu organisieren.
+                Bleiben Sie alle durch nur einen Blick auf ihre Veranstaltung auf dem selben Informationsstand um nichts zu verpassen.
+                EasyPlan wünscht Ihnen einen angenehmen Umgang mit unserer Webapplikation und <br><strong>viel Spaß bei Ihrer Veranstaltung!</strong>
             </p>
         </div>
         <div class="col-md-6 col-sm-12">
-            <img src="img/Erstellen.jpg" class="Pic" alt="Bild">
+            <img src="img/VielSpass.jpg" class="Pic" alt="Bild">
         </div>
         </div>
           </div>
-
-
-
-
-
-
-
     </div>
 
 

@@ -10,15 +10,14 @@
         <div class="row">
         <div class="col-md-3 col-sm-12">
             <div id="AuswahlSuchen">
-                <form action="/suchen">
                     <label for="Veranstaltungsname">Veranstaltungsname</label><br>
-                <input type="text" size="24px" maxlength="30" name="Veranstaltungsname" placeholder="z.B. Grillparty"><br>
+                <input type="text" size="24px" maxlength="30" onkeyup="search()" name="Veranstaltungsname" id="VeranstaltungsName" placeholder="z.B. Grillparty"><br>
                 <label for="Veranstaltungsort">Veranstaltungsort</label><br>
-                <input type="text" size="24px" maxlength="20" name="Veranstaltungsort" placeholder="z.B. Konstanz"><br>
+                <input type="text" size="24px" maxlength="20" onkeyup="search()" name="Veranstaltungsort" id="VerOrt" placeholder="z.B. Konstanz"><br>
                     <label for="Veranstalter">Veranstalter</label><br>
-                    <input type="text" size="24px" maxlength="20" name="Veranstalter" placeholder="z.B. Cristiano Ronaldo"><br>
+                    <input type="text" size="24px" maxlength="20" onkeyup="search()" name="Veranstalter" id="Veranstalter" placeholder="z.B. Cristiano Ronaldo"><br>
                     <label for="Genre">Genre</label><br>
-                <select size="1" id="genre" name="Genre">
+                <select size="1" id="genre" onchange="search()" name="Genre">
                     <option label=""></option>
                     <option label="Party">Party</option>
                     <option label="Sport">Sport</option>
@@ -26,22 +25,24 @@
                     <option label="Sonstige">Sonstiges</option>
                 </select>
                     <br>
-                    <button type="submit" id="weiter"> Suchen</button>
-                </form>
             </div>
         </div>
-        <div class="col-md-9 col-sm-12 Ergebnis">
+        <div id="Ajax" class="col-md-9 col-sm-12 Ergebnis">
             @foreach($Vsuchen as $vsuchen)
                <table>
                    <a href="{{route('Veranstaltung',$vsuchen->id)}}"> <h1 id="VerName"> {{ $vsuchen->Name }}</h1></a>
-                   <td id="VerInfo"> Veranstaltungsort: {{ $vsuchen->Ort }}</td>
-                   <td id="VerInfo">Veranstalter: {{ $vsuchen->Veranstalter }}</td>
-                   <td id="VerInfo">Genre: {{ $vsuchen->Genre }}</td>
-                   <td id="VerInfo">Datum: {{ $vsuchen->Datum }}</td>
+                   <td class="VerInfo"> Veranstaltungsort: {{ $vsuchen->Ort }}</td>
+                   <td class="VerInfo">Veranstalter: {{ $vsuchen->Veranstalter }}</td>
+                   <td class="VerInfo">Genre: {{ $vsuchen->Genre }}</td>
+                   <td class="VerInfo">Datum: {{ $vsuchen->Datum }}</td>
                </table>
             @endforeach
         </div>
         </div>
     </div>
-
+<script type="text/javascript">
+    function search() {
+        $('#Ajax').load('/suchen/ajax?Veranstaltungsname=' + $('#VeranstaltungsName').val() + '&Veranstaltungsort=' + $('#VerOrt').val() + '&Veranstalter=' + $('#Veranstalter').val() + '&Genre=' + $('#genre').val());
+    }
+</script>
 @endsection

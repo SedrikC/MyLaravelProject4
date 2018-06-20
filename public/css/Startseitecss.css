@@ -167,3 +167,9 @@ padding: 0;
 }
 .test{
 }
+
+@media screen and (max-width: 990px) {
+.Pic .Pic2 .caption2 .caption {
+    display: none;
+}
+}

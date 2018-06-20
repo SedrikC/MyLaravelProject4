@@ -42,7 +42,8 @@ class CommentController extends BaseController
     $VerID = $request->input('VerID');
     $User =Auth::user();
     $Name = $User->name;
-    $data = array('Comment'=>$Comment, 'VeranstaltungsID'=>$VerID, 'Username'=>$Name);
+    $created = date('Y-m-d H:i:s');
+    $data = array('Comment'=>$Comment, 'VeranstaltungsID'=>$VerID, 'Username'=>$Name, 'created_at'=>$created);
 
     DB::table('comments')->insert($data);
 

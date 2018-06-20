@@ -1,0 +1,30 @@
+.Bild{
+    width: 75%;
+    margin-left: 15%;
+    margin-top: 20px;
+    border: #568BFF solid 5px;
+}
+.Titel{
+    text-align: center;
+    color: #568BFF;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.Bild:hover{
+    width: 75%;
+    margin-left: 15%;
+    margin-top: 20px;
+    border: #E2007A solid 5px;
+}
+
+.Titel:hover {
+    text-align: center;
+    color: #E2007A;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+a:hover{
+    color: #E2007A;
+}

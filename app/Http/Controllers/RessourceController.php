@@ -27,6 +27,18 @@ class RessourceController extends Controller
 
         return view('Vsuchen')->with('Vsuchen',$result);
     }
+
+    public function ajaxsuche (Request $request){
+        $Veranstaltungsname = $request->input('Veranstaltungsname');
+        $Veranstaltungsort = $request->input('Veranstaltungsort');
+        $Genre = $request->input('Genre');
+        $Veranstalter = $request->input('Veranstalter');
+
+        $result = Veranstaltungen::where('Name', 'LIKE', '%'.$Veranstaltungsname.'%')->where('Ort', 'LIKE', '%'.$Veranstaltungsort.'%')
+            ->where('Genre', 'LIKE', '%'.$Genre.'%')->where('Veranstalter', 'LIKE', '%'.$Veranstalter.'%')->get();
+
+        return view('ajax.Vsuchen')->with('Vsuchen',$result);
+    }
     public function my_veranstaltungen (Request $request){
 
 

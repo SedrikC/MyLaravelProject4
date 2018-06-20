@@ -78,7 +78,4 @@ class Controller extends BaseController
 
         return \Redirect::route('suchen');
     }
-
-
-
 }

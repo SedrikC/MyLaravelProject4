@@ -51,6 +51,7 @@ Route::get('/datenschutz', 'HomeController@datenschutz')->name('datenschutz');
 Route::get('/select_mein_profil','Controller@select_mein_profil');
 
 Route::get('/suchen', 'RessourceController@suchen')->name('suchen');
+Route::get('/suchen/ajax', 'RessourceController@ajaxsuche');
 
 Route::get('/meine_veranstaltungen', 'RessourceController@my_veranstaltungen')->name('my_veranstaltungen');
 
@@ -78,3 +79,5 @@ Route::get('/Like', 'LikeController@store');
 
 
 Route::get('Profil/{id}', 'UserController@profil')->name('UserProfil');
+
+Route::get('/EasyPlanHome', 'HomeController@Home2')->name('Home2');
