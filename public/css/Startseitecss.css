@@ -169,7 +169,7 @@ padding: 0;
 }
 
 @media screen and (max-width: 990px) {
-.Pic .Pic2 .caption2 .caption {
+.Pic, .Pic2, .caption2, .caption {
     display: none;
 }
 }
