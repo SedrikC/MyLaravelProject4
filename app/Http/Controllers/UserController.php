@@ -35,7 +35,7 @@ class UserController extends Controller
             $user->save();
         }
 
-        return view('profile');
+        return view('Profile');
     }
 
     public function profil($name){
