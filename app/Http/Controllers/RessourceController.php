@@ -71,7 +71,7 @@ class RessourceController extends Controller
     }
 
     public function admin () {
-        return view('admin');
+        return view('Admin');
     }
     public function admin_veranstaltungen(){
         $result = Veranstaltungen::all();
