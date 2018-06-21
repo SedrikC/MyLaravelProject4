@@ -56,9 +56,10 @@
                 @foreach($CheckLike as $cl)
                 @endforeach
             <?php if(empty($cl)){?>
+                <?php if($option->Name == ''){}else{?>
             <input type="radio" value="{{$option->option}}" onclick="this.form.submit()" name="optionID">{{$option->Name}}<br>
                 <?php
-                }?>
+                }}?>
         @endforeach
 
 

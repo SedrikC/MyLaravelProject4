@@ -5,7 +5,7 @@
     <title>EasyPlan</title>
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" type="image/gif" href="/img/Logo-EasyPlan.gif">
+    <link rel="shortcut icon" type="/image/gif" href="/img/Logo-EasyPlan.gif">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/Startseitecss.css">
     <!--  <link rel="stylesheet" href="pfad-zur-css-datei/font-awesome.min.css">-->
@@ -20,7 +20,7 @@
 <body class="Background Site">
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a href="{{ route('home') }}"><img src="img/Logo-EasyPlan.gif" alt="Bild" class="Logo" /></a>
+    <a href="{{ route('home') }}"><img src="/img/Logo-EasyPlan.gif" alt="Bild" class="Logo" /></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -148,7 +148,7 @@
 
                 <!--Grid column-->
                 <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
-                    <h2 class="mb-0 white-text">Folgt und auf unseren sozialen Netzwerken</h2>
+                    <h2 class="mb-0 white-text">Folgt uns auf unseren sozialen Netzwerken</h2>
                 </div>
                 <!--Grid column-->
 

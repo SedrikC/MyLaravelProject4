@@ -42,7 +42,7 @@ class RessourceController extends Controller
 
         foreach ($result as $r){
             $tr = '     <tr>
-                        <td></td><td><a href="{{ route(\'Veranstaltung\',$vsuchen->id)}}"><h1 id="VerName"> '. $r->Name .'</h1></a></td>
+                        <td></td><td><a href="/Veranstaltung/'. $r->id.'"<h1 id="VerName"> '. $r->Name .'</h1></a></td>
                         <td></td>
                         <td></td>
                         </tr>
