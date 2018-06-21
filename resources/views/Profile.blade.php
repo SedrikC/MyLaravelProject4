@@ -7,7 +7,7 @@
 
 
                 <div class="container">
-                    <h1 class="BildBearbeiten">Profilbild bearbeiten</h1>
+                    <h1>Profil bearbeiten</h1>
                     <h1 class="BildBearbeiten">{{Auth::user()->name}}</h1>
                 <div class="row">
                     <div class="col-md-10 col-md-offset-1 BildBearbeiten">

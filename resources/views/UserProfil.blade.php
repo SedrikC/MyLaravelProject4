@@ -5,10 +5,7 @@
     <link rel="stylesheet" href="css/Mein_Profil.css">
 </head>
     @foreach($Daten as $daten)
-    <h1>Profil bearbeiten</h1>
     <h1> {{$daten->name }}'s Profil</h1>
-
-
 
     <div class="container">
         <div class="row Mein_Profil">

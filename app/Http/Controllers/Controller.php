@@ -53,6 +53,9 @@ class Controller extends BaseController
 
         $Name =$req->input('Name');
         $Ort = $req->input('Ort');
+        if (empty($Ort)){
+            $Ort = 'Unbekannt';
+        }
         $User = Auth::user();
         $Veranstalter = $User->name;
 
@@ -67,6 +70,10 @@ class Controller extends BaseController
 
         $datum = $req->input('datum');
         $Genre = $req->input('Genre');
+
+        if(empty($datum)){
+            $datum = null;
+        }
 
        $Name = $req->session()->get('Name');
        $Ort = $req->session()->get('Ort');
