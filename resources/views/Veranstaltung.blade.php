@@ -106,11 +106,11 @@
      </tbody>
          <tfoot id="tfood">
          <th id="left">Anzahl</th>
-         <td><?php if(empty($option)){}else{echo count($Like1);}?></td>
-         <td><?php if(empty($option)){}else{echo count($Like2);}?></td>
-         <td><?php if(empty($option)){}else{echo count($Like3);}?></td>
-         <td><?php if(empty($option)){}else{echo count($Like4);}?></td>
-         <td><?php if(empty($option)){}else{echo count($Like5);}?></td>
+         <td><?php if(count($Like1) == '0'){}else{echo count($Like1);}?></td>
+         <td><?php if(count($Like2) == '0'){}else{echo count($Like2);}?></td>
+         <td><?php if(count($Like3) == '0'){}else{echo count($Like3);}?></td>
+         <td><?php if(count($Like4) == '0'){}else{echo count($Like4);}?></td>
+         <td><?php if(count($Like5) == '0'){}else{echo count($Like5);}?></td>
          </tfoot>
 
      </table>

@@ -15,7 +15,7 @@ class CreateVeranstaltungen extends Migration
             $table->string('Ort');
             $table->string('Genre');
             $table->string('Veranstalter');
-            $table->date('Datum');
+            $table->date('Datum')->nullable();
             $table->timestamps();
         });
     }

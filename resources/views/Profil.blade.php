@@ -4,7 +4,6 @@
 
     <link rel="stylesheet" href="css/Mein_Profil.css">
 
-    <h1>Profil bearbeiten</h1>
     <h1> {{Auth::user()->name }}'s Profil</h1>
 
 

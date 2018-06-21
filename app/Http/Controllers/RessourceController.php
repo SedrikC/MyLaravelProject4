@@ -37,7 +37,22 @@ class RessourceController extends Controller
         $result = Veranstaltungen::where('Name', 'LIKE', '%'.$Veranstaltungsname.'%')->where('Ort', 'LIKE', '%'.$Veranstaltungsort.'%')
             ->where('Genre', 'LIKE', '%'.$Genre.'%')->where('Veranstalter', 'LIKE', '%'.$Veranstalter.'%')->get();
 
-        return view('ajax.Vsuchen')->with('Vsuchen',$result);
+        $html = '<table class="table">
+                    <tbody>';
+
+        foreach ($result as $r){
+            $tr = '     <tr></tr><td></td><td><a href="{{route(\'Veranstaltung\',$vsuchen->id)}}"><h1 id="VerName"> '. $r->Name .'</h1></a></td><td></td><td></td></tr>
+                        <tr>
+                        <td class="VerInfo"> Veranstaltungsort: ' . $r->Ort . '</td>
+                        <td class="VerInfo">Veranstalter: '. $r->Veranstalter .'</td>
+                        <td class="VerInfo">Genre: '. $r->Genre  .'</td>
+                        <td class="VerInfo">Datum: '. $r->Datum .'</td>
+                        </tr>';
+            $html .= $tr;
+        }
+        $html .= '</tbody></table>';
+
+        return $html;
     }
     public function my_veranstaltungen (Request $request){
 
