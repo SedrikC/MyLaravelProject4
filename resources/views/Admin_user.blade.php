@@ -7,40 +7,21 @@
     <h1> Willkommen auf der Admin Seite zur User Bearbeitung!</h1>
 
 
-<div class="col-md-9 profilinhalt">
-
-    <table>
-            <br>
-            <tr>
-                <td class="VerInfo2">Username</td>
-                <td class="VerInfo2">Name</td>
-                <td class="VerInfo2">Vorname</td>
-                <td class="VerInfo2">Geschlecht</td>
-                <td class="VerInfo2">Postleitzahl</td>
-            </tr>
-    </table>
-        @foreach($Daten as $daten)
-        <form action={{action('RessourceController@admin_user_loeschen')}}>
-        <table class="user">
-            <tr>
-            <th class="VerInfo2">{{ $daten->name }}</th>
-            <td class="VerInfo2">{{ $daten->lastName }}</td>
-            <td class="VerInfo2">{{ $daten->firstName }}</td>
-            <td class="VerInfo2">{{ $daten->geschlecht }}</td>
-            <td class="VerInfo2">{{ $daten->plz }}</td>
-            <input type="hidden" value="{{ $daten->id }}" name="UserID">
-            <td><button class="btn btn-danger">Löschen</button></td>
-            </tr>
+<div class="col-md-8 col-sm-12 Ergebnis">
+    @foreach($Daten as $daten)
+        <table>
+            <form action={{action('RessourceController@admin_user_loeschen')}}>
+                <h1 id="VerName"> {{ $daten->name }}</h1></a>
+                <td class="VerInfo"> Vorname: {{ $daten->firstName }}</td>
+                <td class="VerInfo">Nachname: {{ $daten->lastName }}</td>
+                <td class="VerInfo">Geschlecht: {{ $daten->geschlecht }}</td>
+                <td class="VerInfo">Postleitzahl: {{ $daten->plz }}</td>
+                <input type="hidden" value="{{ $daten->id }}" name="UserID">
+                <td><button class="btn btn-danger">Löschen</button></td>
+            </form>
         </table>
-        </form>
-</table>
+    @endforeach
 </div>
-            @endforeach
-
-
-
-
-
 
 
 
