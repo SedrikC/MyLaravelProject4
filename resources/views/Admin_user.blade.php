@@ -31,6 +31,7 @@
             <input type="hidden" value="{{ $daten->id }}" name="UserID">
             <td><button class="btn btn-danger">Löschen</button></td>
             </tr>
+        </table>
         </form>
 </table>
 </div>

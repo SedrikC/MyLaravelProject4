@@ -50,10 +50,14 @@ class RessourceController extends Controller
         return view('meine_veranstaltungen')->with('Vsuchen',$result);
 
     }
-    public function admin (){
+
+    public function admin () {
+        return view('admin');
+    }
+    public function admin_veranstaltungen(){
         $result = Veranstaltungen::all();
 
-        return view('Admin')->with('Vsuchen',$result);
+        return view('Admin_veranstaltungen')->with('Vsuchen',$result);
     }
     public function admin_user() {
         $result = User::all();
@@ -65,7 +69,7 @@ class RessourceController extends Controller
         $Ver = Veranstaltungen::where('id', $VerID);
         $Ver->delete();
 
-        return \Redirect::route('Admin');
+        return \Redirect::route('admin');
     }
 
     public function admin_user_loeschen(Request $request){
@@ -73,7 +77,7 @@ class RessourceController extends Controller
         $User = User::where('id', $UserID);
         $User->delete();
 
-        return \Redirect::route('Admin_user');
+        return \Redirect::route('admin');
 
 
     }

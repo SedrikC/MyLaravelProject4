@@ -16,7 +16,7 @@
 
 
 </head>
-<body class="Background">
+<body class="Background Site">
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a href="{{ route('home') }}"><img src="img/Logo-EasyPlan.gif" alt="Bild" class="Logo" /></a>
@@ -89,8 +89,7 @@
                if ($role_id ==2){
 
                 ?>
-                <li><a href="{{URL('admin')}}"><i class="fa fa-btn fa-unlock-alt"></i>Admin - Veranstaltungen</a>
-                <li><a href="{{URL('admin_user')}}"><i class="fa fa-btn fa-unlock-alt"></i>Admin - User</a>
+                <li><a href="{{URL('admin')}}"><i class="fa fa-btn fa-unlock-alt"></i>Admin</a>
 
 
             <?php }?>
@@ -121,8 +120,9 @@
     </div>
 </nav>
 
+<div class="Site-content">
 @yield('content')
-
+</div>
 
 
 <!--Footer-->
