@@ -15,7 +15,7 @@
                 <?php
                 $avatar = Auth::user()->avatar;
                 if ($avatar == NULL){?>
-                <img src="/uploads/avatar/avatar_default.jpg" id="Profilbild">
+                <img src="/uploads/avatar/avatar_default.png" id="Profilbild">
                 <?php } else {
                 ?>
                 <img src="/uploads/avatar/{{Auth::user()->avatar}}" id="Profilbild">

@@ -12,7 +12,7 @@
         <div class="row">
             <div class="col-sm-6 col-md-6">
                 <a href="{{URL('profile')}}">
-                    <img src="img/MeineVeranstaltung.jpg" class="admin_img" />
+                    <img src="/uploads/avatar/avatar_default.png" class="admin_img" />
                     <p class="admin_beschreibung">Profil bearbeiten</p>
                 </a>
             </div>

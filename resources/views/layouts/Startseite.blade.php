@@ -109,7 +109,7 @@
     <?php
     $avatar = Auth::user()->avatar;
     if ($avatar == NULL){?>
-        <img src="/uploads/avatar/avatar_default.jpg" style="width:30px; height:30px; float:left; border-radius:50%; margin-right:25px;">
+        <img src="/uploads/avatar/avatar_default.png" style="width:30px; height:30px; float:left; border-radius:50%; margin-right:25px;">
         <?php } else {
         ?>
             <img src="/uploads/avatar/{{Auth::user()->avatar}}" style="width:30px; height:30px; float:left; border-radius:50%; margin-right:25px;">

@@ -16,7 +16,7 @@
                         <?php
                         $avatar = Auth::user()->avatar;
                         if ($avatar == NULL){?>
-                        <img src="/uploads/avatar/avatar_default.jpg" id="Profilbild">
+                        <img src="/uploads/avatar/avatar_default.png" id="Profilbild">
                         <?php } else {
                         ?>
                         <img src="/uploads/avatar/{{Auth::user()->avatar}}" id="Profilbild">
@@ -41,12 +41,12 @@
 
                         <tr>
                             <td>First Name:</td>
-                            <td><input type="text" name="firstName" class="form-control form" value={{Auth::user()->firstName}}> </td>
+                            <td><input type="text" name="firstName" class="form-control form" value="{{Auth::user()->firstName}}"> </td>
                         </tr>
 
                         <tr>
                             <td>Last Name:</td>
-                            <td><input type="text" name="lastName" class="form-control form"value={{Auth::user()->lastName}}> </td>
+                            <td><input type="text" name="lastName" class="form-control form"value="{{Auth::user()->lastName}}"> </td>
                         </tr>
 
                         <tr>
@@ -64,15 +64,15 @@
 
                         <tr>
                             <td>Ort</td>
-                            <td><input type="text" name="ort" class="form-control form" value={{Auth::user()->ort}}> </td>
+                            <td><input type="text" name="ort" class="form-control form" value="{{Auth::user()->ort}}"> </td>
                         </tr>
                         <tr>
                             <td>Postleitzahl</td>
-                            <td><input type="text" name="plz" class="form-control form" value={{Auth::user()->plz}}> </td>
+                            <td><input type="text" name="plz" class="form-control form" value="{{Auth::user()->plz}}"> </td>
                         </tr>
                         <tr>
                             <td>Strasse</td>
-                            <td><input type="text" name="strasse" class="form-control form" value={{Auth::user()->strasse}}> </td>
+                            <td><input type="text" name="strasse" class="form-control form" value="{{Auth::user()->strasse}}"> </td>
                         </tr>
                        <!--
                         <tr>
@@ -82,10 +82,10 @@
                         -->
                         <tr>
                             <td>Mobile</td>
-                            <td><input type="text" name="mobile" class="form-control form" value={{Auth::user()->mobile}}> </td>
+                            <td><input type="text" name="mobile" class="form-control form" value="{{Auth::user()->mobile}}"> </td>
                         </tr>
                         <tr>
-                            <td><input type="submit" name="submit" value="Bearbeiten " class="pull-right btn btn-sm btn-primary"></td>
+                            <td><input type="submit" name="submit" value="Bearbeiten" class="pull-right btn btn-sm btn-primary"></td>
 
                         </tr>
 
