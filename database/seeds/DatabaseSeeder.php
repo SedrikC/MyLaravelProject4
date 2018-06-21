@@ -18,7 +18,7 @@ class DatabaseSeeder extends Seeder
             'name' => 'Dominik1810',
             'email' => 'dominik.al.burkert@gmail.com',
             'password' => bcrypt('derder'),
-            'avatar' =>NULL,
+            'avatar' => NULL,
             'firstName' => 'Dominik',
             'lastName' => 'Burkert',
             'mobile' => '0124553952',

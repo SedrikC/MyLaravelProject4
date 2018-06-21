@@ -23,15 +23,49 @@ class Controller extends BaseController
         $password = Auth::user()->password;
         $email = Auth::user()->email;
         $role_id = Auth::user()->role_id;
+        //wenn nichts geändert wurde nimmt es die old_xxx werte
+        $old_firstName = Auth::user()->firstName;
+        $old_lastName = Auth::user()->lastName;
+        $old_mobile = Auth::user()->mobile;
+        $old_geburtsdatum = Auth::user()->geburtsdatum;
+        $old_geschlecht = Auth::user()->geschlecht;
+        $old_strasse = Auth::user()->strasse;
+        $old_ort = Auth::user()->ort;
+        $old_plz = Auth::user()->plz;
+
 
         $firstName =$req->input('firstName');
+        if(empty($firstName)){
+            $firstName = $old_firstName;
+        }
         $lastName = $req->input('lastName');
+        if(empty($lastName)){
+            $lastName = $old_lastName;
+        }
         $mobile = $req->input('mobile');
+        if(empty($mobile)){
+            $mobile = $old_mobile;
+        }
         $geburtsdatum = $req->input('geburtsdatum');
+        if(empty($geburtsdatum)){
+            $geburtsdatum = $old_geburtsdatum;
+        }
         $geschlecht = $req->input('geschlecht');
+        if(empty($geschlecht)){
+            $geschlecht = $old_geschlecht;
+        }
         $ort = $req->input('ort');
+        if(empty($ort)){
+            $ort = $old_ort;
+        }
         $plz =$req->input('plz');
+        if(empty($plz)){
+            $plz = $old_plz;
+        }
         $strasse = $req->input('strasse');
+        if(empty($strasse)){
+            $strasse = $old_strasse;
+        }
        // $email = $req->input('email');
 
         $data = array('password'=>$password,'role_id'=>$role_id, 'name'=>$name,'firstName'=>$firstName, "lastName"=>$lastName,
@@ -45,7 +79,7 @@ class Controller extends BaseController
                 ->update($data);
 
 
-        return view('Profile');
+        return view('Profil_bearbeiten_erfolgreich');
     }
 
 

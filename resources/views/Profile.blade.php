@@ -3,15 +3,24 @@
 @section('content')
 
     <link rel="stylesheet" href="css/Profile.css">
+    <link rel="stylesheet" href="css/Mein_Profil.css">
     <div>
-
 
                 <div class="container">
                     <h1 class="BildBearbeiten">Profilbild bearbeiten</h1>
                     <h1 class="BildBearbeiten">{{Auth::user()->name}}</h1>
                 <div class="row">
-                    <div class="col-md-10 col-md-offset-1 BildBearbeiten">
-                        <img src="/uploads/avatar/{{Auth::user()->avatar}}" id="Profbild">
+
+                    <div class="col-md-12 BildBearbeiten">
+
+                        <?php
+                        $avatar = Auth::user()->avatar;
+                        if ($avatar == NULL){?>
+                        <img src="/uploads/avatar/avatar_default.jpg" id="Profilbild">
+                        <?php } else {
+                        ?>
+                        <img src="/uploads/avatar/{{Auth::user()->avatar}}" id="Profilbild">
+                        <?php } ?>
                         <h2>{{ Auth::user()->name }}'s Profile</h2>
                         <form enctype="multipart/form-data" action="/profile" method="post">
                             <label>Update Profile Image</label>
@@ -20,26 +29,32 @@
                             <input type="submit" class="pull-right btn btn-sm btn-primary">
                         </form>
                     </div>
-                </div>
+
+                <div>
+
                 <form action="/insert" method="post">
+
                     <div id="Tabelle">
                         {{csrf_field()}}
+
                     <table>
+
                         <tr>
                             <td>First Name:</td>
-                            <td><input type="text" name="firstName"> </td><br>
+                            <td><input type="text" name="firstName" class="form-control form" value={{Auth::user()->firstName}}> </td>
                         </tr>
+
                         <tr>
                             <td>Last Name:</td>
-                            <td><input type="text" name="lastName"> </td><br>
+                            <td><input type="text" name="lastName" class="form-control form"value={{Auth::user()->lastName}}> </td>
                         </tr>
 
                         <tr>
                             <td>Geburtsdatum</td>
-                            <td><input type="date" name="geburtsdatum"> </td><br>
+                            <td><input type="date" name="geburtsdatum"class="form-control form" value={{Auth::user()->geburtsdatum}}> </td>
                         </tr>
                         <tr>
-                            <td>Geschlecht</td><br>
+                            <td>Geschlecht </td><br>
                             <td>
                                 <input type="radio" name="geschlecht" value="male">
                                 <label for="male">männlich</label>
@@ -49,15 +64,15 @@
 
                         <tr>
                             <td>Ort</td>
-                            <td><input type="text" name="ort"> </td><br>
+                            <td><input type="text" name="ort" class="form-control form" value={{Auth::user()->ort}}> </td>
                         </tr>
                         <tr>
                             <td>Postleitzahl</td>
-                            <td><input type="text" name="plz"> </td><br>
+                            <td><input type="text" name="plz" class="form-control form" value={{Auth::user()->plz}}> </td>
                         </tr>
                         <tr>
                             <td>Strasse</td>
-                            <td><input type="text" name="strasse"> </td><br>
+                            <td><input type="text" name="strasse" class="form-control form" value={{Auth::user()->strasse}}> </td>
                         </tr>
                        <!--
                         <tr>
@@ -67,16 +82,21 @@
                         -->
                         <tr>
                             <td>Mobile</td>
-                            <td><input type="text" name="mobile"> </td><br>
+                            <td><input type="text" name="mobile" class="form-control form" value={{Auth::user()->mobile}}> </td>
                         </tr>
                         <tr>
-                            <td><input type="submit" name="submit" value="Bearbeiten" class="pull-right btn btn-sm btn-primary"> </td>
+                            <td><input type="submit" name="submit" value="Bearbeiten " class="pull-right btn btn-sm btn-primary"></td>
+
                         </tr>
+
                     </table>
                     </div>
                 </form>
+
+                </div>
+                </div>
                 </div>
     </div>
-    </div>
+
 
 @endsection

@@ -13,8 +13,16 @@
 
         <div class="row Mein_Profil">
             <div class="col-md-2 BildBearbeiten" id="bild">
-
+                <?php
+                $avatar = Auth::user()->avatar;
+                if ($avatar == NULL){?>
+                <img src="/uploads/avatar/avatar_default.jpg" id="Profilbild">
+                <?php } else {
+                ?>
                 <img src="/uploads/avatar/{{Auth::user()->avatar}}" id="Profilbild">
+                <?php } ?>
+
+
             </div>
             <div class="col-md-1">
 

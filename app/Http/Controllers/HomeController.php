@@ -41,6 +41,9 @@ class HomeController extends Controller
         $Profil =User::where('id', $UserID)->get();
         return view('Profil')->with('Daten', $Profil);
     }
+    public function Profil_bearbeiten_erfolgreich(){
+        return view('Profil_bearbeiten_erfolgreich');
+    }
     public function datenschutz(){
         return view('Datenschutz');
     }

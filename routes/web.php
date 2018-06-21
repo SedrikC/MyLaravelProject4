@@ -45,6 +45,7 @@ Route::post('insert','Controller@insert');
 Route::get('insert_veranstaltungen1','Controller@insert_veranstaltungen1');
 Route::get('insert_veranstaltungen2','Controller@insert_veranstaltungen2');
 
+Route::get('/Profil_bearbeiten_erfolgreich', 'HomeController@Profil_bearbeiten_erfolgreich')->name('Profil_bearbeiten_erfolgreich');
 
 Route::get('/datenschutz', 'HomeController@datenschutz')->name('datenschutz');
 
