@@ -65,8 +65,8 @@ Route::get('/admin_user_loeschen', 'RessourceController@admin_user_loeschen')->n
 
 
 Route::get('/admin', 'RessourceController@admin')->name('admin')->middleware('admin');
-Route::get('/admin_user', 'RessourceController@admin_user')->name('Admin_user')->middleware('admin');;
-Route::get('/admin_veranstaltungen', 'RessourceController@admin_veranstaltungen')->name('Admin_user')->middleware('admin');;
+Route::get('/admin_user', 'RessourceController@admin_user')->name('Admin_user')->middleware('admin');
+Route::get('/admin_veranstaltungen', 'RessourceController@admin_veranstaltungen')->name('Admin_veranstaltung')->middleware('admin');
 
 
 Route::get('/Veranstaltung/{id}', 'RessourceController@Veranstaltung')->name('Veranstaltung');

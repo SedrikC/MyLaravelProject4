@@ -88,7 +88,7 @@ class RessourceController extends Controller
         $Ver = Veranstaltungen::where('id', $VerID);
         $Ver->delete();
 
-        return \Redirect::route('admin');
+        return \Redirect::route('admin_veranstaltungen_loeschen');
     }
 
     public function admin_user_loeschen(Request $request){
@@ -96,7 +96,7 @@ class RessourceController extends Controller
         $User = User::where('id', $UserID);
         $User->delete();
 
-        return \Redirect::route('admin');
+        return \Redirect::route('admin_user_loeschen');
 
 
     }
