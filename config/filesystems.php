@@ -60,6 +60,7 @@ return [
             'root'   =>public_path() . '/uploads/avatar',
            // 'root'   => public_path() . '/image/ProfilePics',
 
+
         ],
 
         's3' => [
