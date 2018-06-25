@@ -2,7 +2,7 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
-    <title>EasyPlan</title>
+    <title>EasyPlan | Organisieren Sie Ihre Veranstaltungen</title>
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="/image/gif" href="/img/Logo-EasyPlan.gif">
@@ -13,7 +13,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
 
 </head>
@@ -240,34 +240,3 @@
 </footer>
 </body>
 </html>
-<script>
-    $(document).ready(function () {
-        $('#comment_form').on('submit', function (event) {
-            event.preventDefault();
-            var form_data = $(this).serialize();
-            $.ajax({
-                url:"add_comment.php",
-                method: "POST",
-                data:form_data,
-                dataType: "JSON",
-                success:function (data) {
-                    if(data.error != ''){
-                        $('#comment_form')[0].reset();
-                        $('#comment_message').html(data.error);
-                    }
-                }
-            })
-        });
-        load_comment();
-        function load_comment() {
-            $.ajax({
-                url: "fetch_comment.php",
-                method: "POST",
-                success:function (data)
-                {
-                    $('#display_comment').html(data);
-                }
-            })
-        }
-    });
-</script>

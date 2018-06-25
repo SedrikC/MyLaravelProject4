@@ -31,6 +31,22 @@
                 </div>
             </div>
             <div id="Ajax" class="col-md-9 col-sm-12 Ergebnis">
+                @foreach($Vsuchen as $r)
+                    <table class="table">
+                    <tbody>
+                    <tr>
+                        <td></td><td><a href="{{route('Veranstaltung',$r->id)}}"><h1 class="VerName"> {{ $r->Name }}</h1></a></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="VerInfo"> Veranstaltungsort: {{$r->Ort}} </td>
+                        <td class="VerInfo">Veranstalter: {{$r->Veranstalter}} </td>
+                        <td class="VerInfo">Genre: {{$r->Genre}}</td>
+                        <td class="VerInfo">Datum:  {{$r->Datum}}</td>
+                    </tr>
+                    </tbody></table>
+                    @endforeach
             </div>
         </div>
     </div>
