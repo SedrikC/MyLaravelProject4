@@ -143,9 +143,14 @@ padding: 0;
     background-color: #E2007A;
     margin-top: 0px ;
 }
-#AboutUs{
+.AboutUs{
     font-size: 40px;
     border-bottom: #E2007A solid;
+    margin-top: 20px;
+    text-align: center;
+    font-family: Helonia;
+    font-style: Italic;
+    color: #568BFF;
 }
 
 .text{
