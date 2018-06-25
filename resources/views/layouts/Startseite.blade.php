@@ -45,7 +45,7 @@
                    <?php if (\Auth::check()){ ?>
                            "{{ route('suchen') }}">
                    <?php } else {?>
-                "#" onClick="suchenAlert()">
+                "#" onClick="alert('Bitte melde dich erst an um eine Veranstaltung zu suchen!')">
                    <?php } ?>Veranstaltung suchen</a>
 
             </li>
