@@ -36,7 +36,7 @@ class BesucherController extends Controller
         return view('Datenschutz');
     }
     public function impressum(){
-        return view('impressum');
+        return view('Impressum');
     }
     public function index()
     {
