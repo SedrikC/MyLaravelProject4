@@ -22,7 +22,7 @@ class DatabaseSeeder extends Seeder
             'firstName' => 'Dominik',
             'lastName' => 'Burkert',
             'mobile' => '0124553952',
-            'geburtsdatum' => NULL,
+            'geburtsdatum' => '1997'.'10'.'18',
             'ort' => 'Spaichingen',
             'geschlecht' => 'male',
             'strasse' => 'Auf Michelfeld 7',
@@ -42,7 +42,7 @@ class DatabaseSeeder extends Seeder
             'firstName' => 'Sedrik',
             'lastName' => 'Cirzel',
             'mobile' => '110',
-            'geburtsdatum' => NULL,
+            'geburtsdatum' => '1998'.'07'.'17',
             'ort' => 'Spaichingen',
             'geschlecht' => 'male',
             'strasse' => 'Kastanienweg 17',
@@ -72,8 +72,127 @@ class DatabaseSeeder extends Seeder
 
 
         ]);
+        DB::table('users')->insert([
+            'id' =>4,
+            'role_id'=>1,
+            'name' => 'M.Giretti',
+            'email' => 'marco.giretti@htwg-konstanz.de',
+            'password' => bcrypt('passwort'),
+            'avatar' =>NULL,
+            'firstName' => 'Marco',
+            'lastName' => 'Giretti',
+            'mobile' => '01769058051',
+            'geburtsdatum' => '1996'.'07'.'08',
+            'ort' => 'Trossingen',
+            'geschlecht' => 'male',
+            'strasse' => 'Hegaustrasse 23',
+            'plz' => 78546,
+            'created_at' => NOW(),
+            'updated_at' => NOW(),
 
 
-    //  DB::insert("INSERT INTO users VALUES(1,2, 'Dominik Burkert', 'dominik.al.burkert@gmail.com',bcrypt('secret'),NOW(),NOW())");
+        ]);
+
+        //Veranstaltungen erstellen
+            DB::table('veranstaltungen')->insert([
+            'id' =>1,
+            'Name' => '22. Geburtstag',
+            'Ort' => 'Trossingen',
+            'Genre' => 'Party',
+            'Veranstalter' => 'M.Giretti',
+            'Datum' => '2018'.'07'.'08',
+        ]);
+       DB::table('veranstaltungen')->insert([
+            'id' =>2,
+            'Name' => 'ALDA Prüfung',
+            'Ort' => 'Konstanz',
+            'Genre' => 'Sonstige',
+            'Veranstalter' => 'M.Giretti',
+            'Datum' => '2018'.'07'.'04',
+        ]);
+        DB::table('teilnahme')->insert([
+            'id' =>1,
+            'VeranstaltungsID' => 1,
+            'name' => 'M.Giretti',
+            'antwort' => 0,
+        ]);
+        DB::table('teilnahme')->insert([
+            'id' =>2,
+            'VeranstaltungsID' => 1,
+            'name' => 'Dominik1810',
+            'antwort' => 1,
+        ]);
+        DB::table('teilnahme')->insert([
+            'id' =>3,
+            'VeranstaltungsID' => 1,
+            'name' => 'Sedrik17',
+            'antwort' => 0,
+        ]);
+        DB::table('polls')->insert([
+            'pollid' =>1,
+            'Titel' => 'Wo wollt ihr hin?',
+            'User' => 'M.Giretti',
+            'VerID' => 1,
+        ]);
+        DB::table('comments')->insert([
+            'Commentid' =>1,
+            'Veranstaltungsid' => 1,
+            'Username' => 'Dominik1810',
+            'Comment' => 'kann leider nicht kommen ',
+            'created_at' =>'2018'.'07'.'01',
+        ]);
+        DB::table('comments')->insert([
+        'Commentid' =>3,
+        'Veranstaltungsid' => 1,
+        'Username' => 'Sedrik17',
+        'Comment' => 'ich bin dabei!',
+        'created_at' =>'2018'.'07'.'03',
+    ]);
+        DB::table('comments')->insert([
+            'Commentid' =>2,
+            'Veranstaltungsid' => 1,
+            'Username' => 'M.Giretti',
+            'Comment' => 'Schade!',
+            'created_at' =>'2018'.'07'.'02',
+        ]);
+        DB::table('options')->insert([
+        'optionid' =>1,
+        'option' => 1,
+        'VerID' => 1,
+        'Name' => 'Freibad',
+    ]);
+        DB::table('options')->insert([
+            'optionid' =>2,
+            'option' => 2,
+            'VerID' => 1,
+            'Name' => 'Berrys',
+        ]);
+        DB::table('options')->insert([
+            'optionid' =>3,
+            'option' => 3,
+            'VerID' => 1,
+            'Name' => 'Kino',
+        ]);
+        DB::table('options')->insert([
+            'optionid' =>4,
+            'option' => 4,
+            'VerID' => 1,
+            'Name' => 'Pizza essen',
+        ]);
+        DB::table('like')->insert([
+            'LikeID' =>1,
+            'VeranstaltungID' => 1,
+            'optionID' => 4,
+            'Username' => 'M.Giretti',
+        ]);
+        DB::table('like')->insert([
+            'LikeID' =>2,
+            'VeranstaltungID' => 1,
+            'optionID' => 4,
+            'Username' => 'Sedrik17',
+        ]);
+
+
+        //  DB::insert("INSERT INTO users VALUES(1,2, 'Dominik Burkert', 'dominik.al.burkert@gmail.com',bcrypt('secret'),NOW(),NOW())");
     }
 }

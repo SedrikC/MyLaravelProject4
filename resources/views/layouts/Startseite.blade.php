@@ -155,8 +155,10 @@
                 <!--Grid column-->
                 <div class="col-md-6 col-lg-7 text-center text-md-right">
                     <!--Facebook-->
-                    <a class="fb-ic ml-0">
-                        <i class="fa fa-facebook white-text mr-lg-4"> </i>
+
+                    <!-- <a class="fb-ic ml-0"> -->
+                    <a  class="fb-ic ml-0">
+                        <i class="fa fa-facebook white-text mr-lg-4"></i>
                     </a>
                     <!--Twitter-->
                     <a class="tw-ic">

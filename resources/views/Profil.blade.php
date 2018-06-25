@@ -67,7 +67,9 @@
                         </tr>
                     <tr>
                         <td>Email</td>
-                        <td>{{$daten->email}}</td>
+
+
+                        <td id="email">{{$daten->email}}</td>
                     </tr>
                     <td>Handynummer</td>
                     <td>{{ $daten->mobile }}
