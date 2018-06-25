@@ -67,9 +67,9 @@
     </form>
     @endforeach
     <?php if(empty($poll)){?>
-    <a href ='{{route('Pollerstellen', $veranstaltung->id)}}'><h3>Umfrage erstellen</h3></a>
+    <a href ='{{route('Pollerstellen', $veranstaltung->id)}}'><h3 id="Umfrage">Umfrage erstellen</h3></a>
     <?php
-    }?>
+    }else{?>
      <table id="poll">
          <thead id="thead">
          <th id="left">Optionen</th>
@@ -115,9 +115,11 @@
          </tfoot>
 
      </table>
+        <?php
+         }?>
 </div>
 <div class="col-md-6">
-    <h1 class="Header">Veranstaltunschat</h1>
+    <h1 class="Header">Veranstaltungschat</h1>
     <form action={{action('CommentController@store')}}>
         {{csrf_field()}}
         <div><textarea size="5" rows="5" name="comment" id="comment" class="form-control" placeholder="Kommentar eingeben"></textarea></div>

@@ -79,7 +79,8 @@ class Controller extends BaseController
                 ->update($data);
 
 
-        return view('Profil_bearbeiten_erfolgreich');
+        //return view('Profil_bearbeiten_erfolgreich');
+        return \Redirect::route('profil');
     }
 
 

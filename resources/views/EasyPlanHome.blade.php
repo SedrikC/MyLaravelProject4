@@ -49,7 +49,7 @@
     <div class="container">
     <div class="row">
     <div class="col-md-6 col-sm-12">
-        <h1 id="AboutUs">Über uns</h1>
+        <h1 class="AboutUs">Über EasyPlan</h1>
 <p class="text">Wir sind ein junges EntwicklerTeam, das im Rahmen der Veranstaltung WebTechnologien die Webapplikation Easyplan entwickelt haben.<br>
     Mit EasyPlan soll es Veranstaltern und Teilnehmern von mittelgroßen Veranstaltungen erleichtert werden, diese zu organisieren<br>
     Hierbei dient EasyPlan als Platform zur Kommunikation zwischen den Teilnehmern, über Umfragen oder Kommentare.
@@ -63,14 +63,14 @@
             <img src="img/Funktionsumfang.jpg" class="Pic2" alt="Bild">
         </div>
         <div class="col-md-6 col-sm-12">
-            <h1 id="AboutUs">Funktionsumfang</h1>
+            <h2 class="AboutUs">Funktionsumfang</h2>
             <p class="text">EasyPlan bietet Ihnen zahlreiche Features, die Ihnen das organisieren Ihrer Veranstaltung erleichtern. <br>
                 Neben dem Erstellen und Suchen von Veranstaltungen, können Sie Umfragen erstellen und Ihren Freunden per Abstimmung mitteilen ob Sie an
                 der Veranstaltung teilnehmen. Darüber hinaus bietet Ihnen die Kommentarfunktion die Möglichkeit weitere offene Themen für alle sichtbar zu Besprechen.
             </p>
         </div>
         <div class="col-md-6 col-sm-12">
-            <h1 id="AboutUs">Viel Spaß!</h1>
+            <h2 class="AboutUs">Viel Spaß!</h2>
             <p class="text">
                 Kommunizieren Sie mit Ihren Freunden und Bekannten in Form von Chats und Umfragen um so Ihre perfekte Veranstaltung zu organisieren.
                 Bleiben Sie alle durch nur einen Blick auf ihre Veranstaltung auf dem selben Informationsstand um nichts zu verpassen.
