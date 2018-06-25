@@ -68,7 +68,7 @@ a:hover{
 i{
 padding:7px;
 }
-i:hover {
+#easy_social i:hover {
     cursor: pointer;
     padding:6px;
     border  : 1px solid white;
@@ -185,4 +185,7 @@ padding: 0;
 }
 .Site-content {
 flex: 2;
+}
+footer div #easy_social {
+    color:black;
 }
