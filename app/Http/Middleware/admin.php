@@ -11,11 +11,12 @@ class admin
 
     public function handle($request, Closure $next)
     {
-        //Role_id holen
-        $role_id2 = Auth::user()->role_id;
 
 
-        if($role_id2 == '1'){
+if(\Auth::check()){
+    //Role_id holen
+    $role_id2 = Auth::user()->role_id;
+        if($role_id2 == '1' ){
 
             //wenn das statement nich richtig ist, geht es zu dem alten zutück glaub
             // also muss hier role id ==2 rein
@@ -24,5 +25,11 @@ class admin
         }
 
         return $next($request);
+}
+else {
+    return redirect('/home');
+}
     }
+
+
 }

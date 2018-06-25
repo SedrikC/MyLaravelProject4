@@ -29,6 +29,9 @@ class HomeController extends Controller
     {
         return view('EasyPlanHome');
     }
+    public function impressum(){
+        return view('impressum');
+    }
 
     public function erstellen(){
         return view('Verstellen');
@@ -47,9 +50,7 @@ class HomeController extends Controller
     public function datenschutz(){
         return view('Datenschutz');
     }
-    public function Einstellungen(){
-        return view('Einstellungen');
-    }
+
     public function Kontakt(){
         return view('Kontakt');
     }

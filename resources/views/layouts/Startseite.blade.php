@@ -81,8 +81,8 @@
 
             <ul class="dropdown-menu" role="menu">
                 <li><a href="{{URL('profile')}}"><i class="fa fa-btn fa-user"></i>Profil bearbeiten</a> </li>
-                <li><a href="{{URL('meine_veranstaltungen')}}"><i class="fa fa-btn fa-envelope"></i></i> </i>Veranstaltungen</a> </li>
-                <li><a href="{{URL('Einstellungen')}}"><i class="fa fa-btn fa-cog"></i>Einstellungen</a> </li>
+                <li><a href="{{URL('meine_veranstaltungen')}}"><i class="fa fa-btn fa-cog"></i></i> </i>Veranstaltungen</a> </li>
+
                 <li><a href="{{URL('Kontakt')}}"><i class="fa fa-btn fa-envelope"></i>Kontakt</a> </li>
                 <li><a href="{{URL('logout')}}"><i class="fa fa-btn fa-sign-out"></i>Logout</a>
 
@@ -203,14 +203,15 @@
                     <strong>Links</strong>
                 </h6>
                 <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-                <p class="foot">
-                    <a href="{{URL('profile')}}">Mein Account</a>
-                </p>
+
                 <p class="foot">
                     <a href="{{URL('datenschutz')}}">Datenschutzrichtlinien</a>
                 </p>
                 <p class="foot">
                     <a href="{{URL('Kontakt')}}">Kontakt</a>
+                </p>
+                <p class="foot">
+                    <a href="{{URL('Impressum')}}">Impressum</a>
                 </p>
             </div>
             <!--/.Third column-->
