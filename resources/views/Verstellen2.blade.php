@@ -21,10 +21,9 @@
             <br>
             <input type="date" size="24px"name="datum"> <br>
 
-            <input id="weiter" type="submit" name="submit" value="Erstellen">
+            <input id="weiter" type="submit" name="submit" onclick="erfolgreich()" value="Erstellen">
             
 
     </div>
     </form>
-
 @endsection

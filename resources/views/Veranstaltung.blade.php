@@ -11,9 +11,10 @@
 
     @foreach( $Events as $veranstaltung)
         <table>
-        <tr><th>Veranstaltungsname:</th><td> {{ $veranstaltung->Name }}</td></tr>
+            <tr><th>Veranstaltungsname:</th><td> {{ $veranstaltung->Name }}</td></tr>
             <tr><th>Veranstaltungsort:</th><td> {{ $veranstaltung->Ort }}</td></tr>
             <tr><th>Veranstalter: </th><td><a href="{{route('UserProfil',$veranstaltung->Veranstalter)}}"><p> {{ $veranstaltung->Veranstalter }}</p></a></td></tr>
+            <tr><th>Datum:</th><td> {{$veranstaltung->Datum}}</td></tr>
         </table>
 <br>
 
@@ -35,7 +36,9 @@
     <tr><th class="Zusage">
             <?php echo count($Teilnahme)?> Teilnehmer:
         </th><td class="zusage">
-    @foreach($Teilnahme as $teilnahme) {{$teilnahme->name}} @endforeach
+             @foreach($Teilnahme as $teilnahme)
+                {{$teilnahme->name}}
+            @endforeach
         </td>
     </tr>
     <tr><th class="Absage">
