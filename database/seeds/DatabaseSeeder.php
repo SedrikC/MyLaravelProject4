@@ -73,6 +73,7 @@ class DatabaseSeeder extends Seeder
 
         ]);
 
+
     //  DB::insert("INSERT INTO users VALUES(1,2, 'Dominik Burkert', 'dominik.al.burkert@gmail.com',bcrypt('secret'),NOW(),NOW())");
     }
 }
