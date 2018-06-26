@@ -59,7 +59,7 @@
                 @foreach($CheckLike as $cl)
                 @endforeach
             <?php if(empty($cl)){?>
-                <?php if($option->Name == ''){}else{?>
+                <?php if($option->Name != ''){?>
             <input class="radio" type="radio" value="{{$option->option}}" onclick="this.form.submit()" name="optionID">{{$option->Name}}<br>
                 <?php
                 }}?>
@@ -75,7 +75,7 @@
     <?php
     }else{ ?>
          <h3 id="NoUmfrage"> {{ $veranstaltung->Veranstalter }} hat noch keine Umfrage erstellt </h3>
-             <?php   }}else{?>
+             <?php }}else{?>
      <table id="poll">
          <thead id="thead">
          <th id="left">Optionen</th>
