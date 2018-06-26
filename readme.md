@@ -32,7 +32,8 @@ Durch das Responsive Design ist die Webapplikation auf allen Endgeräten nutzbar
 - 2.3 Zweistufiger Geschäftsprozess
 - 2.4 Suche mit Parametern
 - 2.5 Laravel-Mix
-- 2.6 Security
+- 2.6 SEO
+- 2.7 Security
 - 3.0 sonstige technische Umsetzung
 
 #### 2.1 Design / CSS
@@ -99,7 +100,13 @@ Die Suche nach Veranstaltungen wird durch die Parameter Ort, Name, Genre und Ver
 
 Zur Optimierung der Performance nutzen wir LaravelMix. 
 Nachdem wir Laravel Mix installiert hatten, gaben wir in der wepack.mix.js Datei alle Dateien an, die wir komprimieren wollten und speicherten die komprimierte Datei unter combinedCSS.css.
-#### 2.6 Security
+#### 2.6 SEO
+Im Bereich Seo haben wir darauf geachtet den Namen unserer Seite bzw. die passenden Schlagwörter möglichst oft und an den entsprechenden Stellen auf unserer Startseite zu positionieren. Beispielsweise habe wir einen Aussagekräftigen Titel für unsere Webapplikation gewählt. Sowohl im Titel als auch in der h1 Überschrift ist der Name unserer Webapplikation zu finden. Außerdem haben wir versucht die Schlagwörter **Veranstaltung** und **Organisieren** möglichst im Text zu platzieren. 
+Mit der Google Search Console und dem zugehörigen Meta-Tag haben wir sichergestellt, dass unsere WebApplikation bei einer Suche mit Google gefunden werden kann.
+       
+    <meta name="google-site-verification" content="Ry4m_y-QclFVOEQS67a3xk6lvOs15noiqjBZjT2VCP8" />
+
+#### 2.7 Security
 Sensible Daten, wie z.B. das Nutzerpasswort werden in ein Hash umgewandelt und so in der Datenbank gespeichert.
 Durch Middleware wurde sichergestellt, dass bis auf den Admin, niemand auf die URL der Adminseite zugreifen kann. Außerdem wurden die Veranstaltung erstellen Seite, Veranstaltung suchen Seite, die Veranstaltungsseite und die Profilseite für den Besucher ausgeschlossen. 
 
@@ -205,7 +212,7 @@ Jeder Nutzer hat die Möglichkeit sein eigenes Profil durch persönliche Angaben
 
 #### Meine Veranstaltungen löschen
 Jeder Nutzer bekommt im Dropdown-Menu, das beim Klick auf den Username (Oben-Rechts) ausgelöst wird, zusätzlich eine Auswahlmöglichkeit „Veranstaltungen“, durch die Sie auf die eigenen Veranstaltungen gelangen. Dort können einzelne Veranstaltungen gelöscht werden. Dies wurde durch das MVC-Prinzip realisiert. Um andere Veranstaltungen löschen zu können, bedarf es jedoch Adminrechte.
-##### URL: https://www.EasyPlan321.herokuapp.com
+##### URL: https://www.easyplan321.herokuapp.com
 ## Benutzerdaten
 ##### Sedrik17 (Admin)
     Email: sedrik.cirzel@gmail.com			

@@ -14,19 +14,19 @@
     <input type="text" name="titel" required>
 
     <p> Option 1*</p>
-    <input type="text" name="option1" required>
+    <input type="text" name="option1" maxlength="12" required>
 
     <p> Option 2*</p>
-    <input type="text" name="option2" required>
+    <input type="text" name="option2" maxlength="12" required>
 
     <p> Option 3</p>
-    <input type="text" name="option3">
+    <input type="text" maxlength="12" name="option3">
 
     <p> Option 4</p>
-    <input type="text" name="option4">
+    <input type="text" maxlength="12" name="option4">
 
     <p> Option 5</p>
-    <input type="text" name="option5">
+    <input type="text" maxlength="12" name="option5">
 
 
 <input type="hidden" name="VerID" value="<?php echo $id ?>">

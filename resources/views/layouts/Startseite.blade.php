@@ -80,7 +80,7 @@
 
             <ul class="dropdown-menu" role="menu">
                 <li><a href="{{URL('profile')}}"><i class="fa fa-btn fa-user"></i>Profil bearbeiten</a> </li>
-                <li><a href="{{URL('meine_veranstaltungen')}}"><i class="fa fa-btn fa-cog"></i></i> </i>Veranstaltungen</a> </li>
+                <li><a href="{{URL('meine_veranstaltungen')}}"><i class="fa fa-btn fa-cog"></i></i></i>Veranstaltungen</a> </li>
 
                 <li><a href="{{URL('Kontakt')}}"><i class="fa fa-btn fa-envelope"></i>Kontakt</a> </li>
                 <li><a href="{{URL('logout')}}"><i class="fa fa-btn fa-sign-out"></i>Logout</a>
@@ -90,7 +90,7 @@
                if ($role_id ==2){
 
                 ?>
-                <li><a href="{{URL('admin')}}"><i class="fa fa-btn fa-unlock-alt"></i>Admin</a>
+                <li><a href="{{URL('admin')}}"><i class="fa fa-btn fa-unlock-alt"> </i> Admin</a>
 
 
             <?php }?>
@@ -197,7 +197,7 @@
                     <strong>EasyPlan</strong>
                 </h6>
                 <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-                <p class="foot">EasyPlan ist eine Webapplikation die im Rahmen des Moduls Webtech entwicklet wird. Die Webapplikation soll dazu dienen den Nutzern die Organisation von Veranstaltungen leichter zu machen</p>
+                <p class="foot">EasyPlan ist eine Webapplikation die im Rahmen des Moduls Webtech entwickelt wird. Die Webapplikation soll dazu dienen den Nutzern die Organisation von Veranstaltungen leichter zu machen</p>
             </div>
             <!--/.First column-->
 
@@ -223,7 +223,7 @@
             <!--Fourth column-->
             <div class="col-md-4 col-lg-3 col-xl-3">
                 <h6 class="text-uppercase font-weight-bold">
-                    <strong>Contact</strong>
+                    <strong>Kontakt</strong>
                 </h6>
 
                 <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">

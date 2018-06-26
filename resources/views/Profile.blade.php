@@ -85,7 +85,7 @@
                             <td><input type="text" name="mobile" class="form-control form" value="{{Auth::user()->mobile}}"> </td>
                         </tr>
                         <tr>
-                            <td><input type="submit" name="submit" value="Bearbeiten" class="pull-right btn btn-sm btn-primary"></td>
+                            <td><input type="submit" name="submit" value="Speichern" class="pull-right btn btn-sm btn-primary"></td>
 
                         </tr>
 
