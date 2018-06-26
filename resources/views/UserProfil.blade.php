@@ -2,14 +2,37 @@
 
 @section('content')
 <head>
-    <link rel="stylesheet" href="css/Mein_Profil.css">
+    <link rel="stylesheet" href="/css/Mein_Profil.css">
+
 </head>
+
     @foreach($Daten as $daten)
     <h1> {{$daten->name }}'s Profil</h1>
 
+
+
+
     <div class="container">
+
         <div class="row Mein_Profil">
+            <div class="col-md-2 BildBearbeiten" id="bild">
+                <?php
+                $avatar = $daten->avatar;
+                if ($avatar == NULL){?>
+                <img src="/uploads/avatar/avatar_default.png" id="Profilbild">
+                <?php } else {
+                ?>
+                <img src="/uploads/avatar/{{$daten->avatar}}" id="Profilbild">
+                <?php } ?>
+
+
+            </div>
+            <div class="col-md-1">
+
+            </div>
             <div class="col-md-9 profilinhalt">
+                <table class="table table-user-information">
+
                 <table class="table table-user-information">
                         <tbody>
                         <tr>
