@@ -102,14 +102,7 @@ class DatabaseSeeder extends Seeder
             'Veranstalter' => 'M.Giretti',
             'Datum' => '2018'.'07'.'08',
         ]);
-       DB::table('veranstaltungen')->insert([
-            'id' =>2,
-            'Name' => 'ALDA Prüfung',
-            'Ort' => 'Konstanz',
-            'Genre' => 'Sonstige',
-            'Veranstalter' => 'M.Giretti',
-            'Datum' => '2018'.'07'.'04',
-        ]);
+
         DB::table('teilnahme')->insert([
             'id' =>1,
             'VeranstaltungsID' => 1,
@@ -194,5 +187,118 @@ class DatabaseSeeder extends Seeder
 
 
         //  DB::insert("INSERT INTO users VALUES(1,2, 'Dominik Burkert', 'dominik.al.burkert@gmail.com',bcrypt('secret'),NOW(),NOW())");
+
+
+
+
+        DB::table('veranstaltungen')->insert([
+            'id' =>2,
+            'Name' => 'Meisterfeier',
+            'Ort' => 'Spaichingen',
+            'Genre' => 'Party',
+            'Veranstalter' => 'Sedrik17',
+            'Datum' => '2018'.'07'.'10',
+        ]);
+
+        DB::table('teilnahme')->insert([
+            'id' =>4,
+            'VeranstaltungsID' => 2,
+            'name' => 'Sedrik17',
+            'antwort' => 0,
+        ]);
+        DB::table('teilnahme')->insert([
+            'id' =>5,
+            'VeranstaltungsID' => 2,
+            'name' => 'Dominik1810',
+            'antwort' => 0,
+        ]);
+        DB::table('teilnahme')->insert([
+            'id' =>6,
+            'VeranstaltungsID' => 2,
+            'name' => 'M.Giretti',
+            'antwort' => 0,
+        ]);
+        DB::table('polls')->insert([
+            'pollid' =>2,
+            'Titel' => 'Welches Fleisch wollt ihr?',
+            'User' => 'Sedrik17',
+            'VerID' => 2,
+        ]);
+        DB::table('comments')->insert([
+            'Commentid' =>5,
+            'Veranstaltungsid' => 2,
+            'Username' => 'Dominik1810',
+            'Comment' => 'gibts auch was anderes als Pute oder Schwein?',
+            'created_at' =>'2018'.'07'.'02',
+        ]);
+        DB::table('comments')->insert([
+            'Commentid' =>6,
+            'Veranstaltungsid' => 2,
+            'Username' => 'Sedrik17',
+            'Comment' => 'ne gibts nicht.Wenn du was anderes willst, musst es dir selbst mitbringen.',
+            'created_at' =>'2018'.'07'.'03',
+        ]);
+        DB::table('comments')->insert([
+            'Commentid' =>7,
+            'Veranstaltungsid' => 2,
+            'Username' => 'Dominik1810',
+            'Comment' => 'ok. Dann nehm ich noch Hähnchen mit!',
+            'created_at' =>'2018'.'07'.'05',
+        ]);
+        DB::table('options')->insert([
+            'optionid' =>5,
+            'option' => 1,
+            'VerID' => 2,
+            'Name' => 'Pute',
+        ]);
+        DB::table('options')->insert([
+            'optionid' =>6,
+            'option' => 2,
+            'VerID' => 2,
+            'Name' => 'Schwein',
+        ]);
+
+        DB::table('like')->insert([
+            'LikeID' =>3,
+            'VeranstaltungID' => 2,
+            'optionID' => 1,
+            'Username' => 'Sedrik17',
+        ]);
+        DB::table('like')->insert([
+            'LikeID' =>4,
+            'VeranstaltungID' => 2,
+            'optionID' => 1,
+            'Username' => 'Dominik1810',
+        ]);
+        DB::table('like')->insert([
+            'LikeID' =>5,
+            'VeranstaltungID' => 2,
+            'optionID' => 2,
+            'Username' => 'M.Giretti',
+        ]);
+
+
+
+
+
+
+        DB::table('veranstaltungen')->insert([
+            'id' =>3,
+            'Name' => 'ALDA Prüfung',
+            'Ort' => 'Konstanz',
+            'Genre' => 'Sonstige',
+            'Veranstalter' => 'M.Giretti',
+            'Datum' => '2018'.'07'.'04',
+        ]);
+
+
+
+
+
+
+
+
+
+
     }
 }

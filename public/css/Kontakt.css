@@ -1,40 +1,6 @@
 .Kontakt {
     padding-top:100px;
     padding-bottom: 50px;
-
-}
-
-.Sedrik_bild {
-
-}
-.Dominik_bild {
-
-}
-.Dominik{
-
-}
-.row img {
-    width:75%;
-    height: 75%;
-    border-radius: 50%;
-
-
-}
-.Sedrik ul {
-    padding: 0;
-    height: 200px;
-}
-.Dominik ul {
-    height: 200px;
-    padding: 0;
-
-}
-.Dominik ul li {
-    padding:3px;
-    list-style-type: none;
-}
-
-.Sedrik ul li{
-    list-style-type: none;
-    padding:3px;
+    text-align: center;
+    font-size: larger;
 }

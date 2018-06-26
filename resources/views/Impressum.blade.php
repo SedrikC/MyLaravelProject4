@@ -3,41 +3,43 @@
 @section('content')
     <link rel="stylesheet" href="css/Kontakt.css">
 
-    <h1>Kontakt</h1>
+    <h1>Kontaktieren Sie uns!</h1>
 
-     <div class="container">
+    <div class="container">
 
-        <div class="row Kontakt">
-            <div class="col-md-3 Sedrik_bild">
-                <img src="/uploads/avatar/63.jpg" id="Kontaktbild">
+        <div class="row">
+            <div class="col-md-4 col-sm-3">
+
             </div>
 
-            <div class="col-md-3 Sedrik">
-                <ul>
-                    <li><b> Sedrik Cirzel</b></li>
-                    <li><i class="fa fa-btn fa-home"></i>Rheingutstrasse 36</li>
-                    <li><i class="fa fa-btn fa-map-marker"></i> 78546 Konstanz</li>
-                    <br>
-                    <li><i class="fa fa-btn fa-envelope"></i>sedrik@gmail.com</li>
-                    <li><i class="fa fa-btn fa-phone"></i> 0176 1234579</li>
-                </ul>
+            <div class="col-md-4 col-sm-6 Kontakt">
+
+                <h4>Verwaltungsrat</h4>
+                Dominik Burkert <br>
+                Sedrik Cirzel
+                <p><p></p>
+                <h4>Adresse</h4>
+                Easyplan <br>
+                Rheingutstrasse 36 <br>
+                Postfach <br>
+                78462 Konstanz <br>
+                Germany <br>
+                <a href="mailto:kontakt@easyplan.de">kontakt@easyplan.de</a>
+
+
+
+                </p>
             </div>
 
-            <div class="col-md-3 Dominik_bild">
-                <img src="/uploads/avatar/Bewerbungsbild.jpg">
+            <div class="col-md-4 col-sm-3">
+
             </div>
 
-            <div class="col-md-3 Dominik">
-               <ul>
-                   <li><b> Dominik Burkert</b></li>
-                   <li><i class="fa fa-btn fa-home"></i>Rheingutstrasse 36</li>
-                   <li><i class="fa fa-btn fa-map-marker"></i> 78546 Konstanz</li>
-                   <br>
-                   <li><i class="fa fa-btn fa-envelope"></i>burkert@gmail.com</li>
-                   <li><i class="fa fa-btn fa-phone"></i> 0176 1234579</li>
-               </ul>
-            </div>
+
         </div>
+
     </div>
+    </div>
+
 
 @endsection
