@@ -149,32 +149,35 @@
                 <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
                     <h2 class="mb-0 white-text">Folgt uns auf unseren sozialen Netzwerken</h2>
                 </div>
+
                 <!--Grid column-->
 
                 <!--Grid column-->
                 <div class="col-md-6 col-lg-7 text-center text-md-right">
+                    <div id="fa_icons_social_media">
                     <!--Facebook-->
 
                     <!-- <a class="fb-ic ml-0"> -->
-                    <a  class="fb-ic ml-0">
+                    <a  class="fb-ic ml-0" id="easy_social" href="https://www.facebook.de">
                         <i class="fa fa-facebook white-text mr-lg-4"></i>
                     </a>
                     <!--Twitter-->
-                    <a class="tw-ic">
+                    <a class="tw-ic" id="easy_social" href="https://twitter.com/?lang=de">
                         <i class="fa fa-twitter white-text mr-lg-4"> </i>
                     </a>
                     <!--Google +-->
-                    <a class="gplus-ic">
+                    <a class="gplus-ic" id="easy_social" href="https://plus.google.com/discover">
                         <i class="fa fa-google-plus white-text mr-lg-4"> </i>
                     </a>
                     <!--Linkedin-->
-                    <a class="li-ic">
+                    <a class="li-ic" id="easy_social" href="https://www.linkedin.de">
                         <i class="fa fa-linkedin white-text mr-lg-4"> </i>
                     </a>
                     <!--Instagram-->
-                    <a class="ins-ic">
+                    <a class="ins-ic" id="easy_social" href="https://instagram.com/?hl=de">
                         <i class="fa fa-instagram white-text mr-lg-4"> </i>
                     </a>
+                </div>
                 </div>
                 <!--Grid column-->
 
@@ -222,15 +225,18 @@
                 <h6 class="text-uppercase font-weight-bold">
                     <strong>Contact</strong>
                 </h6>
+
                 <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
                 <p class="foot">
                     <i class="fa fa-home mr-3"></i> Easyplan </p>
                 <p class="foot">
-                    <i class="fa fa-envelope mr-3"></i>scirzel@gmail.com</p>
+                    <i class="fa fa-envelope mr-3"></i>EasyPlan@gmail.com</p>
                 <p class="foot">
                     <i class="fa fa-phone mr-3"></i>Tel. 07424/502500</p>
                 <p class="foot">
                     <i class="fa fa-print mr-3"></i>Mobil. 01761234569</p>
+
+
             </div>
             <!--/.Fourth column-->
 
