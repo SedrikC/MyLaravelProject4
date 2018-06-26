@@ -9,7 +9,7 @@
     <form action={{action('Controller@insert_veranstaltungen1')}}>
         {{csrf_field()}}
         Veranstaltungsname*<br>
-        <input type="text" size="20px" id="Name" maxlength="30" name="Name" placeholder="z.B. Grillparty" required>
+        <input type="text" size="20px" id="Name" maxlength="30" name="Name" placeholder="z.B. Grillparty" maxlength="20" required>
         <br id="Output">
         Veranstaltungsort
         <br>
