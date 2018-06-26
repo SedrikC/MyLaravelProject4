@@ -111,10 +111,17 @@ i:hover {
     left: 20px;
 }
 
-#VerName{
+.VerName{
     color: #568BFF;
     font-size: 30px;
 }
+@media screen and (max-width: 990px) {
+    .VerName{
+        font-size: 20px;
+        color: #568BFF;
+    }}
+
+
 .dropdown{
    list-style-type: none;
 

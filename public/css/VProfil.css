@@ -76,3 +76,12 @@ color: grey;
     text-align: center;
     margin-bottom: 30px;
 }
+#NoUmfrage{
+    text-align: center;
+    margin-bottom: 30px;
+    color: #568BFF;
+    opacity: 0.7;
+}
+.radio{
+    margin-left: 30px;
+}

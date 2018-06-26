@@ -4,26 +4,20 @@
 <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" href="/css/PollErstellen.css">
-    <script>
-        $(document).ready(function(){
-            $("#klick").click(function(){
-                $(".o1").show();
-            });
-        });
-    </script>
+
 </head>
 <h1>Umfrage zu ihrer Veranstaltung erstellen</h1>
 <div id="PollErstellen">
 <form action="/StorePoll" method="post">
     {{ csrf_field() }}
-    <h2> Titel </h2>
-    <input type="text" name="titel">
+    <h2> Titel* </h2>
+    <input type="text" name="titel" required>
 
-    <p> Option 1</p>
-    <input type="text" name="option1">
+    <p> Option 1*</p>
+    <input type="text" name="option1" required>
 
-    <p> Option 2</p>
-    <input type="text" name="option2">
+    <p> Option 2*</p>
+    <input type="text" name="option2" required>
 
     <p> Option 3</p>
     <input type="text" name="option3">

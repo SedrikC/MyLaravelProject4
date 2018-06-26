@@ -24,8 +24,8 @@
     @foreach($CheckTeilnahme as $check)
     @endforeach
     <?php if(empty($check)){?>
-    Ja <input type="radio" name="answer" value="0" onclick="this.form.submit();">
-    Nein<input type="radio" name="answer" value="1" onclick="this.form.submit();">
+    <input class="radio" type="radio" name="answer" value="0" onclick="this.form.submit();">Ja
+    <input type="radio" name="answer" value="1" onclick="this.form.submit();">Nein
     <input type="hidden" name="VerID" value="<?php echo $id?>">
     <?php
     }?>
@@ -60,7 +60,7 @@
                 @endforeach
             <?php if(empty($cl)){?>
                 <?php if($option->Name == ''){}else{?>
-            <input type="radio" value="{{$option->option}}" onclick="this.form.submit()" name="optionID">{{$option->Name}}<br>
+            <input class="radio" type="radio" value="{{$option->option}}" onclick="this.form.submit()" name="optionID">{{$option->Name}}<br>
                 <?php
                 }}?>
         @endforeach
@@ -70,9 +70,12 @@
     </form>
     @endforeach
     <?php if(empty($poll)){?>
+            <?php if( Auth::user()->name == $veranstaltung->Veranstalter){?>
     <a href ='{{route('Pollerstellen', $veranstaltung->id)}}'><h3 id="Umfrage">Umfrage erstellen</h3></a>
     <?php
-    }else{?>
+    }else{ ?>
+         <h3 id="NoUmfrage"> {{ $veranstaltung->Veranstalter }} hat noch keine Umfrage erstellt </h3>
+             <?php   }}else{?>
      <table id="poll">
          <thead id="thead">
          <th id="left">Optionen</th>

@@ -14,7 +14,7 @@
         Veranstaltungsort
         <br>
         <input type="text" size="20px" maxlength="20" name="Ort" placeholder="z.B. Konstanz">
-        <input id="weiter" type="submit" name="submit" value="Weiter">
+        <input id="weiter" type="submit" name="submit" value="Weiter" class="btn btn-primary">
 </div>
     </form>
 @endsection

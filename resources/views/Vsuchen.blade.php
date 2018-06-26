@@ -42,8 +42,8 @@
                     <tr>
                         <td class="VerInfo"> Veranstaltungsort: {{$r->Ort}} </td>
                         <td class="VerInfo">Veranstalter: {{$r->Veranstalter}} </td>
-                        <td class="VerInfo">Genre: {{$r->Genre}}</td>
-                        <td class="VerInfo">Datum:  {{$r->Datum}}</td>
+                        <td class="VerInfo Info">Genre: {{$r->Genre}}</td>
+                        <td class="VerInfo Info">Datum:  {{$r->Datum}}</td>
                     </tr>
                     </tbody></table>
                     @endforeach

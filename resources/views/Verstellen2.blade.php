@@ -21,7 +21,7 @@
             <br>
             <input type="date" size="24px"name="datum"> <br>
 
-            <input id="weiter" type="submit" name="submit" onclick="erfolgreich()" value="Erstellen">
+            <input class="btn btn-primary" id="weiter" type="submit" name="submit" onclick="erfolgreich()" value="Erstellen">
             
 
     </div>
