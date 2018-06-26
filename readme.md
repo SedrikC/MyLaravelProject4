@@ -74,8 +74,7 @@ Kommentarfunktion
 Hier kann der User einen Kommentar abgeben, indem er in das Textfeld eine Nachricht schreibt und diese mit dem Submit-Button abschickt. Die Daten werden dann im Controller Verarbeitet und erscheinen durch einen Redirect unter der Kommentarfunktion. Dabei werden Username, Uhrzeit/Datum und der vom User eingegebene Text ausgegeben. Auf dem Namen des Users befindet sich ein Link zu seinem Profil
 
 #### Profil erstellen/Bearbeiten
-Jeder Nutzer hat die Möglichkeit sein eigenes Profil durch persönliche Angaben individuell zu gestalten. Diese sind zu Beginn leer, können aber nach der Registrierung ausgefüllt werden und auch im weiteren Verlauf aktualisiert werden. Des Weiteren gibt es die Möglichkeit ein Profilbild hochzuladen. Hier unterstützt Heroku  leider nicht das Tool, das von uns zum Anpassen der Bildgröße verwendet wird, weswegen manche Bilder nach dem hochladen verzogen sein könnten. 
-
+Jeder Nutzer hat die Möglichkeit sein eigenes Profil durch persönliche Angaben individuell zu gestalten. Diese sind zu Beginn leer, können aber nach der Registrierung ausgefüllt werden und auch im weiteren Verlauf aktualisiert werden. Des Weiteren gibt es die Möglichkeit ein Profilbild hochzuladen. Da Heroku  leider nicht PHP 7, was von uns zum Anpassen der Bildgröße nötig ist, unterstützt, werden manche Bilder nach dem hochladen verzogen. 
 
 
 
