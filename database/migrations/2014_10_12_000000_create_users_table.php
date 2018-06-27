@@ -20,7 +20,7 @@ class CreateUsersTable extends Migration
             $table->string('role_id')->default(1);
             //ROLE_ID = 1 => User
             //ROLE_ID = 2 => Admin
-            $table->string('name');
+            $table->string('name')->unique();
             $table->string('email')->unique();
             $table->string('password');
              $table->string('avatar')->nullable();

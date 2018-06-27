@@ -9,9 +9,6 @@
     @foreach($Daten as $daten)
     <h1> {{$daten->name }}'s Profil</h1>
 
-
-
-
     <div class="container">
 
         <div class="row Mein_Profil">
