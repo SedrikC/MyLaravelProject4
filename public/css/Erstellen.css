@@ -22,20 +22,7 @@
 @media screen and (max-width: 990px) {
     .Info{
         display: none;
-    }
-
-}
+    }}
 .VerInfo2{
     width: 150px;
-}
-.loeschen {
-    margin-top: 10px;
-    margin-bottom: 20px;
-    margin-left:45%;
-    text-align: center;
-}
-@media screen and (max-width: 700px) {
-    .tabelle {
-        display:none;
-    }
 }
