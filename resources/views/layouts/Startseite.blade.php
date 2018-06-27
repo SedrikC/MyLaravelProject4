@@ -243,7 +243,6 @@
         </div>
     </div>
     </div>
-</nav>
 </footer>
 </body>
 </html>

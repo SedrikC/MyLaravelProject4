@@ -1,36 +1,34 @@
 @extends('layouts.Startseite')
 
 @section('content')
-<head>
-    <link rel="stylesheet" href="/css/Mein_Profil.css">
+    <head>
+        <link rel="stylesheet" href="/css/Mein_Profil.css">
 
-</head>
+    </head>
 
     @foreach($Daten as $daten)
-    <h1> {{$daten->name }}'s Profil</h1>
+        <h1> {{$daten->name }}'s Profil</h1>
 
-    <div class="container">
+        <div class="container">
 
-        <div class="row Mein_Profil">
-            <div class="col-md-2 BildBearbeiten" id="bild">
-                <?php
-                $avatar = $daten->avatar;
-                if ($avatar == NULL){?>
-                <img src="/uploads/avatar/avatar_default.png" id="Profilbild">
-                <?php } else {
-                ?>
-                <img src="/uploads/avatar/{{$daten->avatar}}" id="Profilbild">
-                <?php } ?>
+            <div class="row Mein_Profil">
+                <div class="col-md-2 BildBearbeiten" id="bild">
+                    <?php
+                    $avatar = $daten->avatar;
+                    if ($avatar == NULL){?>
+                    <img src="/uploads/avatar/avatar_default.png" id="Profilbild">
+                    <?php } else {
+                    ?>
+                    <img src="/uploads/avatar/{{$daten->avatar}}" id="Profilbild">
+                    <?php } ?>
 
 
-            </div>
-            <div class="col-md-1">
+                </div>
+                <div class="col-md-1">
 
-            </div>
-            <div class="col-md-9 profilinhalt">
-                <table class="table table-user-information">
-
-                <table class="table table-user-information">
+                </div>
+                <div class="col-md-9 profilinhalt">
+                    <table class="table table-user-information">
                         <tbody>
                         <tr>
                             <td>Benutzername</td>
@@ -74,27 +72,27 @@
                         <td>{{ $daten->mobile }}
                         </td>
 
-                        </tr>
+
                         @endforeach
-                        </tbody></form>
-                </table>
+                        </tbody>
+                    </table>
 
-                <div class="container">
+                    <div class="container">
 
-                    <div class="row">
-                        <div class="col-md-8">
+                        <div class="row">
+                            <div class="col-md-8">
 
+                            </div>
                         </div>
                     </div>
+
                 </div>
-
-            </div>
-            <div class="col-md-3">
+                <div class="col-md-3">
 
 
+                </div>
             </div>
         </div>
-    </div>
 
 
 @endsection

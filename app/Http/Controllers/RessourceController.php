@@ -44,7 +44,7 @@ class RessourceController extends Controller
 
         foreach ($result as $r){
             $tr = '     <tr>
-                        <td></td><td><a href="/Veranstaltung/'. $r->id.'"<h1 id="VerName"> '. $r->Name .'</h1></a></td>
+                        <td></td><td><a href="/Veranstaltung/'. $r->id.'"<h1 class="VerName"> '. $r->Name .'</h1></a></td>
                         <td></td>
                         <td></td>
                         </tr>
@@ -78,7 +78,7 @@ class RessourceController extends Controller
     public function admin_veranstaltungen(){
         $result = Veranstaltungen::all();
 
-        return view('Admin_veranstaltungen')->with('Vsuchen',$result);
+        return view('admin_veranstaltungen')->with('Vsuchen',$result);
     }
     public function admin_user() {
         $result = User::all();
@@ -89,9 +89,11 @@ class RessourceController extends Controller
         $VerID = $request->input('VerID');
         $Ver = Veranstaltungen::where('id', $VerID);
         $Ver->delete();
+        $result = Veranstaltungen::all();
 
-        return \Redirect::route('admin_veranstaltungen');
-       // return view('admin_veranstaltungen');
+        return view('admin_veranstaltungen')->with('Vsuchen',$result);
+      //  return \Redirect::route('admin_veranstaltungen');
+      //  return view('admin_veranstaltungen');
 
     }
 
@@ -99,8 +101,10 @@ class RessourceController extends Controller
         $UserID = $request->input('UserID');
         $User = User::where('id', $UserID);
         $User->delete();
+        $result = User::all();
 
-        return \Redirect::route('admin_user');
+        return view('Admin_user')->with('Daten', $result);
+        //return \Redirect::route('admin_user');
        // return view('Admin_user');
 
 

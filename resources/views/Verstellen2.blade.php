@@ -11,19 +11,18 @@
             Genre
             <br>
             <select size="1" id="genre" name="Genre">
+                <option label="Sonstige">Sonstiges</option>
                 <option label="Party">Party</option>
                 <option label="Sport">Sport</option>
                 <option label="Öffentlich">Öffentlich</option>
-                <option label="Sonstige">Sonstiges</option>
             </select>
             <br>
             Datum
             <br>
-            <input type="date" size="24px"name="datum"> <br>
+            <input type="date" size="24px" name="datum"> <br>
 
-            <input class="btn btn-primary" id="weiter" type="submit" name="submit" onclick="erfolgreich()" value="Erstellen">
-            
+            <input class="btn btn-primary" id="weiter" type="submit" name="submit" value="Erstellen">
 
+        </form>
     </div>
-    </form>
 @endsection

@@ -15,10 +15,10 @@
                 <?php
                 $avatar = Auth::user()->avatar;
                 if ($avatar == NULL){?>
-                <img src="/uploads/avatar/avatar_default.png" id="Profilbild">
+                <img src="/uploads/avatar/avatar_default.png" id="Profilbild" alt="DefaultProfilbild">
                 <?php } else {
                 ?>
-                <img src="/uploads/avatar/{{Auth::user()->avatar}}" id="Profilbild">
+                <img src="/uploads/avatar/{{Auth::user()->avatar}}" id="Profilbild" alt="Profilbild">
                 <?php } ?>
 
 
@@ -28,35 +28,35 @@
             </div>
             <div class="col-md-9 profilinhalt">
                 <table class="table table-user-information">
-@foreach($Daten as $daten)
+                    @foreach($Daten as $daten)
 
-                  <tbody>
-                  <tr>
-                      <td>Benutzername</td>
-                      <td>{{ $daten->name }}</td>
-                  </tr>
+                        <tbody>
                         <tr>
-                        <td>Name</td>
-                        <td>{{ $daten->lastName }}</td>
-                    </tr>
-                    <tr>
-                        <td>Vorname</td>
-                        <td>{{ $daten->firstName }}</td>
-                    </tr>
-                    <tr>
-                        <td>Geburtstag</td>
-                        <td>{{ $daten->geburtsdatum }}</td>
-                    </tr>
+                            <td>Benutzername</td>
+                            <td>{{ $daten->name }}</td>
+                        </tr>
+                        <tr>
+                            <td>Name</td>
+                            <td>{{ $daten->lastName }}</td>
+                        </tr>
+                        <tr>
+                            <td>Vorname</td>
+                            <td>{{ $daten->firstName }}</td>
+                        </tr>
+                        <tr>
+                            <td>Geburtstag</td>
+                            <td>{{ $daten->geburtsdatum }}</td>
+                        </tr>
 
-                    <tr>
-                    <tr>
-                        <td>Geschlecht</td>
-                        <td>{{ $daten->geschlecht }}</td>
-                    </tr>
-                    <tr>
-                        <td>PLZ</td>
-                        <td>{{ $daten->plz }}</td>
-                    </tr>
+                        <tr>
+                        <tr>
+                            <td>Geschlecht</td>
+                            <td>{{ $daten->geschlecht }}</td>
+                        </tr>
+                        <tr>
+                            <td>PLZ</td>
+                            <td>{{ $daten->plz }}</td>
+                        </tr>
                         <tr>
                             <td>Ort</td>
                             <td>{{$daten->ort}} </td>
@@ -65,19 +65,17 @@
                             <td>Strasse</td>
                             <td> {{ $daten->strasse }}</td>
                         </tr>
-                    <tr>
-                        <td>Email</td>
+                        <tr>
+                            <td>Email</td>
 
 
-                        <td id="email">{{$daten->email}}</td>
-                    </tr>
-                    <td>Handynummer</td>
-                    <td>{{ $daten->mobile }}
-                    </td>
-
-                    </tr>
-@endforeach
-                    </tbody></form>
+                            <td id="email">{{$daten->email}}</td>
+                        </tr>
+                        <td>Handynummer</td>
+                        <td>{{ $daten->mobile }}
+                        </td>
+                        @endforeach
+                        </tbody>
                 </table>
 
                 <div class="container">
@@ -87,7 +85,7 @@
 
                         </div>
                         <div class="col-md-4">
-                <a href="{{ route('profile') }}" class="btn btn-primary">Profil bearbeiten </a><p>   </p>
+                            <a href="{{ route('profile') }}" class="btn btn-primary submit">Profil bearbeiten </a>
                         </div>
                     </div>
                 </div>

@@ -17,7 +17,8 @@
                 <h4>Verwaltungsrat</h4>
                 Dominik Burkert <br>
                 Sedrik Cirzel
-                <p><p></p>
+
+                <p>
                 <h4>Adresse</h4>
                 Easyplan <br>
                 Rheingutstrasse 36 <br>
@@ -25,9 +26,6 @@
                 78462 Konstanz <br>
                 Germany <br>
                 <a href="mailto:kontakt@easyplan.de">kontakt@easyplan.de</a>
-
-
-
                 </p>
             </div>
 
